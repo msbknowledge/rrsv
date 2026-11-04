@@ -3,13 +3,13 @@ session_start();
 include '../dbcon.php';
 
 // Auth check
-if (!isset($_SESSION['user_data']) || !in_array($_SESSION['role'], ['teacher', 'student'])) {
+if (!isset($_SESSION['user_data']) || !in_array($_SESSION['role'], ['teacher', 'student', 'admin'])) {
     header("Location: ../../index.php?error=Unauthorized Access");
     exit;
 }
 
 $teacher = $_SESSION['user_data'];
-$user_id = $teacher['id'];
+$user_id = $teacher['id'] ?? ($teacher['admin_id'] ?? 1);
 
 $types = mysqli_query($con, "SELECT * FROM rrsv_question_type ORDER BY id DESC");
 ?>

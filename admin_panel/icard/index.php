@@ -3,7 +3,7 @@ session_start();
 include '../dbcon.php';
 
 // Auth check
-if (!isset($_SESSION['user_data']) || !in_array($_SESSION['role'], ['teacher', 'student','icard'])) {
+if (!isset($_SESSION['user_data']) || !in_array($_SESSION['role'], ['teacher', 'student', 'icard', 'admin'])) {
     header("Location: ../../index.php?error=Unauthorized Access");
     exit;
 }

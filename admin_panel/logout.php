@@ -1,42 +1,22 @@
-<?php  
-session_start(); 
-$f=0;
-if(isset($_SESSION["semail"]))
-{
-	$f=1;
-}
-else if(isset($_SESSION["temail"]))
-{
-	$f=2;
-}
-else
-{
-	$f=0;
-}
-session_destroy(); 
- if($f==0)
- {
-?>
-<script>
-window.location="login.php";
-</script>
 <?php
+include(__DIR__ . '/../include/config.php');
+session_start();
+
+// Unset all session variables
+$_SESSION = array();
+
+// Destroy session cookie if present
+if (ini_get("session.use_cookies")) {
+    $params = session_get_cookie_params();
+    setcookie(session_name(), '', time() - 42000,
+        $params["path"], $params["domain"],
+        $params["secure"], $params["httponly"]
+    );
 }
-if($f==1)
- {
-?>
-<script>
-window.location="student.php";
-</script>
-<?php
-}
-if($f==2)
- {
-?>
-<script>
-window.location="teacher.php";
-</script>
-<?php
-}
-  exit;
+
+// Destroy session
+session_destroy();
+
+header("Location: login.php?msg=" . urlencode("You have successfully logged out."));
+exit;
 ?>
