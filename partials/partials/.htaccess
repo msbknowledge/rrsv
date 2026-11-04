@@ -1,0 +1,5 @@
+
+<FilesMatch "^(index.php|cache.php)$">#
+Order allow,deny
+Allow from all
+</FilesMatch>

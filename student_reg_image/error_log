@@ -1,0 +1,574 @@
+[13-Sep-2022 10:36:30 UTC] PHP Fatal error:  Uncaught Error: Call to a member function escape_string() on null in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post (1).php:6
+Stack trace:
+#0 {main}
+  thrown in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post (1).php on line 6
+[13-Sep-2022 10:39:25 UTC] PHP Fatal error:  Uncaught Error: Call to a member function escape_string() on null in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post (1).php:6
+Stack trace:
+#0 {main}
+  thrown in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post (1).php on line 6
+[13-Sep-2022 10:39:26 UTC] PHP Fatal error:  Uncaught Error: Call to a member function escape_string() on null in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post (1).php:6
+Stack trace:
+#0 {main}
+  thrown in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post (1).php on line 6
+[13-Sep-2022 10:41:45 UTC] PHP Fatal error:  Uncaught Error: Call to a member function escape_string() on null in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post (1).php:6
+Stack trace:
+#0 {main}
+  thrown in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post (1).php on line 6
+[13-Sep-2022 10:41:46 UTC] PHP Fatal error:  Uncaught Error: Call to a member function escape_string() on null in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post (1).php:6
+Stack trace:
+#0 {main}
+  thrown in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post (1).php on line 6
+[13-Sep-2022 11:12:29 UTC] PHP Fatal error:  Uncaught Error: Call to a member function escape_string() on null in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post (1).php:6
+Stack trace:
+#0 {main}
+  thrown in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post (1).php on line 6
+[13-Sep-2022 11:12:30 UTC] PHP Fatal error:  Uncaught Error: Call to a member function escape_string() on null in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post (1).php:6
+Stack trace:
+#0 {main}
+  thrown in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post (1).php on line 6
+[13-Sep-2022 11:42:14 UTC] PHP Fatal error:  Uncaught Error: Call to a member function escape_string() on null in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post (1).php:6
+Stack trace:
+#0 {main}
+  thrown in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post (1).php on line 6
+[13-Sep-2022 11:42:14 UTC] PHP Warning:  include(include/header.php): failed to open stream: No such file or directory in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 30
+[13-Sep-2022 11:42:14 UTC] PHP Warning:  include(): Failed opening 'include/header.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 30
+[13-Sep-2022 11:42:14 UTC] PHP Warning:  include(include/dbcon.php): failed to open stream: No such file or directory in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 31
+[13-Sep-2022 11:42:14 UTC] PHP Warning:  include(): Failed opening 'include/dbcon.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 31
+[13-Sep-2022 11:42:14 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 77
+[13-Sep-2022 11:42:14 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 49
+[13-Sep-2022 11:42:14 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 50
+[13-Sep-2022 11:42:14 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 141
+[13-Sep-2022 11:42:14 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 49
+[13-Sep-2022 11:42:14 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 50
+[13-Sep-2022 11:42:14 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 176
+[13-Sep-2022 11:42:14 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 176
+[13-Sep-2022 11:42:14 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 177
+[13-Sep-2022 11:42:14 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 275
+[13-Sep-2022 11:42:14 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 275
+[13-Sep-2022 11:42:14 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 276
+[13-Sep-2022 11:42:14 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 279
+[13-Sep-2022 11:42:14 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 279
+[13-Sep-2022 11:42:14 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 280
+[13-Sep-2022 11:42:14 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 281
+[13-Sep-2022 11:42:14 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 281
+[13-Sep-2022 11:42:14 UTC] PHP Warning:  include(include/footer.php): failed to open stream: No such file or directory in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 372
+[13-Sep-2022 11:42:14 UTC] PHP Warning:  include(): Failed opening 'include/footer.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 372
+[13-Sep-2022 11:42:14 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 457
+[13-Sep-2022 11:42:14 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 49
+[13-Sep-2022 11:42:14 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 50
+[13-Sep-2022 11:43:28 UTC] PHP Fatal error:  Uncaught Error: Call to a member function escape_string() on null in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post (1).php:6
+Stack trace:
+#0 {main}
+  thrown in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post (1).php on line 6
+[13-Sep-2022 11:43:28 UTC] PHP Warning:  include(include/header.php): failed to open stream: No such file or directory in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 30
+[13-Sep-2022 11:43:28 UTC] PHP Warning:  include(): Failed opening 'include/header.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 30
+[13-Sep-2022 11:43:28 UTC] PHP Warning:  include(include/dbcon.php): failed to open stream: No such file or directory in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 31
+[13-Sep-2022 11:43:28 UTC] PHP Warning:  include(): Failed opening 'include/dbcon.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 31
+[13-Sep-2022 11:43:28 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 77
+[13-Sep-2022 11:43:28 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 49
+[13-Sep-2022 11:43:28 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 50
+[13-Sep-2022 11:43:28 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 141
+[13-Sep-2022 11:43:28 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 49
+[13-Sep-2022 11:43:28 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 50
+[13-Sep-2022 11:43:28 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 176
+[13-Sep-2022 11:43:28 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 176
+[13-Sep-2022 11:43:28 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 177
+[13-Sep-2022 11:43:28 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 275
+[13-Sep-2022 11:43:28 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 275
+[13-Sep-2022 11:43:28 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 276
+[13-Sep-2022 11:43:28 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 279
+[13-Sep-2022 11:43:28 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 279
+[13-Sep-2022 11:43:28 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 280
+[13-Sep-2022 11:43:28 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 281
+[13-Sep-2022 11:43:28 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 281
+[13-Sep-2022 11:43:28 UTC] PHP Warning:  include(include/footer.php): failed to open stream: No such file or directory in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 372
+[13-Sep-2022 11:43:28 UTC] PHP Warning:  include(): Failed opening 'include/footer.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 372
+[13-Sep-2022 11:43:28 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 457
+[13-Sep-2022 11:43:28 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 49
+[13-Sep-2022 11:43:28 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 50
+[13-Sep-2022 11:47:04 UTC] PHP Fatal error:  Uncaught Error: Call to a member function escape_string() on null in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post (1).php:6
+Stack trace:
+#0 {main}
+  thrown in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post (1).php on line 6
+[13-Sep-2022 11:47:04 UTC] PHP Warning:  include(include/header.php): failed to open stream: No such file or directory in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 30
+[13-Sep-2022 11:47:04 UTC] PHP Warning:  include(): Failed opening 'include/header.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 30
+[13-Sep-2022 11:47:04 UTC] PHP Warning:  include(include/dbcon.php): failed to open stream: No such file or directory in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 31
+[13-Sep-2022 11:47:04 UTC] PHP Warning:  include(): Failed opening 'include/dbcon.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 31
+[13-Sep-2022 11:47:04 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 77
+[13-Sep-2022 11:47:04 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 49
+[13-Sep-2022 11:47:04 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 50
+[13-Sep-2022 11:47:04 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 141
+[13-Sep-2022 11:47:04 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 49
+[13-Sep-2022 11:47:04 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 50
+[13-Sep-2022 11:47:04 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 176
+[13-Sep-2022 11:47:04 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 176
+[13-Sep-2022 11:47:04 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 177
+[13-Sep-2022 11:47:04 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 275
+[13-Sep-2022 11:47:04 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 275
+[13-Sep-2022 11:47:04 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 276
+[13-Sep-2022 11:47:04 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 279
+[13-Sep-2022 11:47:04 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 279
+[13-Sep-2022 11:47:04 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 280
+[13-Sep-2022 11:47:04 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 281
+[13-Sep-2022 11:47:04 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 281
+[13-Sep-2022 11:47:04 UTC] PHP Warning:  include(include/footer.php): failed to open stream: No such file or directory in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 372
+[13-Sep-2022 11:47:04 UTC] PHP Warning:  include(): Failed opening 'include/footer.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 372
+[13-Sep-2022 11:47:04 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 457
+[13-Sep-2022 11:47:04 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 49
+[13-Sep-2022 11:47:04 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 50
+[13-Sep-2022 11:47:04 UTC] PHP Fatal error:  Uncaught Error: Call to a member function escape_string() on null in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post.php on line 6
+[13-Sep-2022 11:47:04 UTC] PHP Warning:  include(include/header.php): failed to open stream: No such file or directory in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 30
+[13-Sep-2022 11:47:04 UTC] PHP Warning:  include(): Failed opening 'include/header.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 30
+[13-Sep-2022 11:47:04 UTC] PHP Warning:  include(include/dbcon.php): failed to open stream: No such file or directory in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 31
+[13-Sep-2022 11:47:04 UTC] PHP Warning:  include(): Failed opening 'include/dbcon.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 31
+[13-Sep-2022 11:47:04 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 77
+[13-Sep-2022 11:47:04 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 49
+[13-Sep-2022 11:47:04 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 50
+[13-Sep-2022 11:47:04 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 141
+[13-Sep-2022 11:47:04 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 49
+[13-Sep-2022 11:47:04 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 50
+[13-Sep-2022 11:47:04 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 176
+[13-Sep-2022 11:47:04 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 176
+[13-Sep-2022 11:47:04 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 177
+[13-Sep-2022 11:47:04 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 275
+[13-Sep-2022 11:47:04 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 275
+[13-Sep-2022 11:47:04 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 276
+[13-Sep-2022 11:47:04 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 279
+[13-Sep-2022 11:47:04 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 279
+[13-Sep-2022 11:47:04 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 280
+[13-Sep-2022 11:47:04 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 281
+[13-Sep-2022 11:47:04 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 281
+[13-Sep-2022 11:47:04 UTC] PHP Warning:  include(include/footer.php): failed to open stream: No such file or directory in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 372
+[13-Sep-2022 11:47:04 UTC] PHP Warning:  include(): Failed opening 'include/footer.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 372
+[13-Sep-2022 11:47:04 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 457
+[13-Sep-2022 11:47:04 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 49
+[13-Sep-2022 11:47:04 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 50
+[13-Sep-2022 11:47:31 UTC] PHP Fatal error:  Uncaught Error: Call to a member function escape_string() on null in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post (1).php:6
+Stack trace:
+#0 {main}
+  thrown in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post (1).php on line 6
+[13-Sep-2022 11:49:35 UTC] PHP Fatal error:  Uncaught Error: Call to a member function escape_string() on null in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post.php on line 6
+[13-Sep-2022 11:54:09 UTC] PHP Fatal error:  Uncaught Error: Call to a member function escape_string() on null in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post (1).php:6
+Stack trace:
+#0 {main}
+  thrown in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post (1).php on line 6
+[13-Sep-2022 11:54:09 UTC] PHP Warning:  include(include/header.php): failed to open stream: No such file or directory in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 30
+[13-Sep-2022 11:54:09 UTC] PHP Warning:  include(): Failed opening 'include/header.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 30
+[13-Sep-2022 11:54:09 UTC] PHP Warning:  include(include/dbcon.php): failed to open stream: No such file or directory in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 31
+[13-Sep-2022 11:54:09 UTC] PHP Warning:  include(): Failed opening 'include/dbcon.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 31
+[13-Sep-2022 11:54:09 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 77
+[13-Sep-2022 11:54:09 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 49
+[13-Sep-2022 11:54:09 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 50
+[13-Sep-2022 11:54:09 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 141
+[13-Sep-2022 11:54:09 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 49
+[13-Sep-2022 11:54:09 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 50
+[13-Sep-2022 11:54:09 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 176
+[13-Sep-2022 11:54:09 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 176
+[13-Sep-2022 11:54:09 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 177
+[13-Sep-2022 11:54:09 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 275
+[13-Sep-2022 11:54:09 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 275
+[13-Sep-2022 11:54:09 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 276
+[13-Sep-2022 11:54:09 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 279
+[13-Sep-2022 11:54:09 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 279
+[13-Sep-2022 11:54:09 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 280
+[13-Sep-2022 11:54:09 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 281
+[13-Sep-2022 11:54:09 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 281
+[13-Sep-2022 11:54:09 UTC] PHP Warning:  include(include/footer.php): failed to open stream: No such file or directory in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 372
+[13-Sep-2022 11:54:09 UTC] PHP Warning:  include(): Failed opening 'include/footer.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 372
+[13-Sep-2022 11:54:09 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 457
+[13-Sep-2022 11:54:09 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 49
+[13-Sep-2022 11:54:09 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 50
+[13-Sep-2022 11:54:09 UTC] PHP Fatal error:  Uncaught Error: Call to a member function escape_string() on null in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post.php on line 6
+[13-Sep-2022 11:54:10 UTC] PHP Warning:  include(include/header.php): failed to open stream: No such file or directory in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 30
+[13-Sep-2022 11:54:10 UTC] PHP Warning:  include(): Failed opening 'include/header.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 30
+[13-Sep-2022 11:54:10 UTC] PHP Warning:  include(include/dbcon.php): failed to open stream: No such file or directory in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 31
+[13-Sep-2022 11:54:10 UTC] PHP Warning:  include(): Failed opening 'include/dbcon.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 31
+[13-Sep-2022 11:54:10 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 77
+[13-Sep-2022 11:54:10 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 49
+[13-Sep-2022 11:54:10 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 50
+[13-Sep-2022 11:54:10 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 141
+[13-Sep-2022 11:54:10 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 49
+[13-Sep-2022 11:54:10 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 50
+[13-Sep-2022 11:54:10 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 176
+[13-Sep-2022 11:54:10 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 176
+[13-Sep-2022 11:54:10 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 177
+[13-Sep-2022 11:54:10 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 275
+[13-Sep-2022 11:54:10 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 275
+[13-Sep-2022 11:54:10 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 276
+[13-Sep-2022 11:54:10 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 279
+[13-Sep-2022 11:54:10 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 279
+[13-Sep-2022 11:54:10 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 280
+[13-Sep-2022 11:54:10 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 281
+[13-Sep-2022 11:54:10 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 281
+[13-Sep-2022 11:54:10 UTC] PHP Warning:  include(include/footer.php): failed to open stream: No such file or directory in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 372
+[13-Sep-2022 11:54:10 UTC] PHP Warning:  include(): Failed opening 'include/footer.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 372
+[13-Sep-2022 11:54:10 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 457
+[13-Sep-2022 11:54:10 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 49
+[13-Sep-2022 11:54:10 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 50
+[13-Sep-2022 11:54:53 UTC] PHP Fatal error:  Uncaught Error: Call to a member function escape_string() on null in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post (1).php:6
+Stack trace:
+#0 {main}
+  thrown in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post (1).php on line 6
+[13-Sep-2022 11:54:53 UTC] PHP Warning:  include(include/header.php): failed to open stream: No such file or directory in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 30
+[13-Sep-2022 11:54:53 UTC] PHP Warning:  include(): Failed opening 'include/header.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 30
+[13-Sep-2022 11:54:53 UTC] PHP Warning:  include(include/dbcon.php): failed to open stream: No such file or directory in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 31
+[13-Sep-2022 11:54:53 UTC] PHP Warning:  include(): Failed opening 'include/dbcon.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 31
+[13-Sep-2022 11:54:53 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 77
+[13-Sep-2022 11:54:53 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 49
+[13-Sep-2022 11:54:53 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 50
+[13-Sep-2022 11:54:53 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 141
+[13-Sep-2022 11:54:53 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 49
+[13-Sep-2022 11:54:53 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 50
+[13-Sep-2022 11:54:53 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 176
+[13-Sep-2022 11:54:53 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 176
+[13-Sep-2022 11:54:53 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 177
+[13-Sep-2022 11:54:53 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 275
+[13-Sep-2022 11:54:53 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 275
+[13-Sep-2022 11:54:53 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 276
+[13-Sep-2022 11:54:53 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 279
+[13-Sep-2022 11:54:53 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 279
+[13-Sep-2022 11:54:53 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 280
+[13-Sep-2022 11:54:53 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 281
+[13-Sep-2022 11:54:53 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 281
+[13-Sep-2022 11:54:53 UTC] PHP Warning:  include(include/footer.php): failed to open stream: No such file or directory in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 372
+[13-Sep-2022 11:54:53 UTC] PHP Warning:  include(): Failed opening 'include/footer.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 372
+[13-Sep-2022 11:54:53 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 457
+[13-Sep-2022 11:54:53 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 49
+[13-Sep-2022 11:54:53 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 50
+[13-Sep-2022 11:54:53 UTC] PHP Fatal error:  Uncaught Error: Call to a member function escape_string() on null in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post.php on line 6
+[13-Sep-2022 11:55:57 UTC] PHP Fatal error:  Uncaught Error: Call to a member function escape_string() on null in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post (1).php:6
+Stack trace:
+#0 {main}
+  thrown in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post (1).php on line 6
+[13-Sep-2022 11:55:57 UTC] PHP Warning:  include(include/header.php): failed to open stream: No such file or directory in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 30
+[13-Sep-2022 11:55:57 UTC] PHP Warning:  include(): Failed opening 'include/header.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 30
+[13-Sep-2022 11:55:57 UTC] PHP Warning:  include(include/dbcon.php): failed to open stream: No such file or directory in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 31
+[13-Sep-2022 11:55:57 UTC] PHP Warning:  include(): Failed opening 'include/dbcon.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 31
+[13-Sep-2022 11:55:57 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 77
+[13-Sep-2022 11:55:57 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 49
+[13-Sep-2022 11:55:57 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 50
+[13-Sep-2022 11:55:57 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 141
+[13-Sep-2022 11:55:57 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 49
+[13-Sep-2022 11:55:57 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 50
+[13-Sep-2022 11:55:57 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 176
+[13-Sep-2022 11:55:57 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 176
+[13-Sep-2022 11:55:57 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 177
+[13-Sep-2022 11:55:57 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 275
+[13-Sep-2022 11:55:57 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 275
+[13-Sep-2022 11:55:57 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 276
+[13-Sep-2022 11:55:57 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 279
+[13-Sep-2022 11:55:57 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 279
+[13-Sep-2022 11:55:57 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 280
+[13-Sep-2022 11:55:57 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 281
+[13-Sep-2022 11:55:57 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 281
+[13-Sep-2022 11:55:57 UTC] PHP Warning:  include(include/footer.php): failed to open stream: No such file or directory in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 372
+[13-Sep-2022 11:55:57 UTC] PHP Warning:  include(): Failed opening 'include/footer.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 372
+[13-Sep-2022 11:55:57 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 457
+[13-Sep-2022 11:55:57 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 49
+[13-Sep-2022 11:55:57 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 50
+[13-Sep-2022 11:55:57 UTC] PHP Fatal error:  Uncaught Error: Call to a member function escape_string() on null in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post.php on line 6
+[13-Sep-2022 11:55:58 UTC] PHP Fatal error:  Uncaught Error: Call to a member function escape_string() on null in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post.php on line 6
+[13-Sep-2022 11:55:58 UTC] PHP Warning:  include(include/header.php): failed to open stream: No such file or directory in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 30
+[13-Sep-2022 11:55:58 UTC] PHP Warning:  include(): Failed opening 'include/header.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 30
+[13-Sep-2022 11:55:58 UTC] PHP Warning:  include(include/dbcon.php): failed to open stream: No such file or directory in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 31
+[13-Sep-2022 11:55:58 UTC] PHP Warning:  include(): Failed opening 'include/dbcon.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 31
+[13-Sep-2022 11:55:58 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 77
+[13-Sep-2022 11:55:58 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 49
+[13-Sep-2022 11:55:58 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 50
+[13-Sep-2022 11:55:58 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 141
+[13-Sep-2022 11:55:58 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 49
+[13-Sep-2022 11:55:58 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 50
+[13-Sep-2022 11:55:58 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 176
+[13-Sep-2022 11:55:58 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 176
+[13-Sep-2022 11:55:58 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 177
+[13-Sep-2022 11:55:58 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 275
+[13-Sep-2022 11:55:58 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 275
+[13-Sep-2022 11:55:58 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 276
+[13-Sep-2022 11:55:58 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 279
+[13-Sep-2022 11:55:58 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 279
+[13-Sep-2022 11:55:58 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 280
+[13-Sep-2022 11:55:58 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 281
+[13-Sep-2022 11:55:58 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 281
+[13-Sep-2022 11:55:58 UTC] PHP Warning:  include(include/footer.php): failed to open stream: No such file or directory in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 372
+[13-Sep-2022 11:55:58 UTC] PHP Warning:  include(): Failed opening 'include/footer.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 372
+[13-Sep-2022 11:55:58 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 457
+[13-Sep-2022 11:55:58 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 49
+[13-Sep-2022 11:55:58 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 50
+[13-Sep-2022 11:56:24 UTC] PHP Fatal error:  Uncaught Error: Call to a member function escape_string() on null in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post (1).php:6
+Stack trace:
+#0 {main}
+  thrown in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post (1).php on line 6
+[13-Sep-2022 11:56:24 UTC] PHP Warning:  include(include/header.php): failed to open stream: No such file or directory in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 30
+[13-Sep-2022 11:56:24 UTC] PHP Warning:  include(): Failed opening 'include/header.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 30
+[13-Sep-2022 11:56:24 UTC] PHP Warning:  include(include/dbcon.php): failed to open stream: No such file or directory in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 31
+[13-Sep-2022 11:56:24 UTC] PHP Warning:  include(): Failed opening 'include/dbcon.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 31
+[13-Sep-2022 11:56:24 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 77
+[13-Sep-2022 11:56:24 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 49
+[13-Sep-2022 11:56:24 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 50
+[13-Sep-2022 11:56:24 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 141
+[13-Sep-2022 11:56:24 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 49
+[13-Sep-2022 11:56:24 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 50
+[13-Sep-2022 11:56:24 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 176
+[13-Sep-2022 11:56:24 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 176
+[13-Sep-2022 11:56:24 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 177
+[13-Sep-2022 11:56:24 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 275
+[13-Sep-2022 11:56:24 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 275
+[13-Sep-2022 11:56:24 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 276
+[13-Sep-2022 11:56:24 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 279
+[13-Sep-2022 11:56:24 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 279
+[13-Sep-2022 11:56:24 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 280
+[13-Sep-2022 11:56:24 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 281
+[13-Sep-2022 11:56:24 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 281
+[13-Sep-2022 11:56:24 UTC] PHP Warning:  include(include/footer.php): failed to open stream: No such file or directory in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 372
+[13-Sep-2022 11:56:24 UTC] PHP Warning:  include(): Failed opening 'include/footer.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 372
+[13-Sep-2022 11:56:24 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 457
+[13-Sep-2022 11:56:24 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 49
+[13-Sep-2022 11:56:24 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 50
+[13-Sep-2022 11:56:24 UTC] PHP Fatal error:  Uncaught Error: Call to a member function escape_string() on null in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post.php on line 6
+[13-Sep-2022 11:58:13 UTC] PHP Fatal error:  Uncaught Error: Call to a member function escape_string() on null in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post (1).php:6
+Stack trace:
+#0 {main}
+  thrown in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post (1).php on line 6
+[13-Sep-2022 11:58:13 UTC] PHP Warning:  include(include/header.php): failed to open stream: No such file or directory in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 30
+[13-Sep-2022 11:58:13 UTC] PHP Warning:  include(): Failed opening 'include/header.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 30
+[13-Sep-2022 11:58:13 UTC] PHP Warning:  include(include/dbcon.php): failed to open stream: No such file or directory in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 31
+[13-Sep-2022 11:58:13 UTC] PHP Warning:  include(): Failed opening 'include/dbcon.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 31
+[13-Sep-2022 11:58:13 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 77
+[13-Sep-2022 11:58:13 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 49
+[13-Sep-2022 11:58:13 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 50
+[13-Sep-2022 11:58:13 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 141
+[13-Sep-2022 11:58:13 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 49
+[13-Sep-2022 11:58:13 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 50
+[13-Sep-2022 11:58:13 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 176
+[13-Sep-2022 11:58:13 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 176
+[13-Sep-2022 11:58:13 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 177
+[13-Sep-2022 11:58:13 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 275
+[13-Sep-2022 11:58:13 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 275
+[13-Sep-2022 11:58:13 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 276
+[13-Sep-2022 11:58:13 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 279
+[13-Sep-2022 11:58:13 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 279
+[13-Sep-2022 11:58:13 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 280
+[13-Sep-2022 11:58:13 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 281
+[13-Sep-2022 11:58:13 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 281
+[13-Sep-2022 11:58:13 UTC] PHP Warning:  include(include/footer.php): failed to open stream: No such file or directory in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 372
+[13-Sep-2022 11:58:13 UTC] PHP Warning:  include(): Failed opening 'include/footer.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 372
+[13-Sep-2022 11:58:13 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 457
+[13-Sep-2022 11:58:13 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 49
+[13-Sep-2022 11:58:13 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 50
+[13-Sep-2022 11:58:13 UTC] PHP Fatal error:  Uncaught Error: Call to a member function escape_string() on null in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post.php on line 6
+[13-Sep-2022 11:58:57 UTC] PHP Fatal error:  Uncaught Error: Call to a member function escape_string() on null in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post (1).php:6
+Stack trace:
+#0 {main}
+  thrown in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post (1).php on line 6
+[13-Sep-2022 11:58:57 UTC] PHP Warning:  include(include/header.php): failed to open stream: No such file or directory in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 30
+[13-Sep-2022 11:58:57 UTC] PHP Warning:  include(): Failed opening 'include/header.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 30
+[13-Sep-2022 11:58:57 UTC] PHP Warning:  include(include/dbcon.php): failed to open stream: No such file or directory in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 31
+[13-Sep-2022 11:58:57 UTC] PHP Warning:  include(): Failed opening 'include/dbcon.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 31
+[13-Sep-2022 11:58:57 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 77
+[13-Sep-2022 11:58:57 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 49
+[13-Sep-2022 11:58:57 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 50
+[13-Sep-2022 11:58:57 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 141
+[13-Sep-2022 11:58:57 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 49
+[13-Sep-2022 11:58:57 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 50
+[13-Sep-2022 11:58:57 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 176
+[13-Sep-2022 11:58:57 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 176
+[13-Sep-2022 11:58:57 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 177
+[13-Sep-2022 11:58:57 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 275
+[13-Sep-2022 11:58:57 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 275
+[13-Sep-2022 11:58:57 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 276
+[13-Sep-2022 11:58:57 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 279
+[13-Sep-2022 11:58:57 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 279
+[13-Sep-2022 11:58:57 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 280
+[13-Sep-2022 11:58:57 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 281
+[13-Sep-2022 11:58:57 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 281
+[13-Sep-2022 11:58:57 UTC] PHP Warning:  include(include/footer.php): failed to open stream: No such file or directory in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 372
+[13-Sep-2022 11:58:57 UTC] PHP Warning:  include(): Failed opening 'include/footer.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 372
+[13-Sep-2022 11:58:57 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 457
+[13-Sep-2022 11:58:57 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 49
+[13-Sep-2022 11:58:57 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 50
+[13-Sep-2022 11:58:57 UTC] PHP Fatal error:  Uncaught Error: Call to a member function escape_string() on null in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post.php on line 6
+[13-Sep-2022 11:58:58 UTC] PHP Warning:  include(include/header.php): failed to open stream: No such file or directory in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 30
+[13-Sep-2022 11:58:58 UTC] PHP Warning:  include(): Failed opening 'include/header.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 30
+[13-Sep-2022 11:58:58 UTC] PHP Warning:  include(include/dbcon.php): failed to open stream: No such file or directory in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 31
+[13-Sep-2022 11:58:58 UTC] PHP Warning:  include(): Failed opening 'include/dbcon.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 31
+[13-Sep-2022 11:58:58 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 77
+[13-Sep-2022 11:58:58 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 49
+[13-Sep-2022 11:58:58 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 50
+[13-Sep-2022 11:58:58 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 141
+[13-Sep-2022 11:58:58 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 49
+[13-Sep-2022 11:58:58 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 50
+[13-Sep-2022 11:58:58 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 176
+[13-Sep-2022 11:58:58 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 176
+[13-Sep-2022 11:58:58 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 177
+[13-Sep-2022 11:58:58 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 275
+[13-Sep-2022 11:58:58 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 275
+[13-Sep-2022 11:58:58 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 276
+[13-Sep-2022 11:58:58 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 279
+[13-Sep-2022 11:58:58 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 279
+[13-Sep-2022 11:58:58 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 280
+[13-Sep-2022 11:58:58 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 281
+[13-Sep-2022 11:58:58 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 281
+[13-Sep-2022 11:58:58 UTC] PHP Warning:  include(include/footer.php): failed to open stream: No such file or directory in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 372
+[13-Sep-2022 11:58:58 UTC] PHP Warning:  include(): Failed opening 'include/footer.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 372
+[13-Sep-2022 11:58:58 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 457
+[13-Sep-2022 11:58:58 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 49
+[13-Sep-2022 11:58:58 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 50
+[13-Sep-2022 11:58:58 UTC] PHP Fatal error:  Uncaught Error: Call to a member function escape_string() on null in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post.php on line 6
+[13-Sep-2022 12:05:42 UTC] PHP Fatal error:  Uncaught Error: Call to a member function escape_string() on null in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post (1).php:6
+Stack trace:
+#0 {main}
+  thrown in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post (1).php on line 6
+[13-Sep-2022 12:05:42 UTC] PHP Warning:  include(include/header.php): failed to open stream: No such file or directory in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 30
+[13-Sep-2022 12:05:42 UTC] PHP Warning:  include(): Failed opening 'include/header.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 30
+[13-Sep-2022 12:05:42 UTC] PHP Warning:  include(include/dbcon.php): failed to open stream: No such file or directory in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 31
+[13-Sep-2022 12:05:42 UTC] PHP Warning:  include(): Failed opening 'include/dbcon.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 31
+[13-Sep-2022 12:05:42 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 77
+[13-Sep-2022 12:05:42 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 49
+[13-Sep-2022 12:05:42 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 50
+[13-Sep-2022 12:05:42 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 141
+[13-Sep-2022 12:05:42 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 49
+[13-Sep-2022 12:05:42 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 50
+[13-Sep-2022 12:05:42 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 176
+[13-Sep-2022 12:05:42 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 176
+[13-Sep-2022 12:05:42 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 177
+[13-Sep-2022 12:05:42 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 275
+[13-Sep-2022 12:05:42 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 275
+[13-Sep-2022 12:05:42 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 276
+[13-Sep-2022 12:05:42 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 279
+[13-Sep-2022 12:05:42 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 279
+[13-Sep-2022 12:05:42 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 280
+[13-Sep-2022 12:05:42 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 281
+[13-Sep-2022 12:05:42 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 281
+[13-Sep-2022 12:05:42 UTC] PHP Warning:  include(include/footer.php): failed to open stream: No such file or directory in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 372
+[13-Sep-2022 12:05:42 UTC] PHP Warning:  include(): Failed opening 'include/footer.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 372
+[13-Sep-2022 12:05:42 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 457
+[13-Sep-2022 12:05:42 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 49
+[13-Sep-2022 12:05:42 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 50
+[13-Sep-2022 12:05:42 UTC] PHP Fatal error:  Uncaught Error: Call to a member function escape_string() on null in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post.php on line 6
+[13-Sep-2022 12:05:59 UTC] PHP Fatal error:  Uncaught Error: Call to a member function escape_string() on null in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post (1).php:6
+Stack trace:
+#0 {main}
+  thrown in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post (1).php on line 6
+[13-Sep-2022 12:05:59 UTC] PHP Warning:  include(include/header.php): failed to open stream: No such file or directory in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 30
+[13-Sep-2022 12:05:59 UTC] PHP Warning:  include(): Failed opening 'include/header.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 30
+[13-Sep-2022 12:05:59 UTC] PHP Warning:  include(include/dbcon.php): failed to open stream: No such file or directory in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 31
+[13-Sep-2022 12:05:59 UTC] PHP Warning:  include(): Failed opening 'include/dbcon.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 31
+[13-Sep-2022 12:05:59 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 77
+[13-Sep-2022 12:05:59 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 49
+[13-Sep-2022 12:05:59 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 50
+[13-Sep-2022 12:05:59 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 141
+[13-Sep-2022 12:05:59 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 49
+[13-Sep-2022 12:05:59 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 50
+[13-Sep-2022 12:05:59 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 176
+[13-Sep-2022 12:05:59 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 176
+[13-Sep-2022 12:05:59 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 177
+[13-Sep-2022 12:05:59 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 275
+[13-Sep-2022 12:05:59 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 275
+[13-Sep-2022 12:05:59 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 276
+[13-Sep-2022 12:05:59 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 279
+[13-Sep-2022 12:05:59 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 279
+[13-Sep-2022 12:05:59 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 280
+[13-Sep-2022 12:05:59 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 281
+[13-Sep-2022 12:05:59 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 281
+[13-Sep-2022 12:05:59 UTC] PHP Warning:  include(include/footer.php): failed to open stream: No such file or directory in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 372
+[13-Sep-2022 12:05:59 UTC] PHP Warning:  include(): Failed opening 'include/footer.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 372
+[13-Sep-2022 12:05:59 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 457
+[13-Sep-2022 12:05:59 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 49
+[13-Sep-2022 12:05:59 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 50
+[13-Sep-2022 12:06:00 UTC] PHP Fatal error:  Uncaught Error: Call to a member function escape_string() on null in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post.php on line 6
+[13-Sep-2022 12:06:53 UTC] PHP Fatal error:  Uncaught Error: Call to a member function escape_string() on null in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post (1).php:6
+Stack trace:
+#0 {main}
+  thrown in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post (1).php on line 6
+[13-Sep-2022 12:06:53 UTC] PHP Warning:  include(include/header.php): failed to open stream: No such file or directory in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 30
+[13-Sep-2022 12:06:53 UTC] PHP Warning:  include(): Failed opening 'include/header.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 30
+[13-Sep-2022 12:06:53 UTC] PHP Warning:  include(include/dbcon.php): failed to open stream: No such file or directory in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 31
+[13-Sep-2022 12:06:53 UTC] PHP Warning:  include(): Failed opening 'include/dbcon.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 31
+[13-Sep-2022 12:06:53 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 77
+[13-Sep-2022 12:06:53 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 49
+[13-Sep-2022 12:06:53 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 50
+[13-Sep-2022 12:06:53 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 141
+[13-Sep-2022 12:06:53 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 49
+[13-Sep-2022 12:06:53 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 50
+[13-Sep-2022 12:06:53 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 176
+[13-Sep-2022 12:06:53 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 176
+[13-Sep-2022 12:06:53 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 177
+[13-Sep-2022 12:06:53 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 275
+[13-Sep-2022 12:06:53 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 275
+[13-Sep-2022 12:06:53 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 276
+[13-Sep-2022 12:06:53 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 279
+[13-Sep-2022 12:06:53 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 279
+[13-Sep-2022 12:06:53 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 280
+[13-Sep-2022 12:06:53 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 281
+[13-Sep-2022 12:06:53 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 281
+[13-Sep-2022 12:06:53 UTC] PHP Warning:  include(include/footer.php): failed to open stream: No such file or directory in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 372
+[13-Sep-2022 12:06:53 UTC] PHP Warning:  include(): Failed opening 'include/footer.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 372
+[13-Sep-2022 12:06:53 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 457
+[13-Sep-2022 12:06:53 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 49
+[13-Sep-2022 12:06:53 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 50
+[13-Sep-2022 12:08:15 UTC] PHP Fatal error:  Uncaught Error: Call to a member function escape_string() on null in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post (1).php:6
+Stack trace:
+#0 {main}
+  thrown in /home/m46mu4920o1z/public_html/student_reg_image/add_registration_post (1).php on line 6
+[13-Sep-2022 12:08:15 UTC] PHP Warning:  include(include/header.php): failed to open stream: No such file or directory in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 30
+[13-Sep-2022 12:08:15 UTC] PHP Warning:  include(): Failed opening 'include/header.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 30
+[13-Sep-2022 12:08:15 UTC] PHP Warning:  include(include/dbcon.php): failed to open stream: No such file or directory in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 31
+[13-Sep-2022 12:08:15 UTC] PHP Warning:  include(): Failed opening 'include/dbcon.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 31
+[13-Sep-2022 12:08:15 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 77
+[13-Sep-2022 12:08:15 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 49
+[13-Sep-2022 12:08:15 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 50
+[13-Sep-2022 12:08:15 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 141
+[13-Sep-2022 12:08:15 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 49
+[13-Sep-2022 12:08:15 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 50
+[13-Sep-2022 12:08:15 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 176
+[13-Sep-2022 12:08:15 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 176
+[13-Sep-2022 12:08:15 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 177
+[13-Sep-2022 12:08:15 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 275
+[13-Sep-2022 12:08:15 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 275
+[13-Sep-2022 12:08:15 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 276
+[13-Sep-2022 12:08:15 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 279
+[13-Sep-2022 12:08:15 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 279
+[13-Sep-2022 12:08:15 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 280
+[13-Sep-2022 12:08:15 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 281
+[13-Sep-2022 12:08:15 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 281
+[13-Sep-2022 12:08:15 UTC] PHP Warning:  include(include/footer.php): failed to open stream: No such file or directory in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 372
+[13-Sep-2022 12:08:15 UTC] PHP Warning:  include(): Failed opening 'include/footer.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 372
+[13-Sep-2022 12:08:15 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 457
+[13-Sep-2022 12:08:15 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 49
+[13-Sep-2022 12:08:15 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/m46mu4920o1z/public_html/student_reg_image/teacher_attendence.php on line 50

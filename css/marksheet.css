@@ -1,0 +1,90 @@
+section{
+  width: 21cm;  
+  height: 30.3cm; 
+  margin: 0px 65px 200px 65px;
+}
+
+.txt-center {
+    text-align: center;
+}
+
+.BoxA{position:relative;margin-bottom:20px;margin-left:80px;}
+
+.BoxA h2{
+	font-size:35px;
+	text-align: center;
+	color: #0a44c9;
+	font-family: 'Source Serif Pro', serif;
+	font-weight:bold;
+}
+
+.BoxA p{
+	font-size:15px;
+	text-align: center;
+	color: #f6a724;
+}
+
+.BoxA h2, .BoxA p {
+    margin: 0;
+}
+
+.mr{text-align:center;}
+
+/*.border- {
+    border: 1px solid #000 !important;
+}*/
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@700&display=swap');
+
+.position{position:relative;}
+
+.pd{padding:5px;}
+
+.pd1{padding:5px 0px 5px 5px;}
+.tb{position:relative;}
+
+.iamge img{position:absolute;left:42%;top:135%;}
+
+@media print{
+
+section{
+    margin-top:20px;
+	margin-left:40px;
+	margin-bottom:800px;
+	width: 21cm;  
+	height: 29.7cm; 
+}
+
+.tb{margin-bottom:100%;}
+
+.txt-center {
+    text-align: center;
+}
+
+.BoxA{position:relative;margin-bottom:20px;margin-left:80px;}
+
+.BoxA p{
+	font-size:22px;
+	text-align: center;
+	color: #f6a724;
+}
+
+.BoxA h2{
+	font-size:40px;
+	text-align: center;
+	color: #0a44c9;
+	font-family: 'Source Serif Pro', serif;
+	font-weight:bold;
+	padding-bottom:10px;
+}
+
+.tb{position:relative;}
+
+.iamge img{position:absolute;left:42%;top:71%;}
+
+}
+/*.table-bordered td, .table-bordered th, .table thead th {
+    border: 1px solid #000000 !important;
+}*/
+
+

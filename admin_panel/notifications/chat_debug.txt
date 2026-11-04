@@ -1,0 +1,1366 @@
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 0
+    [sender_type] => teacher
+    [sender_id] => 1
+    [receiver_type] => NURSERY
+    [message] => msb
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 0
+    [sender_type] => teacher
+    [sender_id] => 1
+    [receiver_type] => NURSERY
+    [message] => msb
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 0
+    [sender_type] => teacher
+    [sender_id] => 1
+    [receiver_type] => NURSERY
+    [message] => msb
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 0
+    [sender_type] => teacher
+    [sender_id] => 1
+    [receiver_type] => NURSERY
+    [message] => msb
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 0
+    [sender_type] => teacher
+    [sender_id] => 1
+    [receiver_type] => NURSERY
+    [message] => msb
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 0
+    [sender_type] => teacher
+    [sender_id] => 1
+    [receiver_type] => NURSERY
+    [message] => msb
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 0
+    [sender_type] => teacher
+    [sender_id] => 1
+    [receiver_type] => NURSERY
+    [message] => msb
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 0
+    [sender_type] => teacher
+    [sender_id] => 1
+    [receiver_type] => NURSERY
+    [message] => msb
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 0
+    [sender_type] => teacher
+    [sender_id] => 1
+    [receiver_type] => NURSERY
+    [message] => msb
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 0
+    [sender_type] => teacher
+    [sender_id] => 1
+    [receiver_type] => NURSERY
+    [message] => msb
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 0
+    [sender_type] => teacher
+    [sender_id] => 1
+    [receiver_type] => NURSERY
+    [message] => msb
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 0
+    [sender_type] => teacher
+    [sender_id] => 1
+    [receiver_type] => NURSERY
+    [message] => msb
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 0
+    [sender_type] => teacher
+    [sender_id] => 1
+    [receiver_type] => NURSERY
+    [message] => msb
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 0
+    [sender_type] => teacher
+    [sender_id] => 1
+    [receiver_type] => NURSERY
+    [message] => msb
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 0
+    [sender_type] => teacher
+    [sender_id] => 1
+    [receiver_type] => NURSERY
+    [message] => msb
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 0
+    [sender_type] => teacher
+    [sender_id] => 1
+    [receiver_type] => NURSERY
+    [message] => msb
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 0
+    [sender_type] => teacher
+    [sender_id] => 1
+    [receiver_type] => NURSERY
+    [message] => msb
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 0
+    [sender_type] => teacher
+    [sender_id] => 1
+    [receiver_type] => NURSERY
+    [message] => msb
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 0
+    [sender_type] => teacher
+    [sender_id] => 1
+    [receiver_type] => NURSERY
+    [message] => msb
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 0
+    [sender_type] => teacher
+    [sender_id] => 1
+    [receiver_type] => NURSERY
+    [message] => msb
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 0
+    [sender_type] => teacher
+    [sender_id] => 1
+    [receiver_type] => NURSERY
+    [message] => msb
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 0
+    [sender_type] => teacher
+    [sender_id] => 1
+    [receiver_type] => NURSERY
+    [message] => msb
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 0
+    [sender_type] => teacher
+    [sender_id] => 1
+    [receiver_type] => NURSERY
+    [message] => jgkhfghg
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 0
+    [sender_type] => teacher
+    [sender_id] => 1
+    [receiver_type] => NURSERY
+    [message] => jkghgcgc
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 0
+    [sender_type] => teacher
+    [sender_id] => 1
+    [receiver_type] => NURSERY
+    [message] => msb
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 0
+    [sender_type] => teacher
+    [sender_id] => 1
+    [receiver_type] => NURSERY
+    [message] => msb
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 0
+    [sender_type] => teacher
+    [sender_id] => 1
+    [receiver_type] => NURSERY
+    [message] => msb
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 322
+    [sender_type] => teacher
+    [sender_id] => 10
+    [receiver_type] => NURSERY
+    [message] =>  It is hereby notified  to all guardians that our school will remain closed on 12/01/2026(Monday)on account of Swami Vivekananda Birthday.
+
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 322
+    [sender_type] => teacher
+    [sender_id] => 10
+    [receiver_type] => KINDER GARDEN
+    [message] => It is hereby notified to all guardians that our school will remain closed on 12/01/2026(Monday)on account of Swami Vivekananda Birthday.
+
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 322
+    [sender_type] => teacher
+    [sender_id] => 10
+    [receiver_type] => STANDERD 1
+    [message] => *NOTICE*
+This is hereby informed to  all guardians that our school has been invited for a celebration *150th years  of Rasulpur B.M High School* 
+We are also going to celebrate *Swami Viveknanda's Birthday* on that day.
+
+The programme as follows:
+*Date-12/01/2026*
+*Time-08:30am*
+We are also going to Celebrate Swami Vivekananda's Birthday at school on this day.
+After celebration we all teachers , along with guardians will go to Rasulpur B.M.High School to join the rally.
+
+*Please note*-Student will not be allowed to join the rally without guardian.
+
+★ *Every student will come with proper dress and on time*
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 322
+    [sender_type] => teacher
+    [sender_id] => 10
+    [receiver_type] => STANDERD 1
+    [message] => *NOTICE*
+This is hereby informed to  all guardians that our school has been invited for a celebration *150th years  of Rasulpur B.M High School* 
+We are also going to celebrate *Swami Viveknanda's Birthday* on that day.
+
+The programme as follows:
+*Date-12/01/2026*
+*Time-08:30am*
+We are also going to Celebrate Swami Vivekananda's Birthday at school on this day.
+After celebration we all teachers , along with guardians will go to Rasulpur B.M.High School to join the rally.
+
+*Please note*-Student will not be allowed to join the rally without guardian.
+
+★ *Every student will come with proper dress and on time*
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 322
+    [sender_type] => teacher
+    [sender_id] => 10
+    [receiver_type] => STANDERD 2
+    [message] => *NOTICE*
+This is hereby informed to  all guardians that our school has been invited for a celebration *150th years  of Rasulpur B.M High School* 
+We are also going to celebrate *Swami Viveknanda's Birthday* on that day.
+
+The programme as follows:
+*Date-12/01/2026*
+*Time-08:30am*
+We are also going to Celebrate Swami Vivekananda's Birthday at school on this day.
+After celebration we all teachers , along with guardians will go to Rasulpur B.M.High School to join the rally.
+
+*Please note*-Student will not be allowed to join the rally without guardian.
+
+★ *Every student will come with proper dress and on time*
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 322
+    [sender_type] => teacher
+    [sender_id] => 10
+    [receiver_type] => STANDERD 3
+    [message] => *NOTICE*
+This is hereby informed to  all guardians that our school has been invited for a celebration *150th years  of Rasulpur B.M High School* 
+We are also going to celebrate *Swami Viveknanda's Birthday* on that day.
+
+The programme as follows:
+*Date-12/01/2026*
+*Time-08:30am*
+We are also going to Celebrate Swami Vivekananda's Birthday at school on this day.
+After celebration we all teachers , along with guardians will go to Rasulpur B.M.High School to join the rally.
+
+*Please note*-Student will not be allowed to join the rally without guardian.
+
+★ *Every student will come with proper dress and on time*
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 322
+    [sender_type] => teacher
+    [sender_id] => 10
+    [receiver_type] => STANDERD 4
+    [message] => *NOTICE*
+This is hereby informed to  all guardians that our school has been invited for a celebration *150th years  of Rasulpur B.M High School* 
+We are also going to celebrate *Swami Viveknanda's Birthday* on that day.
+
+The programme as follows:
+*Date-12/01/2026*
+*Time-08:30am*
+We are also going to Celebrate Swami Vivekananda's Birthday at school on this day.
+After celebration we all teachers , along with guardians will go to Rasulpur B.M.High School to join the rally.
+
+*Please note*-Student will not be allowed to join the rally without guardian.
+
+★ *Every student will come with proper dress and on time*
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 322
+    [sender_type] => teacher
+    [sender_id] => 10
+    [receiver_type] => STANDERD 5
+    [message] => *NOTICE*
+This is hereby informed to  all guardians that our school has been invited for a celebration *150th years  of Rasulpur B.M High School* 
+We are also going to celebrate *Swami Viveknanda's Birthday* on that day.
+
+The programme as follows:
+*Date-12/01/2026*
+*Time-08:30am*
+We are also going to Celebrate Swami Vivekananda's Birthday at school on this day.
+After celebration we all teachers , along with guardians will go to Rasulpur B.M.High School to join the rally.
+
+*Please note*-Student will not be allowed to join the rally without guardian.
+
+★ *Every student will come with proper dress and on time*
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 0
+    [sender_type] => teacher
+    [sender_id] => 15
+    [receiver_type] => STANDERD 2
+    [message] => If anyone has Aarushi Bairagi's English book, please bring it to school the next day.
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 426
+    [sender_type] => teacher
+    [sender_id] => 3
+    [receiver_type] => STANDERD 1
+    [message] => Every one will bring your English text book tomorrow .
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 424
+    [sender_type] => teacher
+    [sender_id] => 10
+    [receiver_type] => STANDERD 1
+    [message] => If anyone has received the copy of sk mahir,please submit it to the office.
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 440
+    [sender_type] => teacher
+    [sender_id] => 4
+    [receiver_type] => STANDERD 1
+    [message] => Math class test will be held on 25/3/26 Wednesday.
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 440
+    [sender_type] => teacher
+    [sender_id] => 4
+    [receiver_type] => STANDERD 3
+    [message] => SST class test will be held on 24/3/26 Tuesday.
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 426
+    [sender_type] => teacher
+    [sender_id] => 3
+    [receiver_type] => STANDERD 1
+    [message] => Science class test will be held on 23/03/2026 Monday.
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 440
+    [sender_type] => teacher
+    [sender_id] => 4
+    [receiver_type] => NURSERY
+    [message] => English.test will be held on 23.3.26 Monday.
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 426
+    [sender_type] => teacher
+    [sender_id] => 3
+    [receiver_type] => STANDERD 1
+    [message] => English class test will be held on 24/03/2026 Tuesday.
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 440
+    [sender_type] => teacher
+    [sender_id] => 4
+    [receiver_type] => NURSERY
+    [message] => L. Number class test will be held on 25.3.26 Wednesday.
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 426
+    [sender_type] => teacher
+    [sender_id] => 3
+    [receiver_type] => STANDERD 2
+    [message] => Science class test will be held on 25/03/2026 Wednesday.
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 426
+    [sender_type] => teacher
+    [sender_id] => 3
+    [receiver_type] => STANDERD 4
+    [message] => Hindi class test will be held on 25/03/3026 Wednesday
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 440
+    [sender_type] => teacher
+    [sender_id] => 4
+    [receiver_type] => STANDERD 5
+    [message] => SST class test will be held on 24.3.26  Tuesday 
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 428
+    [sender_type] => teacher
+    [sender_id] => 15
+    [receiver_type] => KINDER GARDEN
+    [message] => Science class test will be held on 23/03/2026 (Monday)
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 426
+    [sender_type] => teacher
+    [sender_id] => 3
+    [receiver_type] => STANDERD 5
+    [message] => Class 5 Science class test will be held on 26/03/2026 Thursday
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 428
+    [sender_type] => teacher
+    [sender_id] => 15
+    [receiver_type] => STANDERD 4
+    [message] => English work class test will be held on 26/03/2026 (Thursday)
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 492
+    [sender_type] => teacher
+    [sender_id] => 9
+    [receiver_type] => KINDER GARDEN
+    [message] => Math and computer class kg test will be held on 24 march 2026 Tuesday
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 492
+    [sender_type] => teacher
+    [sender_id] => 9
+    [receiver_type] => STANDERD 4
+    [message] => Bengali class 4 class test will be held on 23March 2026 Monday
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 492
+    [sender_type] => teacher
+    [sender_id] => 9
+    [receiver_type] => STANDERD 2
+    [message] => Bengali  class test will be held on 23March 2026 Monday
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 492
+    [sender_type] => teacher
+    [sender_id] => 9
+    [receiver_type] => STANDERD 3
+    [message] => Bengali class test will be held on 23March 2026 Monday
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 507
+    [sender_type] => teacher
+    [sender_id] => 7
+    [receiver_type] => STANDERD 4
+    [message] => আগামীকাল সকালে আনন্দপাঠ বই নিয়ে আসবে।
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 440
+    [sender_type] => teacher
+    [sender_id] => 4
+    [receiver_type] => STANDERD 1
+    [message] => Bengali class test will be held on 24/3/26. ( Tuesday)
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 515
+    [sender_type] => teacher
+    [sender_id] => 7
+    [receiver_type] => STANDERD 2
+    [message] => English Text and work class test will be held on (25.03.26)on Wednesday.
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 438
+    [sender_type] => teacher
+    [sender_id] => 8
+    [receiver_type] => STANDERD 1
+    [message] => Computer class1 class test will be held on 27/03/Friday
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 438
+    [sender_type] => teacher
+    [sender_id] => 8
+    [receiver_type] => STANDERD 1
+    [message] => Gk class 1 class test will be held on 26/03/26 Thursday.
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 438
+    [sender_type] => teacher
+    [sender_id] => 8
+    [receiver_type] => STANDERD 1
+    [message] => Hindi class 1 test will be held on 26/03/26 Thursday
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 438
+    [sender_type] => teacher
+    [sender_id] => 8
+    [receiver_type] => STANDERD 2
+    [message] => Gk class test will be held on 25/03/26 Wednesday.
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 438
+    [sender_type] => teacher
+    [sender_id] => 8
+    [receiver_type] => STANDERD 2
+    [message] => Hindi class test will be held on 27/03/26 Friday.
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 438
+    [sender_type] => teacher
+    [sender_id] => 8
+    [receiver_type] => STANDERD 1
+    [message] => English work class test will be held on 02/04/26 Tuesda
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 515
+    [sender_type] => teacher
+    [sender_id] => 7
+    [receiver_type] => STANDERD 5
+    [message] => Bengali (Anandapath)class test will be held on 30.03.26(Monday)
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 516
+    [sender_type] => teacher
+    [sender_id] => 7
+    [receiver_type] => NURSERY
+    [message] => W. ABC class test will be held on 01/04/26(Wednesday )
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 426
+    [sender_type] => teacher
+    [sender_id] => 3
+    [receiver_type] => STANDERD 3
+    [message] => Computer class test will be held on 27/03/2026
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 517
+    [sender_type] => teacher
+    [sender_id] => 7
+    [receiver_type] => STANDERD 4
+    [message] => Tomorrow everybody will bring Anandapath book.
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 492
+    [sender_type] => teacher
+    [sender_id] => 9
+    [receiver_type] => STANDERD 4
+    [message] => Class 4 g.k class test will be held on 31.3.26(Tuesday)
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 492
+    [sender_type] => teacher
+    [sender_id] => 9
+    [receiver_type] => STANDERD 5
+    [message] => Class 5 g.k class test will be held on 31.3.26(Tuesday)
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 506
+    [sender_type] => teacher
+    [sender_id] => 5
+    [receiver_type] => STANDERD 1
+    [message] => Grammar class will be held on 2.4.26 on Thursday 
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 506
+    [sender_type] => teacher
+    [sender_id] => 5
+    [receiver_type] => STANDERD 4
+    [message] => Class 4 class test will be held on Wednesday 1/4/26
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 506
+    [sender_type] => teacher
+    [sender_id] => 5
+    [receiver_type] => STANDERD 4
+    [message] => Class 4 english class test will be held on Thursday 2/4/26
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 506
+    [sender_type] => teacher
+    [sender_id] => 5
+    [receiver_type] => STANDERD 4
+    [message] => Grammar class test will be held on Wednesday 1/4/26
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 506
+    [sender_type] => teacher
+    [sender_id] => 5
+    [receiver_type] => STANDERD 5
+    [message] => Class 5 grammar class test will be held on Wednesday 
+1/4/26
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 506
+    [sender_type] => teacher
+    [sender_id] => 5
+    [receiver_type] => STANDERD 2
+    [message] => Class 2 class test will be held on Wednesday 1/4/26
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 506
+    [sender_type] => teacher
+    [sender_id] => 5
+    [receiver_type] => STANDERD 3
+    [message] => Class 3 class test will be held on Wednesday 1/4/26
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 440
+    [sender_type] => teacher
+    [sender_id] => 4
+    [receiver_type] => STANDERD 3
+    [message] => Hindi class test will be held on 2/4/26 ( Thursday).
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 428
+    [sender_type] => teacher
+    [sender_id] => 15
+    [receiver_type] => KINDER GARDEN
+    [message] => Bengali class test will be held on 31/03/2026(Tuesday)
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 428
+    [sender_type] => teacher
+    [sender_id] => 15
+    [receiver_type] => STANDERD 2
+    [message] => Computer class test will be held on 31/03/2026(Tuesday)
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 428
+    [sender_type] => teacher
+    [sender_id] => 15
+    [receiver_type] => STANDERD 3
+    [message] => English text class test will be held on 31/03/2026
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 520
+    [sender_type] => teacher
+    [sender_id] => 7
+    [receiver_type] => STANDERD 4
+    [message] => SST class test will be held on 07.04.26(Tuesday )
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 522
+    [sender_type] => teacher
+    [sender_id] => 7
+    [receiver_type] => STANDERD 4
+    [message] => Anandapath class test will be held on 08.04.26(Wednesday)
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 524
+    [sender_type] => teacher
+    [sender_id] => 7
+    [receiver_type] => NURSERY
+    [message] => Bengali class test will be held on 10.04.26(Friday)
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 526
+    [sender_type] => teacher
+    [sender_id] => 7
+    [receiver_type] => STANDERD 5
+    [message] => Everybody bring bengali book.
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 536
+    [sender_type] => teacher
+    [sender_id] => 7
+    [receiver_type] => STANDERD 3
+    [message] => Next Monday (15.06.26)everybody will come and ready for conversation with teacher and student about class homework.
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 537
+    [sender_type] => teacher
+    [sender_id] => 7
+    [receiver_type] => STANDERD 5
+    [message] => Everybody will bring bengali and anandapath book tomorrow.
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 537
+    [sender_type] => teacher
+    [sender_id] => 7
+    [receiver_type] => STANDERD 2
+    [message] => Everybody will memories the poem 'The Cow' in Thursday.
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 492
+    [sender_type] => teacher
+    [sender_id] => 9
+    [receiver_type] => STANDERD 2
+    [message] => Class 2 bengali class test will be held on Monday 20.7.2026
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 492
+    [sender_type] => teacher
+    [sender_id] => 9
+    [receiver_type] => STANDERD 3
+    [message] => Bengali class test will be held on 21.7.26(Tuesday)
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 492
+    [sender_type] => teacher
+    [sender_id] => 9
+    [receiver_type] => STANDERD 4
+    [message] => Bengali class test will be held 20.6.26
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 492
+    [sender_type] => teacher
+    [sender_id] => 9
+    [receiver_type] => STANDERD 5
+    [message] => G.k.class test will be held on 23.6.26 Thursday 
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 492
+    [sender_type] => teacher
+    [sender_id] => 9
+    [receiver_type] => STANDERD 4
+    [message] =>  Class 4 Bengali class test will be held on 20.7.26 Monday 
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 492
+    [sender_type] => teacher
+    [sender_id] => 9
+    [receiver_type] => STANDERD 5
+    [message] => Class 5 G.k class test will be held on 23.7.26 (Thursday)
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 440
+    [sender_type] => teacher
+    [sender_id] => 4
+    [receiver_type] => NURSERY
+    [message] => Eng.Text  and  L. number class test will be held on Wednesday ( 22.7.26).
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 440
+    [sender_type] => teacher
+    [sender_id] => 4
+    [receiver_type] => STANDERD 3
+    [message] => SST class test will be held on Wednesday (22.7.26).
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 440
+    [sender_type] => teacher
+    [sender_id] => 4
+    [receiver_type] => STANDERD 1
+    [message] => Math class test will be held on Wednesday (22.7.26).
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 440
+    [sender_type] => teacher
+    [sender_id] => 4
+    [receiver_type] => STANDERD 1
+    [message] => Bengali class test will be held on Friday(.24.7.26)
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 440
+    [sender_type] => teacher
+    [sender_id] => 4
+    [receiver_type] => STANDERD 5
+    [message] => SST class test will be held on Thursday ( 23.7.26)
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 556
+    [sender_type] => teacher
+    [sender_id] => 7
+    [receiver_type] => NURSERY
+    [message] => Writing ABC class test will be held on 23.07.26(Wednesday)
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 556
+    [sender_type] => teacher
+    [sender_id] => 7
+    [receiver_type] => NURSERY
+    [message] => Bengali class test will be held on 24.07.26(Friday)
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 492
+    [sender_type] => teacher
+    [sender_id] => 9
+    [receiver_type] => KINDER GARDEN
+    [message] => Math and computer class test will be held on 27.7.26(Monday)
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 561
+    [sender_type] => teacher
+    [sender_id] => 7
+    [receiver_type] => STANDERD 5
+    [message] => Bengali class test will be held on 29.07.26(Wednesday )
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 561
+    [sender_type] => teacher
+    [sender_id] => 7
+    [receiver_type] => STANDERD 4
+    [message] => SST class test will be held on 29.07.26(Wednesday )
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 426
+    [sender_type] => teacher
+    [sender_id] => 3
+    [receiver_type] => STANDERD 1
+    [message] => English class test will be held on 27/07/26(Monday)
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 426
+    [sender_type] => teacher
+    [sender_id] => 3
+    [receiver_type] => STANDERD 1
+    [message] => Science class test will be held on 28/07/26(Tuesday)
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 426
+    [sender_type] => teacher
+    [sender_id] => 3
+    [receiver_type] => STANDERD 4
+    [message] => Hindi class test will be held on 27/07/26(Monday)
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 426
+    [sender_type] => teacher
+    [sender_id] => 3
+    [receiver_type] => STANDERD 5
+    [message] => Science class test will be held on 31/07/26(Friday)
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 426
+    [sender_type] => teacher
+    [sender_id] => 3
+    [receiver_type] => STANDERD 3
+    [message] => Computer class test will be held on 31/07/26(Friday)
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 426
+    [sender_type] => teacher
+    [sender_id] => 3
+    [receiver_type] => STANDERD 2
+    [message] => Science class test will be held on 27/07/28(Monday)
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 427
+    [sender_type] => teacher
+    [sender_id] => 1
+    [receiver_type] => STANDERD 3
+    [message] => Math class test will be taken on 28.07.26 , Tuesday. 
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 427
+    [sender_type] => teacher
+    [sender_id] => 1
+    [receiver_type] => STANDERD 2
+    [message] => Math class test will be taken on 28.07.26 , Tuesday. 
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 427
+    [sender_type] => teacher
+    [sender_id] => 1
+    [receiver_type] => STANDERD 5
+    [message] => Math class test will be taken on 28.07.26 , Tuesday. 
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 427
+    [sender_type] => teacher
+    [sender_id] => 1
+    [receiver_type] => STANDERD 3
+    [message] => Science class test will be taken on 30.07.26 , Thursday 
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 427
+    [sender_type] => teacher
+    [sender_id] => 1
+    [receiver_type] => STANDERD 4
+    [message] => Math class test will be taken on 30.07.26 , Thursday. 
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 427
+    [sender_type] => teacher
+    [sender_id] => 1
+    [receiver_type] => STANDERD 4
+    [message] => Science class test will be taken on 03.08.26 , monday
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 561
+    [sender_type] => teacher
+    [sender_id] => 7
+    [receiver_type] => STANDERD 2
+    [message] => English Text and work class test will be held on 30.07.26(Thursday)
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 561
+    [sender_type] => teacher
+    [sender_id] => 7
+    [receiver_type] => STANDERD 4
+    [message] => Bengali (Anandapath)class test will be held on 31.07.26(Friday )
+
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 561
+    [sender_type] => teacher
+    [sender_id] => 7
+    [receiver_type] => STANDERD 5
+    [message] => Tomorrow everybody will bring Bengali Swarnakamal book.
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 438
+    [sender_type] => teacher
+    [sender_id] => 8
+    [receiver_type] => KINDER GARDEN
+    [message] => English class test will be held on 31/07/26 Friday.
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 438
+    [sender_type] => teacher
+    [sender_id] => 8
+    [receiver_type] => STANDERD 2
+    [message] => GK class test will be held on 29/07/26Wednesday
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 438
+    [sender_type] => teacher
+    [sender_id] => 8
+    [receiver_type] => STANDERD 2
+    [message] => Hindi class test will be held on 30/07/26 Thursday
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 438
+    [sender_type] => teacher
+    [sender_id] => 8
+    [receiver_type] => STANDERD 5
+    [message] => English work class test will be held on 30/07/26 Thursday
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 438
+    [sender_type] => teacher
+    [sender_id] => 8
+    [receiver_type] => STANDERD 5
+    [message] => Hindi class test will be held on 29/07/26 Wednesday
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 438
+    [sender_type] => teacher
+    [sender_id] => 8
+    [receiver_type] => STANDERD 1
+    [message] => Gk class test will be held on 28/07/26 Tuesday
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 438
+    [sender_type] => teacher
+    [sender_id] => 8
+    [receiver_type] => STANDERD 1
+    [message] => Computer class test will be held on 31/07/Friday
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 438
+    [sender_type] => teacher
+    [sender_id] => 8
+    [receiver_type] => STANDERD 1
+    [message] => Hindi and English work class test will be held on 30/07/26. Thursday.
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 428
+    [sender_type] => teacher
+    [sender_id] => 15
+    [receiver_type] => STANDERD 3
+    [message] => English text class test will be taken on 29.07.26 , Wednesday.
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 428
+    [sender_type] => teacher
+    [sender_id] => 15
+    [receiver_type] => STANDERD 3
+    [message] => G.k class test will be taken on 30.07.26 , Thursday.
+)
+
+Array
+(
+    [action] => send_chat
+    [behaviour_id] => 428
+    [sender_type] => teacher
+    [sender_id] => 15
+    [receiver_type] => STANDERD 5
+    [message] => English text class test will be taken on 30.07.26 , Thursday.
+)
+

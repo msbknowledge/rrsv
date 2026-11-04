@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Multiple CKEditor Example</title>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://msbinfotech.in/rrsv/libray/ckeditor/ckeditor.js"></script>
+</head>
+<body>
+
+<form>
+  <textarea id="description" class="ckeditor-field"></textarea>
+  <textarea id="remarks" class="ckeditor-field"></textarea>
+  <textarea id="comments" class="ckeditor-field"></textarea>
+  <textarea id="editor1"></textarea>
+</form>
+
+<script>
+  var baseurl = window.location.origin + '/';
+  var activeEditor;
+
+  $(function() {
+    // Initialize all editors
+    $('.ckeditor-field').each(function () {
+      var editor = CKEDITOR.replace(this.id, { height: 300 });
+      editor.on('focus', function() { activeEditor = this; });
+    });
+
+    // Special editor
+    var mainEditor = CKEDITOR.replace('editor1', {
+      customConfig: baseurl + 'ckeditor_config.js'
+    });
+    mainEditor.on('focus', function() { activeEditor = this; });
+  });
+
+  function InsertHTML(content_html) {
+    if (activeEditor && activeEditor.mode === 'wysiwyg') {
+      activeEditor.insertHtml(content_html);
+    } else {
+      alert('Please focus an editor first.');
+    }
+  }
+</script>
+
+</body>
+</html>

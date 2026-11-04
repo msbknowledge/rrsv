@@ -1,0 +1,13 @@
+[28-Dec-2025 04:28:58 UTC] PHP Warning:  include(include/dbcon.php): failed to open stream: No such file or directory in /home/m46mu4920o1z/public_html/admin/reports/report.php on line 82
+[28-Dec-2025 04:28:58 UTC] PHP Warning:  include(): Failed opening 'include/dbcon.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/m46mu4920o1z/public_html/admin/reports/report.php on line 82
+[28-Dec-2025 04:28:58 UTC] PHP Notice:  Undefined variable: myDB in /home/m46mu4920o1z/public_html/admin/reports/report.php on line 96
+[28-Dec-2025 04:28:58 UTC] PHP Fatal error:  Uncaught Error: Call to a member function escape_string() on null in /home/m46mu4920o1z/public_html/admin/reports/report.php:96
+Stack trace:
+#0 {main}
+  thrown in /home/m46mu4920o1z/public_html/admin/reports/report.php on line 96
+[28-Dec-2025 04:31:01 UTC] PHP Notice:  Undefined index: scl_class in /home/m46mu4920o1z/public_html/admin/reports/report.php on line 101
+[28-Dec-2025 04:31:01 UTC] PHP Notice:  Undefined variable: incomeamount in /home/m46mu4920o1z/public_html/admin/reports/report.php on line 222
+[28-Dec-2025 04:31:01 UTC] PHP Notice:  Undefined variable: expamount in /home/m46mu4920o1z/public_html/admin/reports/report.php on line 223
+[28-Dec-2025 04:36:39 UTC] PHP Notice:  Undefined index: scl_class in /home/m46mu4920o1z/public_html/admin/reports/report.php on line 98
+[28-Dec-2025 04:36:39 UTC] PHP Notice:  Undefined variable: incomeamount in /home/m46mu4920o1z/public_html/admin/reports/report.php on line 210
+[28-Dec-2025 04:36:39 UTC] PHP Notice:  Undefined variable: expamount in /home/m46mu4920o1z/public_html/admin/reports/report.php on line 211

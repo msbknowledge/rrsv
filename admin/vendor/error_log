@@ -1,0 +1,53 @@
+[16-Dec-2025 03:50:16 UTC] PHP Notice:  Undefined index: rate in /home/m46mu4920o1z/public_html/admin/vendor/save_vendor_bill.php on line 64
+[16-Dec-2025 03:50:16 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/m46mu4920o1z/public_html/admin/vendor/save_vendor_bill.php on line 64
+[17-Dec-2025 04:47:50 UTC] PHP Notice:  Undefined index: rate in /home/m46mu4920o1z/public_html/admin/vendor/save_vendor_bill.php on line 64
+[17-Dec-2025 04:47:50 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/m46mu4920o1z/public_html/admin/vendor/save_vendor_bill.php on line 64
+[20-Dec-2025 04:49:08 UTC] PHP Notice:  Undefined index: rate in /home/m46mu4920o1z/public_html/admin/vendor/save_vendor_bill.php on line 64
+[20-Dec-2025 04:49:08 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/m46mu4920o1z/public_html/admin/vendor/save_vendor_bill.php on line 64
+[20-Dec-2025 04:49:46 UTC] PHP Notice:  Undefined index: gst_rate in /home/m46mu4920o1z/public_html/admin/vendor/print_bill.php on line 152
+[20-Dec-2025 04:53:01 UTC] PHP Notice:  Undefined index: gst_rate in /home/m46mu4920o1z/public_html/admin/vendor/print_bill.php on line 152
+[20-Dec-2025 04:53:03 UTC] PHP Notice:  Undefined index: gst_rate in /home/m46mu4920o1z/public_html/admin/vendor/print_bill.php on line 152
+[20-Dec-2025 04:53:04 UTC] PHP Notice:  Undefined index: gst_rate in /home/m46mu4920o1z/public_html/admin/vendor/print_bill.php on line 152
+[20-Dec-2025 04:53:18 UTC] PHP Notice:  Undefined index: gst_rate in /home/m46mu4920o1z/public_html/admin/vendor/print_bill.php on line 152
+[20-Dec-2025 04:53:19 UTC] PHP Notice:  Undefined index: gst_rate in /home/m46mu4920o1z/public_html/admin/vendor/print_bill.php on line 152
+[20-Dec-2025 04:53:21 UTC] PHP Notice:  Undefined index: gst_rate in /home/m46mu4920o1z/public_html/admin/vendor/print_bill.php on line 152
+[20-Dec-2025 04:53:22 UTC] PHP Notice:  Undefined index: gst_rate in /home/m46mu4920o1z/public_html/admin/vendor/print_bill.php on line 152
+[23-Dec-2025 14:03:44 UTC] PHP Notice:  Undefined index: gst_rate in /home/m46mu4920o1z/public_html/admin/vendor/print_bill.php on line 152
+[27-Dec-2025 04:10:36 UTC] PHP Notice:  Undefined index: rate in /home/m46mu4920o1z/public_html/admin/vendor/save_vendor_bill.php on line 64
+[27-Dec-2025 04:10:36 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/m46mu4920o1z/public_html/admin/vendor/save_vendor_bill.php on line 64
+[27-Dec-2025 04:17:54 UTC] PHP Notice:  Undefined index: rate in /home/m46mu4920o1z/public_html/admin/vendor/save_vendor_bill.php on line 64
+[27-Dec-2025 04:17:54 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/m46mu4920o1z/public_html/admin/vendor/save_vendor_bill.php on line 64
+[27-Dec-2025 04:18:03 UTC] PHP Notice:  Undefined index: gst_rate in /home/m46mu4920o1z/public_html/admin/vendor/print_bill.php on line 152
+[27-Dec-2025 04:18:13 UTC] PHP Notice:  Undefined index: gst_rate in /home/m46mu4920o1z/public_html/admin/vendor/print_bill.php on line 152
+[27-Dec-2025 04:18:14 UTC] PHP Notice:  Undefined index: gst_rate in /home/m46mu4920o1z/public_html/admin/vendor/print_bill.php on line 152
+[27-Dec-2025 04:18:15 UTC] PHP Notice:  Undefined index: gst_rate in /home/m46mu4920o1z/public_html/admin/vendor/print_bill.php on line 152
+[27-Dec-2025 04:18:15 UTC] PHP Notice:  Undefined index: gst_rate in /home/m46mu4920o1z/public_html/admin/vendor/print_bill.php on line 152
+[27-Dec-2025 04:18:16 UTC] PHP Notice:  Undefined index: gst_rate in /home/m46mu4920o1z/public_html/admin/vendor/print_bill.php on line 152
+[27-Dec-2025 04:22:02 UTC] PHP Notice:  Undefined index: rate in /home/m46mu4920o1z/public_html/admin/vendor/save_vendor_bill.php on line 64
+[27-Dec-2025 04:22:02 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/m46mu4920o1z/public_html/admin/vendor/save_vendor_bill.php on line 64
+[27-Dec-2025 04:39:15 UTC] PHP Notice:  Undefined index: gst_rate in /home/m46mu4920o1z/public_html/admin/vendor/print_bill.php on line 152
+[27-Dec-2025 04:45:51 UTC] PHP Notice:  Undefined index: gst_rate in /home/m46mu4920o1z/public_html/admin/vendor/print_bill.php on line 152
+[27-Dec-2025 05:27:54 UTC] PHP Notice:  Undefined index: gst_rate in /home/m46mu4920o1z/public_html/admin/vendor/print_bill.php on line 152
+[27-Dec-2025 05:41:07 UTC] PHP Notice:  Undefined index: gst_rate in /home/m46mu4920o1z/public_html/admin/vendor/print_bill.php on line 152
+[27-Dec-2025 05:41:13 UTC] PHP Notice:  Undefined index: gst_rate in /home/m46mu4920o1z/public_html/admin/vendor/print_bill.php on line 152
+[27-Dec-2025 05:41:14 UTC] PHP Notice:  Undefined index: gst_rate in /home/m46mu4920o1z/public_html/admin/vendor/print_bill.php on line 152
+[27-Dec-2025 05:41:15 UTC] PHP Notice:  Undefined index: gst_rate in /home/m46mu4920o1z/public_html/admin/vendor/print_bill.php on line 152
+[27-Dec-2025 05:41:16 UTC] PHP Notice:  Undefined index: gst_rate in /home/m46mu4920o1z/public_html/admin/vendor/print_bill.php on line 152
+[27-Dec-2025 05:49:37 UTC] PHP Notice:  Undefined index: gst_rate in /home/m46mu4920o1z/public_html/admin/vendor/print_bill.php on line 152
+[27-Dec-2025 05:49:38 UTC] PHP Notice:  Undefined index: gst_rate in /home/m46mu4920o1z/public_html/admin/vendor/print_bill.php on line 152
+[27-Dec-2025 05:49:38 UTC] PHP Notice:  Undefined index: gst_rate in /home/m46mu4920o1z/public_html/admin/vendor/print_bill.php on line 152
+[27-Dec-2025 05:49:39 UTC] PHP Notice:  Undefined index: gst_rate in /home/m46mu4920o1z/public_html/admin/vendor/print_bill.php on line 152
+[28-Dec-2025 09:11:25 UTC] PHP Notice:  Undefined index: item_id in /home/m46mu4920o1z/public_html/admin/vendor/return_bill.php on line 82
+[28-Dec-2025 09:12:36 UTC] PHP Notice:  Undefined index: item_id in /home/m46mu4920o1z/public_html/admin/vendor/return_bill.php on line 82
+[31-Dec-2025 04:21:08 UTC] PHP Notice:  Undefined index: gst_rate in /home/m46mu4920o1z/public_html/admin/vendor/print_bill.php on line 152
+[31-Dec-2025 04:21:12 UTC] PHP Notice:  Undefined index: gst_rate in /home/m46mu4920o1z/public_html/admin/vendor/print_bill.php on line 152
+[31-Dec-2025 04:21:13 UTC] PHP Notice:  Undefined index: gst_rate in /home/m46mu4920o1z/public_html/admin/vendor/print_bill.php on line 152
+[31-Dec-2025 04:21:14 UTC] PHP Notice:  Undefined index: gst_rate in /home/m46mu4920o1z/public_html/admin/vendor/print_bill.php on line 152
+[07-Jan-2026 06:24:43 UTC] PHP Notice:  Undefined index: rate in /home/m46mu4920o1z/public_html/admin/vendor/save_vendor_bill.php on line 66
+[07-Jan-2026 06:24:43 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/m46mu4920o1z/public_html/admin/vendor/save_vendor_bill.php on line 66
+[07-Jan-2026 06:25:02 UTC] PHP Notice:  Undefined index: gst_rate in /home/m46mu4920o1z/public_html/admin/vendor/print_bill.php on line 152
+[07-Jan-2026 06:25:17 UTC] PHP Notice:  Undefined index: gst_rate in /home/m46mu4920o1z/public_html/admin/vendor/print_bill.php on line 152
+[07-Jan-2026 06:25:18 UTC] PHP Notice:  Undefined index: gst_rate in /home/m46mu4920o1z/public_html/admin/vendor/print_bill.php on line 152
+[07-Jan-2026 06:25:19 UTC] PHP Notice:  Undefined index: gst_rate in /home/m46mu4920o1z/public_html/admin/vendor/print_bill.php on line 152
+[07-Jan-2026 06:25:19 UTC] PHP Notice:  Undefined index: gst_rate in /home/m46mu4920o1z/public_html/admin/vendor/print_bill.php on line 152
+[07-Jan-2026 06:25:19 UTC] PHP Notice:  Undefined index: gst_rate in /home/m46mu4920o1z/public_html/admin/vendor/print_bill.php on line 152

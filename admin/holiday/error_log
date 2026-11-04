@@ -1,0 +1,6 @@
+[13-Oct-2025 18:19:39 UTC] PHP Warning:  require_once(../../libray/tcpdf/tcpdf.php): failed to open stream: No such file or directory in /home/m46mu4920o1z/public_html/admin/holiday/holiday_pdf.php on line 3
+[13-Oct-2025 18:19:39 UTC] PHP Fatal error:  require_once(): Failed opening required '../../libray/tcpdf/tcpdf.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/m46mu4920o1z/public_html/admin/holiday/holiday_pdf.php on line 3
+[13-Oct-2025 18:21:43 UTC] PHP Warning:  require_once(../../libray/tcpdf/tcpdf.php): failed to open stream: No such file or directory in /home/m46mu4920o1z/public_html/admin/holiday/holiday_pdf.php on line 3
+[13-Oct-2025 18:21:43 UTC] PHP Fatal error:  require_once(): Failed opening required '../../libray/tcpdf/tcpdf.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/m46mu4920o1z/public_html/admin/holiday/holiday_pdf.php on line 3
+[13-Oct-2025 18:22:14 UTC] PHP Warning:  require_once(../../libray/tcpdf/tcpdf.php): failed to open stream: No such file or directory in /home/m46mu4920o1z/public_html/admin/holiday/holiday_pdf.php on line 3
+[13-Oct-2025 18:22:14 UTC] PHP Fatal error:  require_once(): Failed opening required '../../libray/tcpdf/tcpdf.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/m46mu4920o1z/public_html/admin/holiday/holiday_pdf.php on line 3

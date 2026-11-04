@@ -1,0 +1,506 @@
+<?php
+	include('include/dbcon.php');
+$id=0;
+if(isset($_GET['recep_no']))
+{
+  $recep_no=$myDB->escape_string(trim(addslashes($_GET['recep_no'])));
+$sql="select a.*,b.scl_name,b.scl_roll_no,b.scl_class,b.scl_section from rrsv_scl_studen_fee as a,rrsv_student_registration as b where a.recep_no=$recep_no and a.pay_id=b.id";
+$res=mysqli_query($myDB,$sql);
+$rows=mysqli_fetch_array($res);
+}
+?>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<HTML>
+<HEAD>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/payment.css">
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE>Invoice</TITLE>
+<META name="generator" content="BCL easyConverter SDK 5.0.252">
+<META name="author" content="Rajesh">
+<STYLE type="text/css">
+
+body {margin-top: 0px;margin-left: 0px;}
+
+#page_1 {position:relative; overflow: hidden;margin: 22px 0px 43px 23px;padding: 0px;border: none;width: 642px;height: 715px;border-style: solid;}
+#page_1 #id1_1 {border:none;margin: 0px 0px 0px 129px;padding: 0px;border:none;width: 642px;overflow: hidden;}
+#page_1 #id1_2 {border:none;margin: 3px 0px 0px 0px;padding: 0px;border:none;width: 771px;overflow: hidden;}
+#page_1 #id1_2 #id1_2_1 {float:left;border:none;margin: 0px 0px 0px 0px;padding: 0px;border:none;width: 550px;overflow: hidden;}
+#page_1 #id1_2 #id1_2_2 {float:left;border:none;margin: 0px 0px 0px 0px;padding: 0px;border:none;width: 221px;overflow: hidden;}
+#page_1 #id1_3 {border:none;margin: 1px 0px 0px 1px;padding: 0px;border:none;width: 741px;overflow: hidden;}
+#page_1 #id1_4 {border:none;margin: 2px 0px 0px 3px;padding: 0px;border:none;width: 768px;overflow: hidden;}
+#page_1 #id1_4 #id1_4_1 {float:left;border:none;margin: 0px 0px 0px 0px;padding: 0px;border:none;width: 351px;overflow: hidden;}
+#page_1 #id1_4 #id1_4_2 {float:left;border:none;margin: 0px 0px 0px 0px;padding: 0px;border:none;width: 417px;overflow: hidden;margin-top: -77px;
+    margin-left: 494px}
+#page_1 #id1_5 {border:none;margin: 2px 0px 0px 0px;padding: 0px;border:none;width: 742px;overflow: hidden;}
+#page_1 #id1_6 {border:none;margin: 0px 0px 0px 1px;padding: 0px;border:none;width: 770px;overflow: hidden;}
+#page_1 #id1_6 #id1_6_1 {float:left;border:none;margin: 0px 0px 0px 0px;padding: 0px;border:none;width: 635px;overflow: hidden;}
+#page_1 #id1_6 #id1_6_2 {float:left;border:none;margin: 1px 0px 0px 69px;padding: 0px;border:none;width: 54px;overflow: hidden;}
+#page_1 #id1_7 {border:none;margin: 0px 0px 0px 1px;padding: 0px;border:none;width: 741px;overflow: hidden;}
+#page_1 #id1_8 {border:none;margin: 52px 0px 0px 510px;padding: 0px;border:none;width: 196px;overflow: hidden;}
+
+#page_1 #p1dimg1 {position:absolute;top:0px;left:0px;z-index:-1;width:742px;height:1057px;}
+#page_1 #p1dimg1 #p1img1 {width:742px;height:1057px;}
+
+
+
+
+.dclr {clear:both;float:none;height:1px;margin:0px;padding:0px;overflow:hidden;}
+
+.ft0{font: bold 25px 'Arial';color: #1f497d;line-height: 30px;}
+.ft1{font: bold 12px 'Calibri';line-height: 13px;}
+.ft2{font: 1px 'Calibri';line-height: 1px;}
+.ft3{font: bold 14px 'Arial Black';text-decoration: underline;line-height: 19px;}
+.ft4{font: 1px 'Calibri';line-height: 3px;}
+.ft5{font: 1px 'Calibri';line-height: 2px;}
+.ft6{font: 1px 'Calibri';line-height: 4px;}
+.ft7{font: 1px 'Calibri';line-height: 13px;}
+.ft8{font: 1px 'Calibri';line-height: 14px;}
+.ft9{font: bold 13px 'Calibri';line-height: 15px;}
+.ft10{font: bold 14px 'Calibri';line-height: 14px;}
+.ft11{font: bold 13px 'Calibri';line-height: 14px;}
+.ft12{font: bold 12px 'Calibri';line-height: 14px;}
+.ft13{font: bold 14px 'Calibri';line-height: 17px;}
+.ft14{font: bold 11px 'Calibri';line-height: 13px;}
+.ft15{font: bold 16px 'Calibri';line-height: 19px;}
+.ft16{font: bold 13px 'Calibri';line-height: 13px;}
+.ft17{font: bold 10px 'Calibri';line-height: 12px;}
+.ft18{font: bold 10px 'Calibri';line-height: 13px;}
+.ft19{font: bold 11px 'Arial';line-height: 14px;}
+.ft20{font: 1px 'Calibri';line-height: 8px;}
+.ft21{font: bold 9px 'Calibri';line-height: 11px;}
+.ft22{font: bold 8px 'Calibri';line-height: 10px;}
+
+.p0{text-align: left;margin-top: 0px;margin-bottom: 0px;}
+.p1{text-align: left;padding-left: 167px;margin-top: 0px;margin-bottom: 0px;}
+.p2{text-align: left;margin-top: 0px;margin-bottom: 0px;white-space: nowrap;}
+.p3{text-align: left;padding-left: 44px;margin-top: 0px;margin-bottom: 0px;white-space: nowrap;}
+.p4{text-align: left;padding-left: 3px;margin-top: 0px;margin-bottom: 0px;white-space: nowrap;}
+.p5{text-align: left;padding-left: 1px;margin-top: 0px;margin-bottom: 0px;white-space: nowrap;}
+.p6{text-align: left;padding-left: 21px;margin-top: 0px;margin-bottom: 0px;white-space: nowrap;}
+.p7{text-align: left;padding-left: 82px;margin-top: 0px;margin-bottom: 0px;}
+.p8{text-align: left;margin-top: 3px;margin-bottom: 0px;}
+.p9{text-align: left;margin-top: 6px;margin-bottom: 0px;}
+.p10{text-align: left;padding-left: 127px;margin-top: 0px;margin-bottom: 0px;white-space: nowrap;}
+.p11{text-align: left;padding-right: 221px;margin-top: 1px;margin-bottom: 0px;}
+.p12{text-align: left;margin-top: 4px;margin-bottom: 0px;}
+.p13{text-align: left;padding-left: 1px;margin-top: 0px;margin-bottom: 0px;}
+.p14{text-align: left;margin-top: 50px;margin-bottom: 0px;}
+.p15{text-align: left;padding-left: 8px;margin-top: 0px;margin-bottom: 0px;white-space: nowrap;}
+.p16{text-align: left;padding-left: 12px;margin-top: 0px;margin-bottom: 0px;white-space: nowrap;}
+.p17{text-align: left;padding-left: 66px;margin-top: 0px;margin-bottom: 0px;white-space: nowrap;}
+.p18{text-align: left;padding-left: 10px;margin-top: 0px;margin-bottom: 0px;white-space: nowrap;}
+.p19{text-align: left;padding-left: 11px;margin-top: 0px;margin-bottom: 0px;white-space: nowrap;}
+.p20{text-align: right;padding-right: 19px;margin-top: 0px;margin-bottom: 0px;white-space: nowrap;}
+.p21{text-align: center;padding-right: 87px;margin-top: 0px;margin-bottom: 0px;white-space: nowrap;}
+.p22{text-align: right;padding-right: 1px;margin-top: 0px;margin-bottom: 0px;white-space: nowrap;}
+.p23{text-align: right;padding-right: 216px;margin-top: 0px;margin-bottom: 0px;white-space: nowrap;}
+.p24{text-align: right;margin-top: 0px;margin-bottom: 0px;white-space: nowrap;}
+.p25{text-align: left;padding-left: 2px;margin-top: 0px;margin-bottom: 0px;white-space: nowrap;}
+.p26{text-align: left;padding-left: 9px;margin-top: 0px;margin-bottom: 0px;white-space: nowrap;}
+.p27{text-align: right;padding-right: 3px;margin-top: 0px;margin-bottom: 0px;white-space: nowrap;}
+.p28{text-align: left;padding-left: 76px;margin-top: 0px;margin-bottom: 0px;white-space: nowrap;}
+.p29{text-align: left;padding-left: 2px;margin-top: 0px;margin-bottom: 0px;}
+.p30{text-align: left;padding-left: 2px;margin-top: 2px;margin-bottom: 0px;}
+.p31{text-align: left;padding-left: 2px;margin-top: 1px;margin-bottom: 0px;}
+.p32{text-align: left;margin-top: 1px;margin-bottom: 0px;}
+.p33{text-align: left;padding-left: 2px;margin-top: 16px;margin-bottom: 0px;}
+.p34{text-align: right;padding-right: 10px;margin-top: 0px;margin-bottom: 0px;white-space: nowrap;}
+.p35{text-align: right;padding-right: 9px;margin-top: 0px;margin-bottom: 0px;white-space: nowrap;}
+.p36{text-align: left;padding-left: 35px;margin-top: 0px;margin-bottom: 0px;white-space: nowrap;}
+
+.td0{padding: 0px;margin: 0px;width: 143px;vertical-align: bottom;}
+.td1{padding: 0px;margin: 0px;width: 239px;vertical-align: bottom;}
+.td2{padding: 0px;margin: 0px;width: 18px;vertical-align: bottom;}
+.td3{border-right: #000000 1px solid;padding: 0px;margin: 0px;width: 103px;vertical-align: bottom;}
+.td4{border-right: #000000 1px solid;border-top: #000000 1px solid;border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 42px;vertical-align: bottom;}
+.td5{padding: 0px;margin: 0px;width: 2px;vertical-align: bottom;}
+.td6{border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 43px;vertical-align: bottom;}
+.td7{border-right: #000000 1px solid;padding: 0px;margin: 0px;width: 42px;vertical-align: bottom;}
+.td8{border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 243px;vertical-align: bottom;}
+.td9{border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 139px;vertical-align: bottom;}
+.td10{border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 18px;vertical-align: bottom;}
+.td11{border-right: #000000 1px solid;border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 103px;vertical-align: bottom;}
+.td12{border-right: #000000 1px solid;border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 42px;vertical-align: bottom;}
+.td13{border-right: #000000 1px solid;border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 121px;vertical-align: bottom;}
+.td14{border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 2px;vertical-align: bottom;}
+.td15{padding: 0px;margin: 0px;width: 243px;vertical-align: bottom;}
+.td16{padding: 0px;margin: 0px;width: 139px;vertical-align: bottom;}
+.td17{border-right: #000000 1px solid;padding: 0px;margin: 0px;width: 17px;vertical-align: bottom;}
+.td18{padding: 0px;margin: 0px;width: 147px;vertical-align: bottom;}
+.td19{padding: 0px;margin: 0px;width: 100px;vertical-align: bottom;}
+.td20{padding: 0px;margin: 0px;width: 104px;vertical-align: bottom;}
+.td21{padding: 0px;margin: 0px;width: 43px;vertical-align: bottom;}
+.td22{padding: 0px;margin: 0px;width: 492px;vertical-align: bottom;background: #d9d9d9;}
+.td23{padding: 0px;margin: 0px;width: 249px;vertical-align: bottom;background: #d9d9d9;}
+.td24{border-top: #000000 1px solid;border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 1px;vertical-align: bottom;}
+.td25{border-right: #000000 1px solid;border-top: #000000 1px solid;border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 44px;vertical-align: bottom;background: #d9d9d9;}
+.td26{border-right: #000000 1px solid;border-top: #000000 1px solid;border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 67px;vertical-align: bottom;background: #d9d9d9;}
+.td27{border-right: #000000 1px solid;border-top: #000000 1px solid;border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 285px;vertical-align: bottom;background: #d9d9d9;}
+.td28{border-top: #000000 1px solid;border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 59px;vertical-align: bottom;background: #d9d9d9;}
+.td29{border-right: #000000 1px solid;border-top: #000000 1px solid;border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 43px;vertical-align: bottom;background: #d9d9d9;}
+.td30{border-top: #000000 1px solid;border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 58px;vertical-align: bottom;background: #d9d9d9;}
+.td31{border-top: #000000 1px solid;border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 92px;vertical-align: bottom;background: #d9d9d9;}
+.td32{padding: 0px;margin: 0px;width: 1px;vertical-align: bottom;}
+.td33{border-right: #000000 1px solid;padding: 0px;margin: 0px;width: 44px;vertical-align: bottom;}
+.td34{border-right: #000000 1px solid;padding: 0px;margin: 0px;width: 67px;vertical-align: bottom;}
+.td35{border-right: #000000 1px solid;padding: 0px;margin: 0px;width: 285px;vertical-align: bottom;}
+.td36{padding: 0px;margin: 0px;width: 59px;vertical-align: bottom;}
+.td37{border-right: #000000 1px solid;padding: 0px;margin: 0px;width: 43px;vertical-align: bottom;}
+.td38{padding: 0px;margin: 0px;width: 58px;vertical-align: bottom;}
+.td39{padding: 0px;margin: 0px;width: 92px;vertical-align: bottom;}
+.td40{border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 1px;vertical-align: bottom;}
+.td41{border-right: #000000 1px solid;border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 44px;vertical-align: bottom;}
+.td42{border-right: #000000 1px solid;border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 67px;vertical-align: bottom;}
+.td43{border-right: #000000 1px solid;border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 19px;vertical-align: bottom;}
+.td60{border-right: #000000 1px solid;border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 19px;vertical-align: bottom;}
+.td44{border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 59px;vertical-align: bottom;}
+.td45{border-right: #000000 1px solid;border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 43px;vertical-align: bottom;}
+.td46{border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 58px;vertical-align: bottom;}
+.td47{border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 92px;vertical-align: bottom;}
+.td48{padding: 0px;margin: 0px;width: 87px;vertical-align: bottom;}
+.td49{padding: 0px;margin: 0px;width: 350px;vertical-align: bottom;}
+.td50{padding: 0px;margin: 0px;width: 198px;vertical-align: bottom;}
+.td51{padding: 0px;margin: 0px;width: 108px;vertical-align: bottom;}
+.td52{padding: 0px;margin: 0px;width: 242px;vertical-align: bottom;}
+.td53{padding: 0px;margin: 0px;width: 195px;vertical-align: bottom;}
+.td54{padding: 0px;margin: 0px;width: 87px;vertical-align: bottom;background: #d9d9d9;}
+.td55{padding: 0px;margin: 0px;width: 350px;vertical-align: bottom;background: #d9d9d9;}
+.td56{padding: 0px;margin: 0px;width: 37px;vertical-align: bottom;}
+.td57{padding: 0px;margin: 0px;width: 464px;vertical-align: bottom;}
+.td58{padding: 0px;margin: 0px;width: 240px;vertical-align: bottom;}
+.td59{padding: 0px;margin: 0px;width: 704px;vertical-align: bottom;}
+
+.tr0{height: 19px;}
+.tr1{height: 26px;}
+.tr2{height: 17px;}
+.tr3{height: 3px;}
+.tr4{height: 2px;}
+.tr5{height: 4px;}
+.tr6{height: 13px;}
+.tr7{height: 14px;}
+.tr8{height: 18px;}
+.tr9{height: 16px;}
+.tr10{height: 15px;}
+.tr11{height: 408px;}
+.tr12{height: 24px;}
+.tr13{height: 8px;}
+
+.t0{width: 549px;margin-top: 2px;font: bold 13px 'Calibri';}
+.t1{width: 741px;font: bold 13px 'Calibri';}
+.t2{width: 742px;font: bold 10px 'Calibri';}
+.t3{width: 635px;font: bold 13px 'Calibri';}
+.t4{width: 741px;font: bold 11px 'Calibri';}
+	@media print {
+            #printbtn {
+                display :  none;
+            }
+		}
+		@media print {
+            #cancel {
+                display :  none;
+            }
+        }
+    
+@media print {
+    body{
+        background-image: none;
+    }
+	@media print {
+  #printPageButton {
+    display: none;
+  }
+}
+@media print {
+  #backPageButton {
+    display: none;
+  }
+}
+</STYLE>
+</HEAD>
+
+<BODY>
+    	<button type="button" id="backPageButton" class="btn btn-info"><a style="color: #fff" href="manage_bill.php">Back</a></button>
+	<button type="button" onclick = "generatePDF()" class="btn btn-info" id="printPageButton">Print</button>
+<DIV id="page_1">
+<DIV id="p1dimg1">
+<!--<IMG src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAuYAAAQhCAIAAADuxt0yAAATYElEQVR4nO3ZQY5bRRSGUS7yOKtI1PtfTgKrYAOXQVAz6QhibOp91jmD6uk/KD197ZrdnZnd/QUA4JJm5vQEAIB/YfzKAgBc3Mz8enoDAMA/kywAQIBkAQACJAsAECBZAIAAyQIABEgWACBAsgAAAZIFAAiQLABAgGQBAAIkCwAQIFkAgADJAgAESBYAIECyAAABkgUACJAsAECAZAEAAiQLABAgWQCAAMkCAARIFgAgQLIAAAGSBQAIkCwAQIBkAQACJAsAECBZAIAAyQIABEgWACBAsgAAAZIFAAiQLABAgGQBAAIkCwAQIFkAgADJAgAESBYAIECyAAABkgUACJAsAECAZAEAAiQLABAgWQCAAMkCAARIFgD+DzNzegJtt9MDAHh933tFtfBfSBYAnm53Z2Z3Tw+hamY8DAEAAZIFAAiQLABAgGQBAAIkCwAQIFkAgADJAgAESBYAIECyAAABkgUACJAsAECAZAEAAiQLABAgWQCAAMkCAARIFgAg4HZ6AACvb2beT7iPZAHg6XZ3Znb39BCqZsbDEAAQIFkAgADJAgAESBYAIECyAAABkgUACJAsAECAZAEAAiQLABAgWQCAAMkCAARIFgAgQLIAAAGSBQAIkCwAQIBkAQACJAsAEHA7PQCA1zcz7yfcR7IA8HS7OzO7e3oIVTPjYQgACJAsAECAZAEAAiQLABAgWQCAAMkCAARIFgAgQLIAAAGSBQAIkCwAQIBkAQACJAsAECBZAIAAyQIABEgWACBAsgAAAZIFAAi4nR4AwOubmfcT7iNZAHi63T09gbaZ8TAEAARIFgAgQLIAAAGSBQAIkCwAQIBkAQACJAsAECBZAIAAyQIABEgWACBAsgAAAZIFAAiQLABAgGQBAAIkCwAQIFkAgADJAgAESBYAIECyAAABkgUACJAsAECAZAEAAiQLABAgWQCAAMkCAARIFgAgQLIAAAGSBQAIkCwAQIBkAQACJAsAECBZAIAAyQIABEgWACBAsgAAAZIFAAiQLABAgGQBAAIkCwAQIFkAgADJAgAESBYAIECyAAABkgUACJAsAECAZAEAAiQLABAgWQCAAMkCAARIFgAgQLIAAAGSBQAIkCwAQIBkAQACJAsAECBZAIAAyQIABEgWACBAsgAAAZIFAAiQLABAgGQBAAIkCwAQIFkAgADJAgAESBYAAACAR5jdnZndPb0EAOBjM+NhCAAIkCwAQIBkAQACJAsAECBZAIAAyQIABEgWACBAsgAAAZIFAAiQLABAgGQBAAIkCwAQIFkAgADJAvzQzJyeAAAA0DG7OzO7e3oJcDk+DsBFzIyHIQAgQLIAAAGSBQAIkCwAQIBkAQACJAsAECBZAIAAyQIABEgWACBAsgAAAZIFAAiQLABAgGQBAAIkCwAQIFkAgADJAgAESBYAIECyAAABkgUACJAsAECAZAEAAiQLABAgWQCAAMkCAARIFgAgQLIAAAGSBQAIkCwAQIBkAQACJAsAECBZAIAAyQIABEgWACBAsgAAAZIFAAiQLABAgGQBAAIkCwAQIFkAgADJAgAESBYAIECyAAABkgUACJAsAECAZAEAAiQLABAgWQCAAMkCAARIFgAgQLIAAAGSBQAIkCwAQIBkAQACJAsAECBZAIAAyQIABEgWACBAsgAAAZIFAAiQLABAgGQBAAIkCwAQIFkAgADJAgAESBYAIECyAAABkgUACJAsAECAZAEAAiQLABAgWQCAAMkCAARIFgAgQLIAAAGSBQAIkCwAQIBkAQACJAsAECBZAIAAyQIABEgWACBAsgAAAZIFAAiQLABAgGQBAAIkCwAQIFkAgADJAgAESBYAIECyAAABkgUACJAsAECAZAEAAiQLABAgWQCAAMkCAARIFgAgQLIAAAGSBQAIkCwAPzQzpyfwgtyr+0gW4Id29/QEgL9IFgAgQLIAAAGSBQAIkCwAQIBkAQACJAsAECBZAIAAyQIABEgWACBAsgAAAZIFAAiQLABAgGQBAAIkCwAQIFkAgADJAgAESBYAIECyAAABkgUACJAsAECAZAEAAiQLABAgWQCAAMkCAARIFgAgQLIAAAGSBQAIkCwAQIBkAQACJAsAECBZAIAAyQIABEgWACBAsgAAAZIFAAiQLABAgGQBAAIkCwAQIFkAgADJAgAESBYAIECyAAABkgUACJAsAECAZAEAAiQLABAgWQCAAMkCAARIFgAgQLIAAAGSBQAIkCwAQIBkAQACJAsAECBZAIAAyQIABEgWACBAsgAAAZIFAAiQLABAgGQBAAIkCwAQIFkAgADJAgAESBYAIECyAAABkgUACJAsAECAZAEAAiQLABAgWQCAAMkCAARIFgAgQLIAAAGSBQAIkCwAQIBkAQACJAsAECBZAIAAyQIABEgWACBAsgAAAZIFAAiQLABAgGQBAAIkCwAQIFkAgADJAgAESBYAIECyAAABkgUACJAsAECAZAEAAiQLABAgWQCAAMkCAARIFgAgQLIAAAGSBQAIkCwAQIBkAQACJAsAECBZAIAAyQIABEgWACBAsgAAAZIFAAiQLABAgGQBAAIkCwAQIFkAgADJAgAESBYAIECyAAABkgUACJAsAECAZAEAAiQLABAgWQCAAMkCAARIFgAgQLIAAAGSBQAIkCwAQIBkAQACJAsAECBZAIAAyQIABEgWACBAsgAAAZIFAAiQLABAgGQBAAIkCwAQIFkAgADJAgAESBYAIECyAAABkgUACJAsAECAZAEAAiQLABAgWQCAAMkCAARIFgAgQLIAAAGSBQAIkCwAQIBkAQACJAsAECBZAIAAyQIABEgWACBAsgAAAZIFAAiQLABAgGQBAAIkCwAQIFkAgADJAgAESBYAIECyAAABkgUACJAsAECAZAEAAiQLABAgWQCAAMkCAARIFgAgQLIAAAGSBQAIkCwAQIBkAQACJAsAECBZAIAAyQIABEgWACBAsgAAAZIFAAiQLABAgGQBAAIkCwAQIFkAgADJAgAESBYAIECyAAABkgUACJAsAECAZAEAAiQLABAgWQCAAMkCAARIFgAgQLIAAAGSBQAIkCwAQIBkAQACJAsAECBZAIAAyQIABEgWACBAsgAAAZIFAAiQLABAgGQBAAIkCwAQIFkAgADJAgAESBYAIECyAAABkgUACJAsAECAZAEAAiQLABAgWQCAAMkCAARIFgAgQLIAAAGSBQAIkCwAQIBkAQACJAsAECBZAIAAyQIABEgWACBAsgAAAZIFAAiQLABAgGQBAAIkCwAQIFkAgADJAgAESBYAIECyAAABkgUACJAsAECAZAEAAiQLABAgWQCAAMkCAARIFgAgQLIAAAGSBQAIkCwAQIBkAQACJAsAECBZAIAAyQIABEgWACBAsgAAAZIFAAiQLABAgGQBAAIkCwAQIFkAgADJAgAESBYAIECyAAABkgUACJAsAECAZAEAAiQLABAgWQCAAMkCAARIFgAgQLIAAAGSBQAIkCwAQIBkAQACJAsAECBZAIAAyQIABEgWACBAsgAAAZIFAAiQLABAgGQBAAIkCwAQIFkAgADJAgAESBYAIECyAAABkgUACJAsAECAZAEAAiQLABAgWQCAAMkCAARIFgAgQLIAAAGSBQAIkCwAQIBkAQACJAsAECBZAIAAyQIABEgWACBAsgAAAZIFAAiQLABAgGQBAAIkCwAQIFkAgADJAgAESBYAIECyAAABkgUACJAsAECAZAEAAiQLABAgWQCAAMkCAARIFgAgQLIAAAGSBQAIkCwAQIBkAQACJAsAECBZAIAAyQIABEgWACBAsgAAAZIFAAiQLABAgGQBAAIkCwAQIFkAgADJAgAESBYAIECyAAABkgUACJAsAECAZAEAAiQLABAgWQCAAMkCAARIFgAgQLIAAAGSBQAIkCwAQIBkAQACJAsAECBZAIAAyQIABEgWACBAsgAAAZIFAAiQLABAgGQBAAIkCwAQIFkAgADJAgAESBYAIECyAAABkgUACJAsAECAZAEAAiQLABAgWQCAAMkCAARIFgAgQLIAAAGSBQAIkCwAQIBkAQACJAsAECBZAIAAyQIABEgWACBAsgAAAZIFAAiQLABAgGQBAAIkCwAQIFkAgADJAgAESBYAIECyAAABkgUACJAsAECAZAEAAiQLABAgWQCAAMkCAARIFgAgQLIAAAGSBQAIkCwAQIBkAQACJAsAECBZAIAAyQIABEgWACBAsgAAAZIFAAiQLABAgGQBAAIkCwAQIFkAgADJAgAESBYAIECyAAABkgUACJAsAECAZAEAAiQLABAgWQCAAMkCAARIFgAgQLIAAAGSBQAIkCwAQIBkAQACJAsAECBZAIAAyQIABEgWACBAsgAAAZIFAAiQLABAgGQBAAIkCwAQIFkAgADJAgAESBYAIECyAAABkgUACJAsAECAZAEAAiQLABAgWQCAAMkCAARIFgAgQLIAAAGSBQAIkCwAQIBkAQACJAsAEHD7/ufbt29ndwBck88jz+Be3cGvLABAgGQBAAIkCwAQIFkAgADJAgAESBYAIECyAAABkgUACJAsAECAZAEAAiQLABAgWQCAAMkCAARIFgAgQLIAAAAAPMLs7szs7uklAJfj88gzuFd3mBkPQwBAgGQBAAIkCwAQIFkAgADJAgAESBYAIECyAAABkgUACJAsAECAZAEAAiQLABAgWQCAAMkCAARIFgAgQLIAAAG30wMALmpm3k94LPfqDpIF4GO7OzO7e3oIr8a9usPMeBgCAAIkCwAQIFkAgADJAgAESBYAIECyAAABkgUACJAsAECAZAEAAiQLABAgWQCAAMkCAARIFgAgQLIAAAAAPMLs7szs7uklAJfj88gzuFd3mBkPQwBAgGQBAAIkCwAQIFkAgADJAgAESBYAIECyAAABkgUACJAsAECAZAEAAiQLABAgWQCAAMkCAARIFgAg4HZ6AMBFzcz7CY/lXt1BsgB8bHdnZndPD+HVuFd3mBkPQwBAgGQBAAIkCwAQIFkAgADJAgAESBYAIECyAAABkgUACJAsAECAZAEAAiQLABAgWQCAAMkCAARIFgAg4HZ6AMBFzcz7CY/lXt1BsgB8bHdn5uvXr6eH8Gre3t7cq5/19vbmYQgACJAsAECAZAEAAiQLABAgWQCAAMkCAARIFgAgQLIAAAGSBQAIkCwAQIBkAQACJAsAECBZAIAAyQIABEgWACBgdndmdvf0EoBrmZnTE4C/3U4PALgo/9HxJO7VHWbGwxAAECBZAIAAyQIABEgWACBAsgAAAZIFAAiQLABAgGQBAAIkCwAQIFkAgADJAgAESBYAIECyAAABkgUAAADgEWZ3Z2Z3Ty8BuJyZ+eP3306v4NV8+vzFvfpZnz5/8TAEAARIFgAgQLIAAAGSBQAIkCwAQIBkAQACJAsAECBZAIAAyQIABEgWACBAsgAAAZIFAAiQLABAgGQBAAAAeITZ3ZnZ3dNLAAA+NjMehgCAAMkCAARIFgAgQLIAAAGSBQAIkCwAQIBkAQACJAsAECBZAIAAyQIABEgWACBAsgAAAZIFAAiQLABAgGQBAAIkCwAQIFkAgADJAgAESBYAIECyAAABkgUACJAsAECAZAEAAiQLABAgWQCAAMkCAARIFgAgQLIAAAGSBQAIkCwAQIBkAQACJAsAECBZAIAAyQIABEgWACBAsgAAAZIFAAiQLABAgGQBAAIkCwAQIFkAgADJAgAESBYAIECyAAABkgUACJAsAECAZAEAAiQLABAgWQCAAMkCAARIFgAgQLIAAAGSBQAIkCwAQIBkAQACJAsAECBZAIAAyQIABEgWACBAsgAAAZIFAAiQLABAgGQBAAIkCwAQIFkAgADJAgAESBYAIECyAAABkgUACJAsAECAZAEAAiQLABAgWQCAAMkCAARIFgAgQLIAAAGSBQAIkCwAQIBkAQACJAsAECBZAIAAyQIABEgWACBAsgAAAZIFAAiQLABAgGQBAAIkCwAQIFkAgADJAgAESBYAIECyAAABkgUACJAsAECAZAEAAiQLABAgWQCAAMkCAARIFgAgQLIAAAGSBQAIkCwAQIBkAQACJAsAECBZAIAAyQIABEgWACBAsgAAAZIFAAiQLABAgGQBAAIkCwAQIFkAgADJAgAESBYAIECyAAABkgUACJAsAECAZAEAAiQLABAgWQCAAMkCAARIFgAgQLIAAAGSBQAIkCwAQIBkAQACJAsAECBZAIAAyQIABEgWACBAsgAAAZIFAAiQLABAgGQBAAIkCwAQIFkAgADJAgAESBYAIECyAAABkgUACJAsAECAZAEAAiQLABAgWQCAAMkCAARIFgAgQLIAAAGSBQAIkCwAQIBkAQACJAsAECBZAIAAyQIABEgWACBAsgAAAZIFAAiQLABAgGQBAAIkCwAQIFkAgADJAgAESBYAIECyAAABkgUACJAsAECAZAEAAiQLABAgWQCAAMkCAARIFgAgQLIAAAGSBQAIkCwAQIBkAQACJAsAECBZAIAAyQIABEgWACBAsgAAAZIFAAiQLABAgGQBAAIkCwAQIFkAgADJAgAESBYAIECyAAABkgUACJAsAECAZAEAAiQLABAgWQAAAAAe4U8Vg5cwOJJ6ugAAAABJRU5ErkJggg==" id="p1img1"></DIV>-->
+
+
+<DIV class="dclr"></DIV>
+<DIV id="id1_1">
+<P class="p0 ft0">RASULPUR RAMKRISHNA SARADA VIDYAPITH</P>
+
+</DIV>
+<DIV id="id1_2">
+<DIV id="id1_2_1">
+<P class="p1 ft1">Baidyadanga,Rasulpur,Rasulpur, Purba Bardhaman, Pin -713151</P>
+<TABLE cellpadding=0 cellspacing=0 class="t0">
+
+<TR>
+	<TD class="tr9 td0"><P class="p4 ft9">Invoice Serial Number:</P></TD>
+	<TD class="tr9 td19"><P class="p6 ft12"><NOBR><?=$rows['recep_no'];?></NOBR></P></TD>
+	<!--<TD class="tr9 td16"><P class="p2 ft2">&nbsp;</P></TD>-->
+	<!--<TD class="tr9 td17"><P class="p2 ft2">&nbsp;</P></TD>-->
+
+	<TD class="tr9 td5"><P class="p2 ft2">&nbsp;</P></TD>
+</TR>
+<TR>
+	<TD class="tr9 td0"><P class="p4 ft9">Invoice Date:</P></TD>
+	<TD class="tr9 td19"><P class="p6 ft9"><?=date('d-m-Y',strtotime($rows['scl_date']));?></P></TD>
+	<!--<TD class="tr9 td16"><P class="p2 ft2">&nbsp;</P></TD>-->
+	<!--<TD class="tr9 td17"><P class="p2 ft2">&nbsp;</P></TD>-->
+	<!--<TD class="tr9 td20"><P class="p2 ft2">&nbsp;</P></TD>-->
+	<!--<TD class="tr9 td21"><P class="p2 ft2">&nbsp;</P></TD>-->
+	<!--<TD class="tr9 td5"><P class="p2 ft2">&nbsp;</P></TD>-->
+</TR>
+<TR>
+	<TD class="tr4 td0"><P class="p2 ft5">&nbsp;</P></TD>
+	<TD class="tr4 td19"><P class="p2 ft5">&nbsp;</P></TD>
+	<TD class="tr4 td16"><P class="p2 ft5">&nbsp;</P></TD>
+	<TD class="tr4 td17"><P class="p2 ft5">&nbsp;</P></TD>
+	<TD class="tr4 td20"><P class="p2 ft5">&nbsp;</P></TD>
+	<TD class="tr4 td21"><P class="p2 ft5">&nbsp;</P></TD>
+	<TD class="tr4 td5"><P class="p2 ft5">&nbsp;</P></TD>
+</TR>
+</TABLE>
+</DIV>
+
+</DIV>
+<DIV id="id1_3">
+<TABLE cellpadding=0 cellspacing=0 class="t1">
+<TR>
+	<TD class="tr9 td22"><P class="p10 ft9">Details of Receiver</P></TD>
+	<TD class="tr9 td23"><P class="p2 ft9"></P></TD>
+</TR>
+</TABLE>
+</DIV>
+<DIV id="id1_4">
+<DIV id="id1_4_1">
+<P class="p0 ft15"><?=$rows['cus_name'];?></P>
+<P class="p11 ft9"><?=$rows['cus_address'];?></P>
+<P class="p12 ft9">Student Name:<?=$rows['scl_name'];?></P>
+<P class="p0 ft16">Class: <?=$rows['scl_class'];?></P>
+<P class="p0 ft16">Roll: <?=$rows['scl_roll_no'];?></P>
+<P class="p0 ft16">Sec: <?=$rows['scl_section'];?></P>
+</DIV>
+<DIV id="id1_4_2">
+<P class="p0 ft15"></P>
+<P class="p14 ft9"></P>
+<P class="p0 ft16"></P>
+</DIV>
+</DIV>
+<DIV id="id1_5">
+<TABLE cellpadding=0 cellspacing=0 class="t2">
+<TR>
+	<TD class="tr7 td24"><P class="p2 ft2">&nbsp;</P></TD>
+	<TD class="tr7 td25"><P class="p15 ft17">SL. NO</P></TD>
+
+	<TD class="tr7 td27"><P class="p17 ft18">Description & Specification of Goods</P></TD>
+	<TD class="tr7 td28"><P class="p18 ft17">QTY</P></TD>
+	<TD class="tr7 td29"><P class="p2 ft17">RATE</P></TD>
+	<TD class="tr7 td31"><P class="p2 ft17">AMOUNT</P></TD>
+</TR>
+
+<TR>
+	<TD class="tr10 td32"><P class="p2 ft2">&nbsp;</P></TD>
+	<TD class="tr10 td33"><P class="p2 ft2">&nbsp;</P>1.</TD>
+	<TD class="tr10 td35"><P class="p2 ft2">&nbsp;</P>Admission Fee</TD>
+	<TD class="tr10 td36"><P class="p2 ft2">&nbsp;</P><?=$row['qty'];?></TD>
+	<TD class="tr10 td37"><P class="p2 ft2">&nbsp;</P> <?=$row['rate'];?></TD>
+	<TD class="tr10 td39"><P class="p20 ft9"><?=$rows['admission_fee_val'];?></P></TD>
+</TR>
+<TR>
+	<TD class="tr10 td32"><P class="p2 ft2">&nbsp;</P></TD>
+	<TD class="tr10 td33"><P class="p2 ft2">&nbsp;</P>2.</TD>
+	<TD class="tr10 td35"><P class="p2 ft2">&nbsp;</P>Readmission Fee</TD>
+	<TD class="tr10 td36"><P class="p2 ft2">&nbsp;</P><?=$row['qty'];?></TD>
+	<TD class="tr10 td37"><P class="p2 ft2">&nbsp;</P> <?=$row['rate'];?></TD>
+	<TD class="tr10 td39"><P class="p20 ft9"><?=$rows['re_admission_fee_val'];?></P></TD>
+</TR>
+
+<TR>
+	<TD class="tr10 td32"><P class="p2 ft2">&nbsp;</P></TD>
+	<TD class="tr10 td33"><P class="p2 ft2">&nbsp;</P>3.</TD>
+	<TD class="tr10 td35"><P class="p2 ft2">&nbsp;</P>Tuition Fee</TD>
+	<TD class="tr10 td36"><P class="p2 ft2">&nbsp;</P><?=$row['qty'];?></TD>
+	<TD class="tr10 td37"><P class="p2 ft2">&nbsp;</P> <?=$row['rate'];?></TD>
+	<TD class="tr10 td39"><P class="p20 ft9"><?=$rows['monthly_fee_val'];?></P></TD>
+</TR>
+<TR>
+	<TD class="tr10 td32"><P class="p2 ft2">&nbsp;</P></TD>
+	<TD class="tr10 td33"><P class="p2 ft2">&nbsp;</P>4.</TD>
+	<TD class="tr10 td35"><P class="p2 ft2">&nbsp;</P>Admission Form</TD>
+	<TD class="tr10 td36"><P class="p2 ft2">&nbsp;</P><?=$row['qty'];?></TD>
+	<TD class="tr10 td37"><P class="p2 ft2">&nbsp;</P> <?=$row['rate'];?></TD>
+	<TD class="tr10 td39"><P class="p20 ft9"><?=$rows['admission_val'];?></P></TD>
+</TR>
+<TR>
+	<TD class="tr10 td32"><P class="p2 ft2">&nbsp;</P></TD>
+	<TD class="tr10 td33"><P class="p2 ft2">&nbsp;</P>5.</TD>
+	<TD class="tr10 td35"><P class="p2 ft2">&nbsp;</P>Readmission Fee</TD>
+	<TD class="tr10 td36"><P class="p2 ft2">&nbsp;</P><?=$row['qty'];?></TD>
+	<TD class="tr10 td37"><P class="p2 ft2">&nbsp;</P> <?=$row['rate'];?></TD>
+	<TD class="tr10 td39"><P class="p20 ft9"><?=$rows['re_admission_fee_val'];?></P></TD>
+</TR>
+<TR>
+	<TD class="tr10 td32"><P class="p2 ft2">&nbsp;</P></TD>
+	<TD class="tr10 td33"><P class="p2 ft2">&nbsp;</P>6.</TD>
+	<TD class="tr10 td35"><P class="p2 ft2">&nbsp;</P>Student Uniform</TD>
+	<TD class="tr10 td36"><P class="p2 ft2">&nbsp;</P><?=$row['qty'];?></TD>
+	<TD class="tr10 td37"><P class="p2 ft2">&nbsp;</P> <?=$row['rate'];?></TD>
+	<TD class="tr10 td39"><P class="p20 ft9"><?=$rows['uniform_val'];?></P></TD>
+</TR>
+<TR>
+	<TD class="tr10 td32"><P class="p2 ft2">&nbsp;</P></TD>
+	<TD class="tr10 td33"><P class="p2 ft2">&nbsp;</P>7.</TD>
+	<TD class="tr10 td35"><P class="p2 ft2">&nbsp;</P>Icard</TD>
+	<TD class="tr10 td36"><P class="p2 ft2">&nbsp;</P><?=$row['qty'];?></TD>
+	<TD class="tr10 td37"><P class="p2 ft2">&nbsp;</P> <?=$row['rate'];?></TD>
+	<TD class="tr10 td39"><P class="p20 ft9"><?=$rows['icard_val'];?></P></TD>
+</TR>
+<TR>
+	<TD class="tr10 td32"><P class="p2 ft2">&nbsp;</P></TD>
+	<TD class="tr10 td33"><P class="p2 ft2">&nbsp;</P>8.</TD>
+	<TD class="tr10 td35"><P class="p2 ft2">&nbsp;</P>Sweater,Slax,Cap</TD>
+	<TD class="tr10 td36"><P class="p2 ft2">&nbsp;</P><?=$row['qty'];?></TD>
+	<TD class="tr10 td37"><P class="p2 ft2">&nbsp;</P> <?=$row['rate'];?></TD>
+	<TD class="tr10 td39"><P class="p20 ft9"><?=$rows['sweater_slax_cap_val'];?></P></TD>
+</TR>
+<TR>
+	<TD class="tr10 td32"><P class="p2 ft2">&nbsp;</P></TD>
+	<TD class="tr10 td33"><P class="p2 ft2">&nbsp;</P>9.</TD>
+	<TD class="tr10 td35"><P class="p2 ft2">&nbsp;</P>Badge</TD>
+	<TD class="tr10 td36"><P class="p2 ft2">&nbsp;</P><?=$row['qty'];?></TD>
+	<TD class="tr10 td37"><P class="p2 ft2">&nbsp;</P> <?=$row['rate'];?></TD>
+	<TD class="tr10 td39"><P class="p20 ft9"><?=$rows['bag_val'];?></P></TD>
+</TR>
+<TR>
+	<TD class="tr10 td32"><P class="p2 ft2">&nbsp;</P></TD>
+	<TD class="tr10 td33"><P class="p2 ft2">&nbsp;</P>10.</TD>
+	<TD class="tr10 td35"><P class="p2 ft2">&nbsp;</P>Shoes & Sockes</TD>
+	<TD class="tr10 td36"><P class="p2 ft2">&nbsp;</P><?=$row['qty'];?></TD>
+	<TD class="tr10 td37"><P class="p2 ft2">&nbsp;</P> <?=$row['rate'];?></TD>
+	<TD class="tr10 td39"><P class="p20 ft9"><?=$rows['shoes_sockes_val'];?></P></TD>
+</TR>
+<TR>
+	<TD class="tr10 td32"><P class="p2 ft2">&nbsp;</P></TD>
+	<TD class="tr10 td33"><P class="p2 ft2">&nbsp;</P>11.</TD>
+	<TD class="tr10 td35"><P class="p2 ft2">&nbsp;</P>Diary</TD>
+	<TD class="tr10 td36"><P class="p2 ft2">&nbsp;</P><?=$row['qty'];?></TD>
+	<TD class="tr10 td37"><P class="p2 ft2">&nbsp;</P> <?=$row['rate'];?></TD>
+	<TD class="tr10 td39"><P class="p20 ft9"><?=$rows['diary_val'];?></P></TD>
+</TR>
+<TR>
+	<TD class="tr10 td32"><P class="p2 ft2">&nbsp;</P></TD>
+	<TD class="tr10 td33"><P class="p2 ft2">&nbsp;</P>12.</TD>
+	<TD class="tr10 td35"><P class="p2 ft2">&nbsp;</P>Car</TD>
+	<TD class="tr10 td36"><P class="p2 ft2">&nbsp;</P><?=$row['qty'];?></TD>
+	<TD class="tr10 td37"><P class="p2 ft2">&nbsp;</P> <?=$row['rate'];?></TD>
+	<TD class="tr10 td39"><P class="p20 ft9"><?=$rows['car_cost'];?></P></TD>
+</TR>
+<tr>
+    	<TD class="tr10 td32"><P class="p2 ft2">&nbsp;</P></TD>
+	<TD class="tr10 td33"><P class="p2 ft2">&nbsp;</P>12.</TD>
+<TD class="tr10 td35"><P class="p2 ft2">&nbsp;</P>Book</TD>
+</tr>
+	<?php
+	$sql="select * from rrsv_book_cost where cost_id=$recep_no";
+    $res=mysqli_query($myDB,$sql);
+    while($row=mysqli_fetch_array($res)){
+	?>
+	<tr>
+	    <TD class="tr10 td39"><P class="p20 ft9"></P></TD>
+	    <TD class="tr10 td39"><P class="p20 ft9"></P></TD>
+	<TD class="tr10 td39"><P class="p20 ft9"><?=$row['book_name'];?></P></TD>
+</tr>
+	<?php
+    }
+    ?>
+</tr>
+<TR>
+	<TD class="tr11 td40"><P class="p2 ft2">&nbsp;</P></TD>
+	<TD class="tr11 td41"><P class="p2 ft2">&nbsp;</P></TD>
+	<TD class="tr11 td42"><P class="p2 ft2">&nbsp;</P></TD>
+	<TD class="tr11 td43"><P class="p2 ft2">&nbsp;</P></TD>
+	<TD class="tr11 td60"><P class="p2 ft2">&nbsp;</P></TD>
+	<TD class="tr11 td44"><P class="p2 ft2">&nbsp;</P></TD>
+	<TD class="tr11 td45"><P class="p2 ft2">&nbsp;</P></TD>
+	<TD class="tr11 td41"><P class="p2 ft2">&nbsp;</P></TD>
+
+</TR>
+</TABLE>
+</DIV>
+<DIV id="id1_6">
+<DIV id="id1_6_1">
+<TABLE cellpadding=0 cellspacing=0 class="t3">
+
+
+
+<TR>
+	<TD class="tr13 td48"><P class="p2 ft20">&nbsp;</P></TD>
+	<TD class="tr13 td51"><P class="p2 ft20">&nbsp;</P></TD>
+	<TD class="tr13 td52"><P class="p2 ft20">&nbsp;</P></TD>
+</TR>
+
+
+
+<TR>
+	<TD class="tr4 td48"><P class="p2 ft5">&nbsp;</P></TD>
+	<TD class="tr4 td51"><P class="p2 ft5">&nbsp;</P></TD>
+	<TD class="tr4 td52"><P class="p2 ft5">&nbsp;</P></TD>
+	<TD rowspan=2 class="tr9 td50"><P class="p22 ft9">Received (Advance)</P></TD>
+</TR>
+<TR>
+	<TD class="tr7 td48"><P class="p2 ft2">&nbsp;</P></TD>
+	<TD class="tr7 td51"><P class="p2 ft2">&nbsp;</P></TD>
+	<TD class="tr7 td52"><P class="p2 ft2">&nbsp;</P></TD>
+</TR>
+<TR>
+	<TD class="tr4 td48"><P class="p2 ft5">&nbsp;</P></TD>
+	<TD colspan=2 class="tr4 td49"><P class="p2 ft5">&nbsp;</P></TD>
+	<TD class="tr4 td50"><P class="p2 ft5">&nbsp;</P></TD>
+</TR>
+<!--<TR>-->
+<!--	<TD class="tr9 td54"><P class="p2 ft2">&nbsp;</P></TD>-->
+<!--	<TD colspan=2 class="tr9 td55"><P class="p28 ft9">Amount of Tax Subject to Reverse Charge</P></TD>-->
+<!--	<TD class="tr9 td50"><P class="p22 ft9">Net Due</P></TD>-->
+<!--</TR>-->
+</TABLE>
+</DIV>
+<DIV id="id1_6_2">
+<P class="p29 ft9"><?=$rows['t_price'];?></P>
+
+<P class="p30 ft9">-</P>
+<P class="p32 ft9"><?=$rows['sub_total'];?></P>
+<P class="p33 ft11"><?=$rows['total_amount'];?></P>
+</DIV>
+</DIV>
+<DIV id="id1_7">
+<TABLE cellpadding=0 cellspacing=0 class="t4">
+
+<TR>
+	<TD class="tr4 td56"><P class="p2 ft5">&nbsp;</P></TD>
+	<TD class="tr4 td57"><P class="p2 ft5">&nbsp;</P></TD>
+	<TD class="tr4 td58"><P class="p2 ft5">&nbsp;</P></TD>
+</TR>
+
+</TABLE>
+</DIV>
+<DIV id="id1_8">
+<P class="p0 ft14">Authorised Signatory</P>
+</DIV>
+</DIV>
+
+	<script>
+		function generatePDF() {
+		window.print();
+		}
+		    function cancel() {
+		        window.history.go(-1);
+		    }
+    </script>
+</BODY>
+</HTML>

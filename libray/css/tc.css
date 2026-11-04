@@ -1,0 +1,179 @@
+/*section{
+	margin: 30px;
+	width: 420mm;
+	height: 297mm;
+	margin-left:70px;
+}*/
+
+section{
+	margin: 30px;
+	margin-left:70px;
+	width:1600px;
+}
+
+.txt-center {
+    text-align: center;
+}
+
+.idcard{position:relative;}
+
+.img img{position:absolute;left:84%;top:88%;}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@700&display=swap');
+
+
+
+.po1{
+    position: absolute;
+
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 177px;
+    margin-left: 435px;
+}
+.po15{
+        position: absolute;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 177px;
+    margin-left: 949px;
+}
+.po2{
+    position: absolute;
+    
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 219px;
+    margin-left: 435px;
+}
+.po3{
+    position: absolute;
+    
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 274px;
+    margin-left: 435px;
+}
+.po16{
+    position: absolute;
+    
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 274px;
+margin-left: 666px;
+}
+.po17{
+    position: absolute;
+    
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 274px;
+   margin-left: 804px;
+}
+.po4{
+    position: absolute;
+    
+    font-weight: bold;
+    font-size: 20px;
+   margin-top: 326px;
+    margin-left: 436px;
+}
+.po5{
+    position: absolute;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 329px;
+    margin-left: 918px;
+}
+.po6{
+       position: absolute;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 378px;
+    margin-left: 916px;
+}
+.po7{
+    position: absolute;
+    
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 429px;
+    margin-left: 834px;
+}
+.po8{
+    position: absolute;
+    
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 429px;
+    margin-left: 1031px
+}
+.po9{
+    position: absolute;
+    
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 429px;
+    margin-left: 1257px;
+}
+.po10{
+    position: absolute;
+    
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 482px;
+   margin-left: 573px;
+}
+.po11{
+    position: absolute;
+    
+    font-weight: bold;
+    font-size: 20px;
+margin-top: 477px;
+    margin-left: 1004px;
+}
+.po12{
+    position: absolute;
+    
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 527px;
+   margin-left: 1005px;
+
+}
+.po13{
+    position: absolute;
+    
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 634px;
+    margin-left: 354px;
+    text-transform: uppercase;
+}
+.po14{
+    position: absolute;
+    
+    font-weight: bold;
+    font-size: 20px;
+   margin-top: 600px;
+  margin-left: 452px;
+
+}
+@media print{
+
+section{
+	margin: 20px;
+}
+
+
+
+
+.img img{position:absolute;left:25%;top:87%;}
+}
+/*.table-bordered td, .table-bordered th, .table thead th {
+    border: 1px solid #000000 !important;
+}*/
+
+
