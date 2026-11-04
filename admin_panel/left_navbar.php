@@ -45,7 +45,12 @@
             <?php
           } else {
             ?>
-            <li><a href="<?=BASE_URL?>admin_panel"><i class="fa fa-circle-o"></i> Dashboard</a></li>
+            <li><a href="<?=BASE_URL?>admin_panel"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+            <li><a href="<?=BASE_URL?>admin_panel/maney_reports/index.php"><i class="fa fa-money"></i> Money Report</a></li>
+            <li><a href="<?=BASE_URL?>admin_panel/head"><i class="fa fa-cogs"></i> Head Type</a></li>
+            <li><a href="<?=BASE_URL?>admin_panel/teacher/index.php"><i class="fa fa-graduation-cap"></i> Teacher Portal</a></li>
+            <li><a href="<?=BASE_URL?>admin_panel/icard"><i class="fa fa-id-card"></i> Student Icard</a></li>
+            <li><a href="<?=BASE_URL?>admin_panel/student_behaviour"><i class="fa fa-comments"></i> Student Behaviour</a></li>
             <?php
           }
           ?>
