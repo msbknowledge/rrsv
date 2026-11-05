@@ -54,6 +54,26 @@ $totalPaid = 0;
 $h1Paid = 0;
 $h2Paid = 0;
 
+// Note: admissionval was already paid when admission was taken
+if ($admForm > 0) {
+    $totalPaid += $admForm;
+    $h1Paid += $admForm;
+    $admDate = (!empty($student['scl_date']) && $student['scl_date'] !== '0000-00-00') ? $student['scl_date'] : ($student['scl_session'] . '-01-01');
+    $payments[] = [
+        'id' => 'adm_form_' . $student_id,
+        'recep_no' => 'ADM-FORM',
+        'date' => $admDate,
+        'month' => 'Admission',
+        'purpose' => 'Admission Form Fee (Paid at Admission)',
+        'paid' => $admForm,
+        'mode' => 'Cash',
+        'monthly_fee' => 0,
+        'car_fee' => 0,
+        'advance_due' => 0,
+        'val_ad_du' => 'Paid'
+    ];
+}
+
 $h1Months = ['January', 'February', 'March', 'April', 'May', 'June'];
 $h2Months = ['July', 'August', 'September', 'October', 'November', 'December'];
 

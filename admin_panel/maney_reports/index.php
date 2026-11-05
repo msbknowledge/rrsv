@@ -191,8 +191,9 @@ if ($students_result) {
         $grossWithCar    = $grossWithoutCar + $fullYearCar;
         $totalGross      = $hasCar ? $grossWithCar : $grossWithoutCar;
 
-        // Payments
-        $totalPaid = $payments_total[$sid]['total_paid'] ?? 0;
+        // Payments: Note that admissionval (Admission Form fee) is already paid when admission was taken
+        $feePaid = $payments_total[$sid]['total_paid'] ?? 0;
+        $totalPaid = $feePaid + $admForm;
         $rangePaid = $payments_range[$sid] ?? 0;
 
         // Point 5: Auto-generated End of Month Due calculation
@@ -258,6 +259,7 @@ if ($students_result) {
             'gross_without_car'   => $grossWithoutCar,
             'gross_with_car'      => $grossWithCar,
             'total_gross'         => $totalGross,
+            'fee_paid'            => $feePaid,
             'range_paid'          => $rangePaid,
             'total_paid'          => $totalPaid,
             'advance'             => $advance,
@@ -672,7 +674,7 @@ thead th {
                                     <th class="col-item col-12">Uniform</th>
                                     <th class="col-item col-13">Shoes</th>
                                     <th class="col-item col-14">Winter</th>
-                                    <th class="col-item col-15">Adm Form</th>
+                                    <th class="col-item col-15" title="Admission Form Fee - Already Paid when Admission taken">Adm Form <small class="text-green" style="font-weight:bold;">(Paid)</small></th>
                                     <th class="col-item col-16">Bag</th>
                                     <th class="col-item col-17">I.Card</th>
                                     <th class="col-item col-18">Diary</th>
@@ -724,7 +726,7 @@ thead th {
                                             <td class="col-item col-12"><?= ($row['uniform'] > 0) ? '₹' . number_format($row['uniform']) : '-' ?></td>
                                             <td class="col-item col-13"><?= ($row['shoes'] > 0) ? '₹' . number_format($row['shoes']) : '-' ?></td>
                                             <td class="col-item col-14"><?= ($row['winter'] > 0) ? '₹' . number_format($row['winter']) : '-' ?></td>
-                                            <td class="col-item col-15"><?= ($row['adm_form'] > 0) ? '₹' . number_format($row['adm_form']) : '-' ?></td>
+                                            <td class="col-item col-15"><?= ($row['adm_form'] > 0) ? '₹' . number_format($row['adm_form']) . ' <span class="label label-success" style="font-size:9px; padding:1px 4px;" title="Already paid when admission taken"><i class="fa fa-check"></i> Paid</span>' : '-' ?></td>
                                             <td class="col-item col-16"><?= ($row['bag'] > 0) ? '₹' . number_format($row['bag']) : '-' ?></td>
                                             <td class="col-item col-17"><?= ($row['icard'] > 0) ? '₹' . number_format($row['icard']) : '-' ?></td>
                                             <td class="col-item col-18"><?= ($row['diary'] > 0) ? '₹' . number_format($row['diary']) : '-' ?></td>
@@ -737,7 +739,12 @@ thead th {
                                             <td class="col-item col-24" style="font-weight:700; color:#b7950b;">₹<?= number_format($row['total_gross']) ?></td>
                                             <td class="col-item col-25">₹<?= number_format($row['range_paid']) ?></td>
                                             <!-- Total Paid -->
-                                            <td class="col-item col-26" style="font-weight:700; color:#117a65;">₹<?= number_format($row['total_paid']) ?></td>
+                                            <td class="col-item col-26" style="font-weight:700; color:#117a65;">
+                                                ₹<?= number_format($row['total_paid']) ?>
+                                                <?php if ($row['adm_form'] > 0): ?>
+                                                    <br><small class="text-muted" style="font-size:10px; font-weight:normal;" title="Includes ₹<?= number_format($row['adm_form']) ?> Admission Form fee paid at admission">(inc. Form)</small>
+                                                <?php endif; ?>
+                                            </td>
                                             <!-- POINT 6: Advance Amount -->
                                             <td class="col-item col-27">
                                                 <?php if ($row['advance'] > 0): ?>
