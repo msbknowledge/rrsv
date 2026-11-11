@@ -468,6 +468,96 @@ include_once __DIR__ . '/../../include/header.php';
         padding: 18px;
     }
 
+    /* Complete Form Control Override (Removes red glow from left_nav.php) */
+    .form-control, input.form-control, select.form-control, textarea.form-control {
+        border: 1px solid #d1d5db !important;
+        box-shadow: none !important;
+        border-radius: 6px !important;
+        height: 38px !important;
+        font-size: 13px !important;
+        color: #1f2937 !important;
+        background-color: #ffffff !important;
+        padding: 6px 12px !important;
+        outline: none !important;
+    }
+    .form-control:focus, input.form-control:focus, select.form-control:focus, textarea.form-control:focus {
+        border-color: #1a337e !important;
+        box-shadow: 0 0 0 3px rgba(26, 51, 126, 0.12) !important;
+        outline: none !important;
+    }
+    select.form-control {
+        cursor: pointer;
+    }
+    .form-group label {
+        font-size: 12px !important;
+        font-weight: 600 !important;
+        color: #334155 !important;
+        margin-bottom: 5px !important;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    /* Input Group styling */
+    .input-group .form-control {
+        border-top-right-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+    }
+    .input-group .btn {
+        height: 38px !important;
+        line-height: 24px !important;
+        padding: 6px 14px !important;
+        font-size: 13px !important;
+    }
+
+    /* Button Enhancements for Spica */
+    .btn-default, .btn-outline-secondary {
+        background-color: #f8fafc !important;
+        border: 1px solid #cbd5e1 !important;
+        color: #334155 !important;
+    }
+    .btn-default:hover, .btn-outline-secondary:hover {
+        background-color: #e2e8f0 !important;
+        border-color: #94a3b8 !important;
+        color: #0f172a !important;
+    }
+    .btn-primary {
+        background-color: #1a337e !important;
+        border-color: #1a337e !important;
+        color: #ffffff !important;
+    }
+    .btn-primary:hover {
+        background-color: #132760 !important;
+        border-color: #132760 !important;
+    }
+    .btn-success {
+        background-color: #10b981 !important;
+        border-color: #10b981 !important;
+        color: #ffffff !important;
+    }
+    .btn-success:hover {
+        background-color: #059669 !important;
+        border-color: #059669 !important;
+    }
+    .btn-info {
+        background-color: #0ea5e9 !important;
+        border-color: #0ea5e9 !important;
+        color: #ffffff !important;
+    }
+    .btn-info:hover {
+        background-color: #0284c7 !important;
+        border-color: #0284c7 !important;
+    }
+    .btn-warning {
+        background-color: #f59e0b !important;
+        border-color: #f59e0b !important;
+        color: #1e293b !important;
+    }
+    .btn-warning:hover {
+        background-color: #d97706 !important;
+        border-color: #d97706 !important;
+    }
+
     /* Badges & Labels */
     .label {
         display: inline-block;
@@ -488,38 +578,63 @@ include_once __DIR__ . '/../../include/header.php';
     .label-info { background-color: #17a2b8; }
     .label-danger { background-color: #dc3545; }
 
-    /* Top stat cards */
-    .stat-card-custom {
-        border-radius: 8px;
-        padding: 16px 20px;
-        margin-bottom: 20px;
-        color: #fff !important;
-        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    /* Stat Cards Container - 5 Equal Columns */
+    .stat-cards-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 22px;
     }
-
+    .stat-card-wrapper {
+        flex: 1 1 calc(20% - 12px);
+        min-width: 190px;
+        display: flex;
+    }
+    .stat-card-custom {
+        flex: 1;
+        border-radius: 8px;
+        padding: 16px 18px;
+        color: #fff !important;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 110px;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        position: relative;
+        overflow: hidden;
+    }
     .stat-card-custom:hover {
         transform: translateY(-2px);
-        box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 5px 14px rgba(0, 0, 0, 0.14);
     }
-
     .stat-card-custom h3 {
-        margin: 0 0 5px 0;
+        margin: 0 0 6px 0;
         font-weight: 700;
-        font-size: 24px;
+        font-size: 21px;
+        line-height: 1.2;
         color: #fff !important;
+        letter-spacing: -0.3px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
-
     .stat-card-custom p {
-        margin: 0;
+        margin: 0 0 4px 0;
         font-size: 13px;
         opacity: 0.95;
         color: #fff !important;
-        font-weight: 500;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        white-space: nowrap;
     }
-
     .stat-card-custom small {
-        color: rgba(255, 255, 255, 0.85);
+        font-size: 11px;
+        opacity: 0.88;
+        color: #fff !important;
+        white-space: nowrap;
     }
 
     .bg-green { background: linear-gradient(135deg, #1e8449, #27ae60) !important; color: #fff !important; }
@@ -552,174 +667,188 @@ include_once __DIR__ . '/../../include/header.php';
             </div>
         </div>
 
-                <!-- ==============================================================
-                 POINT 3: TOP SUMMARY STAT CARDS (New vs Re-Admission Separately)
-                 ============================================================== -->
-                <div class="row">
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="stat-card-custom bg-green">
-                            <h3>₹<?= number_format($sum_actual_collection, 2) ?></h3>
-                            <p><i class="fa fa-check-circle"></i> Total Actual Collection (Year)</p>
-                            <small style="font-size:11px; opacity:0.85;">Selected Range: ₹<?= number_format($sum_range_collection, 2) ?></small>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-2 col-sm-6">
-                        <div class="stat-card-custom bg-aqua">
-                            <h3>₹<?= number_format($sum_new_adm_collection, 2) ?></h3>
-                            <p><i class="fa fa-user-plus"></i> New Admission (<?= $count_new_adm ?>)</p>
-                            <small style="font-size:11px; opacity:0.85;">Full Package Collection</small>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-2 col-sm-6">
-                        <div class="stat-card-custom bg-blue">
-                            <h3>₹<?= number_format($sum_readm_collection, 2) ?></h3>
-                            <p><i class="fa fa-refresh"></i> Re-Admission (<?= $count_readm ?>)</p>
-                            <small style="font-size:11px; opacity:0.85;">Tuition + Car + Items</small>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-2 col-sm-6">
-                        <div class="stat-card-custom bg-yellow" style="color: #fff !important;">
-                            <h3 style="color:#fff;">₹<?= number_format($sum_current_due, 2) ?></h3>
-                            <p><i class="fa fa-clock-o"></i> End-of-Month Due (<?= $months[$upToMonth] ?>)</p>
-                            <small style="font-size:11px; opacity:0.9;">Advance: ₹<?= number_format($sum_advance_amount, 2) ?></small>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="stat-card-custom bg-purple">
-                            <h3>₹<?= number_format($sum_year_end_due, 2) ?></h3>
-                            <p><i class="fa fa-calendar-check-o"></i> Total Year-End Due</p>
-                            <small style="font-size:11px; opacity:0.85;">Total Students: <?= count($reportRows) ?></small>
-                        </div>
-                    </div>
+        <!-- ==============================================================
+             POINT 3: TOP SUMMARY STAT CARDS (New vs Re-Admission Separately)
+             ============================================================== -->
+        <div class="stat-cards-container">
+            <div class="stat-card-wrapper">
+                <div class="stat-card-custom bg-green">
+                    <h3>₹<?= number_format($sum_actual_collection, 2) ?></h3>
+                    <p><i class="fa fa-check-circle"></i> Actual Collection</p>
+                    <small>Selected Range: ₹<?= number_format($sum_range_collection, 2) ?></small>
                 </div>
+            </div>
 
-                <!-- ==============================================================
-                 POINT 8 & 11: ADVANCED SEARCH & DROPDOWN FILTER BAR
-                 ============================================================== -->
-                <div class="box box-primary">
-                    <div class="box-header with-border">
-                        <h3 class="box-title"><i class="fa fa-filter"></i> Search, Session &amp; Date-wise Filters</h3>
-                        <div class="box-tools pull-right">
-                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+            <div class="stat-card-wrapper">
+                <div class="stat-card-custom bg-aqua">
+                    <h3>₹<?= number_format($sum_new_adm_collection, 2) ?></h3>
+                    <p><i class="fa fa-user-plus"></i> New Admission (<?= $count_new_adm ?>)</p>
+                    <small>Full Package Collection</small>
+                </div>
+            </div>
+
+            <div class="stat-card-wrapper">
+                <div class="stat-card-custom bg-blue">
+                    <h3>₹<?= number_format($sum_readm_collection, 2) ?></h3>
+                    <p><i class="fa fa-refresh"></i> Re-Admission (<?= $count_readm ?>)</p>
+                    <small>Tuition + Car + Items</small>
+                </div>
+            </div>
+
+            <div class="stat-card-wrapper">
+                <div class="stat-card-custom bg-yellow">
+                    <h3>₹<?= number_format($sum_current_due, 2) ?></h3>
+                    <p><i class="fa fa-clock-o"></i> Due (<?= $months[$upToMonth] ?>)</p>
+                    <small>Advance: ₹<?= number_format($sum_advance_amount, 2) ?></small>
+                </div>
+            </div>
+
+            <div class="stat-card-wrapper">
+                <div class="stat-card-custom bg-purple">
+                    <h3>₹<?= number_format($sum_year_end_due, 2) ?></h3>
+                    <p><i class="fa fa-calendar-check-o"></i> Year-End Due</p>
+                    <small>Total Students: <?= count($reportRows) ?></small>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==============================================================
+             POINT 8 & 11: ADVANCED SEARCH & DROPDOWN FILTER BAR
+             ============================================================== -->
+        <div class="box box-primary" style="margin-bottom: 20px;">
+            <div class="box-header with-border" style="cursor: pointer;" data-widget="collapse">
+                <h3 class="box-title"><i class="fa fa-filter text-primary"></i> Search, Session &amp; Date-wise Filters</h3>
+                <div class="box-tools pull-right">
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                </div>
+            </div>
+            <div class="box-body" style="padding: 16px 20px;">
+                <form method="get" action="" id="filterForm">
+                    <!-- Row 1: Primary Dropdown Selectors -->
+                    <div class="row">
+                        <!-- Session Dropdown -->
+                        <div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-3">
+                            <div class="form-group mb-0">
+                                <label><i class="fa fa-calendar text-primary"></i> Session</label>
+                                <select name="scl_session" class="form-control" onchange="document.getElementById('filterForm').submit()">
+                                    <option value="All" <?= ($scl_session === 'All') ? 'selected' : '' ?>>All Sessions</option>
+                                    <?php foreach ($sessionsList as $sess): ?>
+                                        <option value="<?= htmlspecialchars($sess) ?>" <?= ($scl_session == $sess) ? 'selected' : '' ?>>
+                                            Session <?= htmlspecialchars($sess) ?>
+                                        </option>
+                                    <?php endforeach; ?>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Class Dropdown -->
+                        <div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-3">
+                            <div class="form-group mb-0">
+                                <label><i class="fa fa-book text-primary"></i> Class</label>
+                                <select name="scl_class" class="form-control" onchange="document.getElementById('filterForm').submit()">
+                                    <option value="All" <?= ($scl_class === 'All') ? 'selected' : '' ?>>All Classes</option>
+                                    <?php foreach ($classesList as $cls): ?>
+                                        <option value="<?= htmlspecialchars($cls) ?>" <?= ($scl_class == $cls) ? 'selected' : '' ?>>
+                                            <?= htmlspecialchars($cls) ?>
+                                        </option>
+                                    <?php endforeach; ?>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Admission Type Dropdown -->
+                        <div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-3">
+                            <div class="form-group mb-0">
+                                <label><i class="fa fa-tags text-primary"></i> Admission Type</label>
+                                <select name="add_status" class="form-control" onchange="document.getElementById('filterForm').submit()">
+                                    <option value="All" <?= ($add_status === 'All') ? 'selected' : '' ?>>All (New + Re)</option>
+                                    <option value="New Admission" <?= ($add_status === 'New Admission') ? 'selected' : '' ?>>1. New Admission</option>
+                                    <option value="Readmission" <?= ($add_status === 'Readmission') ? 'selected' : '' ?>>2. Re-Admission</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Point 5: Auto-generated End of Month Due Benchmark Dropdown -->
+                        <div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-3">
+                            <div class="form-group mb-0">
+                                <label><i class="fa fa-hourglass-half text-primary"></i> Due Up To Month</label>
+                                <select name="upToMonth" class="form-control" onchange="document.getElementById('filterForm').submit()">
+                                    <?php foreach ($months as $num => $mname): ?>
+                                        <option value="<?= $num ?>" <?= ($upToMonth == $num) ? 'selected' : '' ?>>
+                                            <?= $num ?>. <?= $mname ?>
+                                        </option>
+                                    <?php endforeach; ?>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Date Range: From Date -->
+                        <div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-3">
+                            <div class="form-group mb-0">
+                                <label><i class="fa fa-calendar-check-o text-primary"></i> From Date</label>
+                                <input type="date" name="fromDate" id="fromDateInput" class="form-control" value="<?= htmlspecialchars($fromDate) ?>">
+                            </div>
+                        </div>
+
+                        <!-- Date Range: To Date -->
+                        <div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-3">
+                            <div class="form-group mb-0">
+                                <label><i class="fa fa-calendar-check-o text-primary"></i> To Date</label>
+                                <input type="date" name="endDate" id="endDateInput" class="form-control" value="<?= htmlspecialchars($endDate) ?>">
+                            </div>
                         </div>
                     </div>
-                    <div class="box-body">
-                        <form method="get" action="" id="filterForm">
-                            <div class="row">
-                                <!-- Session Dropdown -->
-                                <div class="col-md-2 col-sm-4">
-                                    <div class="form-group">
-                                        <label><i class="fa fa-calendar"></i> Session</label>
-                                        <select name="scl_session" class="form-control input-sm" onchange="document.getElementById('filterForm').submit()">
-                                            <option value="All" <?= ($scl_session === 'All') ? 'selected' : '' ?>>All Sessions</option>
-                                            <?php foreach ($sessionsList as $sess): ?>
-                                                <option value="<?= htmlspecialchars($sess) ?>" <?= ($scl_session == $sess) ? 'selected' : '' ?>>
-                                                    Session <?= htmlspecialchars($sess) ?>
-                                                </option>
-                                            <?php endforeach; ?>
-                                        </select>
-                                    </div>
-                                </div>
 
-                                <!-- Class Dropdown -->
-                                <div class="col-md-2 col-sm-4">
-                                    <div class="form-group">
-                                        <label><i class="fa fa-book"></i> Class</label>
-                                        <select name="scl_class" class="form-control input-sm">
-                                            <option value="All" <?= ($scl_class === 'All') ? 'selected' : '' ?>>All Classes</option>
-                                            <?php foreach ($classesList as $cls): ?>
-                                                <option value="<?= htmlspecialchars($cls) ?>" <?= ($scl_class == $cls) ? 'selected' : '' ?>>
-                                                    <?= htmlspecialchars($cls) ?>
-                                                </option>
-                                            <?php endforeach; ?>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <!-- Admission Type Dropdown -->
-                                <div class="col-md-2 col-sm-4">
-                                    <div class="form-group">
-                                        <label><i class="fa fa-tags"></i> Admission Type</label>
-                                        <select name="add_status" class="form-control input-sm">
-                                            <option value="All" <?= ($add_status === 'All') ? 'selected' : '' ?>>All (New + Re)</option>
-                                            <option value="New Admission" <?= ($add_status === 'New Admission') ? 'selected' : '' ?>>1. New Admission</option>
-                                            <option value="Readmission" <?= ($add_status === 'Readmission') ? 'selected' : '' ?>>2. Re-Admission</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <!-- Point 5: Auto-generated End of Month Due Benchmark Dropdown -->
-                                <div class="col-md-2 col-sm-4">
-                                    <div class="form-group">
-                                        <label><i class="fa fa-hourglass-half"></i> Due Up To Month</label>
-                                        <select name="upToMonth" class="form-control input-sm">
-                                            <?php foreach ($months as $num => $mname): ?>
-                                                <option value="<?= $num ?>" <?= ($upToMonth == $num) ? 'selected' : '' ?>>
-                                                    <?= $num ?>. End of <?= $mname ?>
-                                                </option>
-                                            <?php endforeach; ?>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <!-- Date Range: From Date -->
-                                <div class="col-md-2 col-sm-4">
-                                    <div class="form-group">
-                                        <label><i class="fa fa-calendar-check-o"></i> From Date</label>
-                                        <input type="date" name="fromDate" id="fromDateInput" class="form-control input-sm" value="<?= htmlspecialchars($fromDate) ?>">
-                                    </div>
-                                </div>
-
-                                <!-- Date Range: To Date -->
-                                <div class="col-md-2 col-sm-4">
-                                    <div class="form-group">
-                                        <label><i class="fa fa-calendar-check-o"></i> To Date</label>
-                                        <input type="date" name="endDate" id="endDateInput" class="form-control input-sm" value="<?= htmlspecialchars($endDate) ?>">
+                    <!-- Row 2: Search, Quick Dates & Action Buttons Toolbar -->
+                    <div class="row align-items-end pt-2" style="border-top: 1px dashed #e2e8f0;">
+                        <!-- Student Search input group -->
+                        <div class="col-lg-4 col-md-5 col-12 mb-lg-0 mb-3">
+                            <div class="form-group mb-0">
+                                <label><i class="fa fa-search text-primary"></i> Search Student (Name / Reg No / Phone)</label>
+                                <div class="input-group">
+                                    <input type="text" name="search_text" class="form-control" placeholder="Type Name, Reg. No, Phone..." value="<?= htmlspecialchars($search_text) ?>">
+                                    <div class="input-group-append">
+                                        <button type="submit" class="btn btn-primary" title="Search"><i class="fa fa-search"></i> Search</button>
+                                        <a href="index.php" class="btn btn-outline-secondary" title="Reset Filters"><i class="fa fa-refresh"></i></a>
                                     </div>
                                 </div>
                             </div>
+                        </div>
 
-                            <div class="row">
-                                <!-- Student Search Text / Datalist Dropdown -->
-                                <div class="col-md-4 col-sm-6">
-                                    <div class="form-group">
-                                        <label><i class="fa fa-search"></i> Search Student (Name / Reg No / Phone)</label>
-                                        <input type="text" name="search_text" class="form-control input-sm" placeholder="Type Name or Reg. No..." value="<?= htmlspecialchars($search_text) ?>">
-                                    </div>
+                        <!-- Quick Date Preset Buttons -->
+                        <div class="col-lg-4 col-md-7 col-12 mb-lg-0 mb-3">
+                            <div class="form-group mb-0">
+                                <label><i class="fa fa-clock-o text-primary"></i> Quick Date Range</label>
+                                <div class="btn-group d-flex w-100" role="group">
+                                    <button type="button" class="btn btn-outline-secondary btn-sm flex-fill" onclick="setQuickDate('today')">Today</button>
+                                    <button type="button" class="btn btn-outline-secondary btn-sm flex-fill" onclick="setQuickDate('yesterday')">Yesterday</button>
+                                    <button type="button" class="btn btn-outline-secondary btn-sm flex-fill" onclick="setQuickDate('this_month')">This Month</button>
+                                    <button type="button" class="btn btn-outline-secondary btn-sm flex-fill" onclick="setQuickDate('year')">Full Year</button>
                                 </div>
+                            </div>
+                        </div>
 
-                                <!-- Quick Preset Date Buttons (Point 11: Day-wise quick filter) -->
-                                <div class="col-md-5 col-sm-6" style="padding-top: 24px;">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-default btn-sm" onclick="setQuickDate('today')">Today</button>
-                                        <button type="button" class="btn btn-default btn-sm" onclick="setQuickDate('yesterday')">Yesterday</button>
-                                        <button type="button" class="btn btn-default btn-sm" onclick="setQuickDate('this_month')">This Month</button>
-                                        <button type="button" class="btn btn-default btn-sm" onclick="setQuickDate('year')">Full Year</button>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary btn-sm"><i class="fa fa-search"></i> Search</button>
-                                    <a href="index.php" class="btn btn-default btn-sm">Reset</a>
-                                </div>
-
-                                <!-- Point 11: Day-Wise Save Snapshot & Export Options -->
-                                <div class="col-md-3 col-sm-12 text-right" style="padding-top: 24px;">
-                                    <button type="button" class="btn btn-success btn-sm" onclick="saveDaySnapshot()" title="Save today's collection snapshot into database">
+                        <!-- Point 11: Day-Wise Save Snapshot & Print Options -->
+                        <div class="col-lg-4 col-md-12 col-12 text-lg-right text-left">
+                            <div class="form-group mb-0">
+                                <label class="d-none d-lg-block" style="color: transparent;">Actions</label>
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-success btn-sm font-weight-bold" onclick="saveDaySnapshot()" title="Save today's collection snapshot into database">
                                         <i class="fa fa-save"></i> Save Day Report
                                     </button>
-                                    <button type="button" class="btn btn-info btn-sm" onclick="openSnapshotsModal()" title="View previously saved daily snapshots">
+                                    <button type="button" class="btn btn-info btn-sm font-weight-bold text-white" onclick="openSnapshotsModal()" title="View previously saved daily snapshots">
                                         <i class="fa fa-history"></i> Saved Reports
                                     </button>
-                                    <button type="button" class="btn btn-warning btn-sm" onclick="window.print()" title="Print complete report">
+                                    <button type="button" class="btn btn-warning btn-sm font-weight-bold text-dark" onclick="window.print()" title="Print complete report">
                                         <i class="fa fa-print"></i> Print
                                     </button>
                                 </div>
                             </div>
-                        </form>
+                        </div>
                     </div>
-                </div>
+                </form>
+            </div>
+        </div>
 
                 <!-- ==============================================================
                  COLUMN TOGGLE CHECKBOXES (CLICK HEADER TO EXPAND / COLLAPSE)
@@ -739,14 +868,14 @@ include_once __DIR__ . '/../../include/header.php';
                     </div>
                     <div class="box-body" id="colToggleBody" style="display: none; padding: 12px 15px; background: #fbfcfc; border-top: 1px solid #eee;">
                         <!-- Quick Preset Buttons -->
-                        <div style="margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px dashed #d5dbdb; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
-                            <div class="btn-group btn-group-xs">
-                                <span style="font-weight: 600; margin-right: 8px; line-height: 22px; font-size: 12px;"><i class="fa fa-sliders"></i> Quick Views:</span>
-                                <button type="button" class="btn btn-default" onclick="applyColPreset('all')"><i class="fa fa-check-square-o text-green"></i> Show All</button>
-                                <button type="button" class="btn btn-default" onclick="applyColPreset('dues')"><i class="fa fa-money text-blue"></i> Dues &amp; Payments Only</button>
-                                <button type="button" class="btn btn-default" onclick="applyColPreset('breakdown')"><i class="fa fa-list text-purple"></i> Detailed Fee Items</button>
-                                <button type="button" class="btn btn-default" onclick="applyColPreset('hide_all')"><i class="fa fa-square-o text-red"></i> Hide All</button>
-                                <button type="button" class="btn btn-default" onclick="resetColDefaults()"><i class="fa fa-refresh"></i> Reset Default</button>
+                        <div style="margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px dashed #e2e8f0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+                            <div class="btn-group btn-group-sm">
+                                <span style="font-weight: 600; margin-right: 8px; line-height: 30px; font-size: 12px; color: #475569;"><i class="fa fa-sliders text-primary"></i> Quick Views:</span>
+                                <button type="button" class="btn btn-outline-primary btn-sm" onclick="applyColPreset('all')"><i class="fa fa-check-square-o text-success"></i> Show All</button>
+                                <button type="button" class="btn btn-outline-primary btn-sm" onclick="applyColPreset('dues')"><i class="fa fa-money text-info"></i> Dues &amp; Payments Only</button>
+                                <button type="button" class="btn btn-outline-primary btn-sm" onclick="applyColPreset('breakdown')"><i class="fa fa-list text-purple"></i> Detailed Fee Items</button>
+                                <button type="button" class="btn btn-outline-danger btn-sm" onclick="applyColPreset('hide_all')"><i class="fa fa-square-o text-danger"></i> Hide All</button>
+                                <button type="button" class="btn btn-outline-secondary btn-sm" onclick="resetColDefaults()"><i class="fa fa-refresh"></i> Reset Default</button>
                             </div>
                         </div>
 

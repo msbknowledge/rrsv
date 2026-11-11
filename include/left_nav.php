@@ -26,13 +26,13 @@
   <link rel="shortcut icon" href="<?php echo BASE_URL; ?>libray/images/logo.jpeg" />
   <style>
     .form-control {
-      border-color: #B5D6FD;
-      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+      border-color: #ced4da;
+      box-shadow: none;
     }
 
     .form-control:focus {
-      border-color: #FF0000;
-      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+      border-color: #1a337e;
+      box-shadow: 0 0 0 0.2rem rgba(26, 51, 126, 0.15);
     }
   </style>
 </head>
