@@ -167,6 +167,36 @@ $sum_advance_amount = 0;    // Total advance
 $count_new_adm = 0;
 $count_readm = 0;
 
+// Per-Column Totals for Table Footer
+$col_totals = [
+    'count'               => 0,
+    'admission_fee'       => 0,
+    'readmission_fee'     => 0,
+    'monthly_fee'         => 0,
+    'yearly_tuition'      => 0,
+    'car_count'           => 0,
+    'car_monthly'         => 0,
+    'yearly_car'          => 0,
+    'uniform'             => 0,
+    'shoes'               => 0,
+    'winter'              => 0,
+    'adm_form'            => 0,
+    'bag'                 => 0,
+    'icard'               => 0,
+    'diary'               => 0,
+    'books'               => 0,
+    'copy'                => 0,
+    'total_items'         => 0,
+    'gross_no_car'        => 0,
+    'gross_with_car'      => 0,
+    'total_package_gross' => 0,
+    'range_paid'          => 0,
+    'total_paid'          => 0,
+    'advance'             => 0,
+    'current_due'         => 0,
+    'year_end_due'        => 0
+];
+
 if ($students_result) {
     while ($row = mysqli_fetch_assoc($students_result)) {
         $sid = $row['id'];
@@ -239,6 +269,34 @@ if ($students_result) {
         } else {
             $sum_readm_collection   += $totalPaid;
         }
+
+        // Accumulate Column Totals for Table Footer
+        $col_totals['count']++;
+        $col_totals['admission_fee']       += $admFee;
+        $col_totals['readmission_fee']     += $readmFee;
+        $col_totals['monthly_fee']         += $monthlyFee;
+        $col_totals['yearly_tuition']      += $fullYearTuition;
+        if ($hasCar) $col_totals['car_count']++;
+        $col_totals['car_monthly']         += $carMonthly;
+        $col_totals['yearly_car']          += $fullYearCar;
+        $col_totals['uniform']             += $uniform;
+        $col_totals['shoes']               += $shoes;
+        $col_totals['winter']              += $winter;
+        $col_totals['adm_form']            += $admForm;
+        $col_totals['bag']                 += $bag;
+        $col_totals['icard']               += $icard;
+        $col_totals['diary']               += $diary;
+        $col_totals['books']               += $books;
+        $col_totals['copy']                += $copy;
+        $col_totals['total_items']         += $totalItems;
+        $col_totals['gross_no_car']        += $grossWithoutCar;
+        $col_totals['gross_with_car']      += $grossWithCar;
+        $col_totals['total_package_gross'] += $totalGross;
+        $col_totals['range_paid']          += $rangePaid;
+        $col_totals['total_paid']          += $totalPaid;
+        $col_totals['advance']             += $advance;
+        $col_totals['current_due']         += $currentDue;
+        $col_totals['year_end_due']        += $yearEndDue;
 
         // Guardian phone
         $phone = trim($row['scl_phone_no'] ?: ($row['father_phone_no'] ?: ''));
@@ -354,12 +412,15 @@ include_once __DIR__ . '/../../include/header.php';
             font-weight: 600;
         }
 
-        /* Sticky Headers */
+        /* Sticky Headers & Footers on Desktop */
         thead th.col-freeze-1,
         thead th.col-freeze-2,
-        thead th.col-freeze-3 {
+        thead th.col-freeze-3,
+        tfoot td.col-freeze-1,
+        tfoot td.col-freeze-2,
+        tfoot td.col-freeze-3 {
             z-index: 25 !important;
-            background-color: #ecf0f5 !important;
+            background-color: #e2e8f0 !important;
         }
 
         /* Hover effect on sticky rows */
@@ -368,6 +429,21 @@ include_once __DIR__ . '/../../include/header.php';
         .table-freeze tbody tr:hover td.col-freeze-3 {
             background-color: #ebf3ff !important;
         }
+    }
+
+    /* Table Footer Styling */
+    tfoot tr {
+        font-weight: bold;
+        background-color: #f1f5f9;
+        border-top: 3px solid #1e3c72 !important;
+        border-bottom: 3px solid #1e3c72 !important;
+    }
+    tfoot td {
+        vertical-align: middle !important;
+        padding: 9px 10px !important;
+        border-right: 1px solid #cbd5e1 !important;
+        white-space: nowrap;
+        font-size: 12px;
     }
 
     /* Mobile screens (<= 768px): Smooth Horizontal Scroll without sticky blocking view */
@@ -909,7 +985,10 @@ include_once __DIR__ . '/../../include/header.php';
                                     <button type="button" class="btn btn-info btn-sm font-weight-bold text-white" onclick="openSnapshotsModal()" title="View previously saved daily snapshots">
                                         <i class="fa fa-history"></i> Saved Reports
                                     </button>
-                                    <button type="button" class="btn btn-warning btn-sm font-weight-bold text-dark" onclick="window.print()" title="Print complete report">
+                                    <button type="button" class="btn btn-danger btn-sm font-weight-bold text-white" onclick="downloadMoneyReportPDF()" title="Download PDF of Money Report">
+                                        <i class="fa fa-file-pdf-o"></i> PDF
+                                    </button>
+                                    <button type="button" class="btn btn-warning btn-sm font-weight-bold text-dark" onclick="printMoneyReport()" title="Print complete report">
                                         <i class="fa fa-print"></i> Print
                                     </button>
                                 </div>
@@ -1001,8 +1080,10 @@ include_once __DIR__ . '/../../include/header.php';
                             <i class="fa fa-table"></i> Student Fee Master Ledger
                             <span class="badge bg-blue"><?= count($reportRows) ?> Students Found</span>
                         </h3>
-                        <div class="box-tools pull-right">
-                            <button class="btn btn-default btn-xs" onclick="exportToCSV()"><i class="fa fa-file-excel-o text-green"></i> Export CSV</button>
+                        <div class="box-tools pull-right" style="display: flex; gap: 6px; align-items: center;">
+                            <button type="button" class="btn btn-danger btn-xs font-weight-bold" onclick="downloadMoneyReportPDF()" title="Download PDF of Money Report"><i class="fa fa-file-pdf-o"></i> Download PDF</button>
+                            <button type="button" class="btn btn-warning btn-xs font-weight-bold text-dark" onclick="printMoneyReport()" title="Print Money Report Ledger"><i class="fa fa-print"></i> Print Report</button>
+                            <button type="button" class="btn btn-success btn-xs font-weight-bold" onclick="exportToCSV()" title="Export CSV Spreadsheet"><i class="fa fa-file-excel-o"></i> Export CSV</button>
                         </div>
                     </div>
                     <div class="box-body" style="padding: 0;">
@@ -1164,6 +1245,45 @@ include_once __DIR__ . '/../../include/header.php';
                                         </tr>
                                     <?php endif; ?>
                                 </tbody>
+                                <?php if (!empty($reportRows)): ?>
+                                <tfoot>
+                                    <tr style="background: #f1f5f9; font-weight: 800; border-top: 3px solid #1e3c72; border-bottom: 3px solid #1e3c72;">
+                                        <!-- Sticky Columns on Desktop -->
+                                        <td class="col-freeze-1 text-center" style="font-weight: 900; background: #e2e8f0 !important; color: #1e3a8a;">TOTAL</td>
+                                        <td class="col-freeze-2 text-center" style="font-weight: 700; background: #e2e8f0 !important; color: #1e3a8a;">-</td>
+                                        <td class="col-freeze-3" style="font-weight: 900; background: #e2e8f0 !important; color: #1e3a8a;"><?= count($reportRows) ?> Students</td>
+
+                                        <!-- Scrollable Data Cells matching col-4 to col-30 -->
+                                        <td class="col-item col-4 text-center" style="font-weight: 700;">-</td>
+                                        <td class="col-item col-5" style="background:#e0effa !important; font-weight:800; color:#1e40af;"><?= ($col_totals['admission_fee'] > 0) ? '₹' . number_format($col_totals['admission_fee']) : '-' ?></td>
+                                        <td class="col-item col-6" style="background:#e0effa !important; font-weight:800; color:#1e40af;"><?= ($col_totals['readmission_fee'] > 0) ? '₹' . number_format($col_totals['readmission_fee']) : '-' ?></td>
+                                        <td class="col-item col-7" style="font-weight:700;">₹<?= number_format($col_totals['monthly_fee']) ?></td>
+                                        <td class="col-item col-8" style="font-weight:700;">₹<?= number_format($col_totals['yearly_tuition']) ?></td>
+                                        <td class="col-item col-9 text-center" style="font-weight:700;"><?= $col_totals['car_count'] ?> Cars</td>
+                                        <td class="col-item col-10" style="font-weight:700;"><?= ($col_totals['car_monthly'] > 0) ? '₹' . number_format($col_totals['car_monthly']) : '-' ?></td>
+                                        <td class="col-item col-11" style="font-weight:700;"><?= ($col_totals['yearly_car'] > 0) ? '₹' . number_format($col_totals['yearly_car']) : '-' ?></td>
+                                        <td class="col-item col-12" style="font-weight:700;"><?= ($col_totals['uniform'] > 0) ? '₹' . number_format($col_totals['uniform']) : '-' ?></td>
+                                        <td class="col-item col-13" style="font-weight:700;"><?= ($col_totals['shoes'] > 0) ? '₹' . number_format($col_totals['shoes']) : '-' ?></td>
+                                        <td class="col-item col-14" style="font-weight:700;"><?= ($col_totals['winter'] > 0) ? '₹' . number_format($col_totals['winter']) : '-' ?></td>
+                                        <td class="col-item col-15" style="font-weight:700;"><?= ($col_totals['adm_form'] > 0) ? '₹' . number_format($col_totals['adm_form']) : '-' ?></td>
+                                        <td class="col-item col-16" style="font-weight:700;"><?= ($col_totals['bag'] > 0) ? '₹' . number_format($col_totals['bag']) : '-' ?></td>
+                                        <td class="col-item col-17" style="font-weight:700;"><?= ($col_totals['icard'] > 0) ? '₹' . number_format($col_totals['icard']) : '-' ?></td>
+                                        <td class="col-item col-18" style="font-weight:700;"><?= ($col_totals['diary'] > 0) ? '₹' . number_format($col_totals['diary']) : '-' ?></td>
+                                        <td class="col-item col-19" style="font-weight:700;"><?= ($col_totals['books'] > 0) ? '₹' . number_format($col_totals['books']) : '-' ?></td>
+                                        <td class="col-item col-20" style="font-weight:700;"><?= ($col_totals['copy'] > 0) ? '₹' . number_format($col_totals['copy']) : '-' ?></td>
+                                        <td class="col-item col-21" style="font-weight:800; background:#f8fafc !important;">₹<?= number_format($col_totals['total_items']) ?></td>
+                                        <td class="col-item col-22" style="font-weight:700;">₹<?= number_format($col_totals['gross_no_car']) ?></td>
+                                        <td class="col-item col-23" style="font-weight:700;">₹<?= number_format($col_totals['gross_with_car']) ?></td>
+                                        <td class="col-item col-24" style="background:#fef3c7 !important; font-weight:900; color:#92400e;">₹<?= number_format($col_totals['total_package_gross']) ?></td>
+                                        <td class="col-item col-25" style="font-weight:800; color:#166534;">₹<?= number_format($col_totals['range_paid']) ?></td>
+                                        <td class="col-item col-26" style="background:#dcfce7 !important; font-weight:900; color:#15803d;">₹<?= number_format($col_totals['total_paid']) ?></td>
+                                        <td class="col-item col-27" style="background:#ecfdf5 !important; font-weight:800; color:#047857;"><?= ($col_totals['advance'] > 0) ? '+₹' . number_format($col_totals['advance']) : '₹0' ?></td>
+                                        <td class="col-item col-28" style="background:#fee2e2 !important; font-weight:900; color:#b91c1c;"><?= ($col_totals['current_due'] > 0) ? '₹' . number_format($col_totals['current_due']) : 'Cleared' ?></td>
+                                        <td class="col-item col-29" style="background:#f3e8ff !important; font-weight:900; color:#7e22ce;"><?= ($col_totals['year_end_due'] > 0) ? '₹' . number_format($col_totals['year_end_due']) : 'Paid' ?></td>
+                                        <td class="col-item col-30 text-center">-</td>
+                                    </tr>
+                                </tfoot>
+                                <?php endif; ?>
                             </table>
                         </div>
 
@@ -1764,5 +1884,89 @@ include_once __DIR__ . '/../../include/header.php';
             downloadLink.style.display = "none";
             document.body.appendChild(downloadLink);
             downloadLink.click();
+        }
+
+        // Download PDF of Money Report
+        function downloadMoneyReportPDF() {
+            var form = document.getElementById('filterForm');
+            var formData = new FormData(form);
+            var params = new URLSearchParams(formData).toString();
+            window.location.href = 'export_pdf.php?' + params;
+        }
+
+        // Print Money Report Ledger (Landscape Printable View with Header & Signatures)
+        function printMoneyReport() {
+            var printTable = document.getElementById('moneyReportTable');
+            if (!printTable) return;
+
+            // Clone table to manipulate without affecting live DOM
+            var tableClone = printTable.cloneNode(true);
+
+            // Remove action column (last column) in the clone
+            var allRows = tableClone.querySelectorAll('tr');
+            for (var r = 0; r < allRows.length; r++) {
+                var cells = allRows[r].querySelectorAll('th, td');
+                if (cells.length > 0) {
+                    cells[cells.length - 1].remove(); // remove Actions column
+                }
+            }
+
+            var sessVal = $('select[name="scl_session"]').val() || 'All';
+            var classVal = $('select[name="scl_class"]').val() || 'All';
+            var fromVal = $('#fromDateInput').val() || '';
+            var toVal = $('#endDateInput').val() || '';
+
+            var printWin = window.open('', '_blank', 'width=1100,height=800');
+            printWin.document.write('<!DOCTYPE html><html><head><title>Money Report - ' + sessVal + '</title>');
+            printWin.document.write('<style>');
+            printWin.document.write('@page { size: landscape; margin: 8mm; }');
+            printWin.document.write('body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; padding: 10px; color: #1e293b; background: #fff; }');
+            printWin.document.write('.header { text-align: center; border-bottom: 2px solid #1e3a8a; padding-bottom: 8px; margin-bottom: 12px; }');
+            printWin.document.write('.header h2 { margin: 0; font-size: 18px; color: #1e3a8a; text-transform: uppercase; font-weight: 800; }');
+            printWin.document.write('.header p { margin: 2px 0; font-size: 11px; color: #475569; }');
+            printWin.document.write('.meta-bar { font-size: 11.5px; background: #f8fafc; padding: 6px 12px; border: 1px solid #e2e8f0; border-radius: 4px; margin-bottom: 12px; display: flex; justify-content: space-between; }');
+            printWin.document.write('table { width: 100%; border-collapse: collapse; font-size: 10px; }');
+            printWin.document.write('th, td { border: 1px solid #cbd5e1; padding: 5px 6px; }');
+            printWin.document.write('thead th { background: #1e3c72; color: #fff; text-align: left; font-size: 9.5px; }');
+            printWin.document.write('tfoot tr { background: #e2e8f0; font-weight: bold; border-top: 2px solid #1e3c72; font-size: 10px; }');
+            printWin.document.write('tfoot td { background: #e2e8f0 !important; font-weight: bold; }');
+            printWin.document.write('.text-center { text-align: center; }');
+            printWin.document.write('.text-right { text-align: right; }');
+            printWin.document.write('.badge-advance, .badge-due, .badge-yeardue, .label { display: inline-block; padding: 1px 4px; border-radius: 3px; font-weight: 700; font-size: 9px; }');
+            printWin.document.write('.signatures { display: flex; justify-content: space-between; margin-top: 35px; padding-top: 15px; }');
+            printWin.document.write('.sig-box { text-align: center; width: 200px; font-size: 11px; border-top: 1px solid #475569; padding-top: 4px; font-weight: 600; }');
+            printWin.document.write('</style></head><body>');
+
+            // Header
+            printWin.document.write('<div class="header">');
+            printWin.document.write('<h2>RASULPUR RAMKRISHNA SARADA VIDYAPITH</h2>');
+            printWin.document.write('<p>Reg. No.: SO196094 | U-DISE Code: 19251610302 | ESTD: 2012 | Baidyadanga, Rasulpur, Memari, Purba Bardhaman</p>');
+            printWin.document.write('<h3 style="margin: 4px 0 0 0; font-size: 13px; color: #0284c7;">STUDENT FEE MASTER LEDGER & MONEY REPORT</h3>');
+            printWin.document.write('</div>');
+
+            // Metadata bar
+            printWin.document.write('<div class="meta-bar">');
+            printWin.document.write('<span><strong>Session:</strong> ' + sessVal + ' | <strong>Class:</strong> ' + classVal + '</span>');
+            printWin.document.write('<span><strong>Date Range:</strong> ' + (fromVal || 'Start') + ' to ' + (toVal || 'End') + '</span>');
+            printWin.document.write('<span><strong>Printed On:</strong> ' + new Date().toLocaleString() + '</span>');
+            printWin.document.write('</div>');
+
+            // Table
+            printWin.document.write(tableClone.outerHTML);
+
+            // Signatures
+            printWin.document.write('<div class="signatures">');
+            printWin.document.write('<div class="sig-box">Prepared By</div>');
+            printWin.document.write('<div class="sig-box">Accountant / Cashier</div>');
+            printWin.document.write('<div class="sig-box">Principal / Headmaster</div>');
+            printWin.document.write('</div>');
+
+            printWin.document.write('</body></html>');
+            printWin.document.close();
+            printWin.focus();
+            setTimeout(function() {
+                printWin.print();
+                printWin.close();
+            }, 500);
         }
     </script>
