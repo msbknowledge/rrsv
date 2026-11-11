@@ -649,6 +649,69 @@ include_once __DIR__ . '/../../include/header.php';
     .bg-blue { background: linear-gradient(135deg, #1f4e79, #2980b9) !important; color: #fff !important; }
     .bg-yellow { background: linear-gradient(135deg, #d35400, #e67e22) !important; color: #fff !important; }
     .bg-purple { background: linear-gradient(135deg, #6c3483, #8e44ad) !important; color: #fff !important; }
+
+    /* Modal Dialog & Header Modern Styling */
+    .modal-content {
+        border-radius: 8px !important;
+        overflow: hidden;
+        border: none !important;
+        box-shadow: 0 12px 36px rgba(0, 0, 0, 0.22) !important;
+    }
+    .modal-header {
+        border-bottom: none !important;
+        padding: 14px 20px !important;
+    }
+    .modal-header .close,
+    button.close,
+    .modal-header button.close {
+        background: transparent !important;
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+        color: #ffffff !important;
+        font-size: 26px !important;
+        font-weight: 300 !important;
+        line-height: 1 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        opacity: 0.85 !important;
+        cursor: pointer !important;
+        float: none !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        min-width: 32px !important;
+        width: 32px !important;
+        height: 32px !important;
+        border-radius: 4px !important;
+        text-shadow: none !important;
+    }
+    .modal-header .close:hover,
+    button.close:hover,
+    .modal-header button.close:hover {
+        opacity: 1 !important;
+        background: rgba(255, 255, 255, 0.2) !important;
+        color: #ffffff !important;
+    }
+    .modal-footer {
+        border-top: 1px solid #edf2f7 !important;
+        padding: 12px 20px !important;
+        background: #f8fafc !important;
+    }
+    #periodButtonGroup .btn {
+        font-size: 12px;
+        padding: 6px 12px;
+        font-weight: 500;
+        border: 1px solid #cbd5e1;
+        background: #ffffff;
+        color: #334155;
+    }
+    #periodButtonGroup .btn.active,
+    #periodButtonGroup .btn:hover {
+        background: #2563eb !important;
+        color: #ffffff !important;
+        border-color: #2563eb !important;
+    }
 </style>
 <!-- Dynamic Column Visibility Style Tag -->
 <style id="dynamic-column-css"></style>
@@ -1111,29 +1174,33 @@ include_once __DIR__ . '/../../include/header.php';
      POINT 10: 6-MONTH & MONTHLY PAYMENT STATEMENT MODAL
      ============================================================== -->
     <div class="modal fade" id="statementModal" tabindex="-1" role="dialog" aria-labelledby="statementModalLabel">
-        <div class="modal-dialog modal-lg" role="document" style="width: 85%; max-width: 950px;">
-            <div class="modal-content">
-                <div class="modal-header bg-primary text-white" style="color: #fff; background-color: #3c8dbc;">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:#fff;"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="statementModalLabel"><i class="fa fa-print"></i> Student Monthly Fee Statement &amp; Report</h4>
+        <div class="modal-dialog modal-lg" role="document" style="width: 90%; max-width: 950px; margin: 30px auto;">
+            <div class="modal-content" style="border-radius: 8px; overflow: hidden; border: none; box-shadow: 0 12px 36px rgba(0,0,0,0.22);">
+                <div class="modal-header" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: #fff; display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; border-bottom: none;">
+                    <h4 class="modal-title" id="statementModalLabel" style="font-size: 15px; font-weight: 600; margin: 0; color: #fff; display: flex; align-items: center; gap: 8px;">
+                        <i class="fa fa-print"></i> Student Monthly Fee Statement &amp; Report
+                    </h4>
+                    <button type="button" class="close" data-dismiss="modal" data-bs-dismiss="modal" aria-label="Close" style="color: #fff !important; background: transparent !important; border: none !important; font-size: 26px; line-height: 1; opacity: 0.85; cursor: pointer; padding: 0 4px !important; margin: 0 !important; box-shadow: none !important;">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-                <div class="modal-body" id="statementModalContent">
+                <div class="modal-body" id="statementModalContent" style="padding: 22px 24px; max-height: calc(85vh - 130px); overflow-y: auto;">
                     <div class="text-center py-4" style="padding: 40px;">
                         <i class="fa fa-spinner fa-spin fa-3x text-primary"></i>
                         <p class="mt-2" style="margin-top:10px;">Loading student payment history...</p>
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <div class="pull-left">
-                        <div class="btn-group" id="periodButtonGroup">
-                            <button type="button" class="btn btn-default btn-sm active" onclick="filterStatementPeriod('all')">Full Year</button>
-                            <button type="button" class="btn btn-default btn-sm" onclick="filterStatementPeriod('h1')">1st 6 Months (Jan - Jun)</button>
-                            <button type="button" class="btn btn-default btn-sm" onclick="filterStatementPeriod('h2')">2nd 6 Months (Jul - Dec)</button>
-                        </div>
+                <div class="modal-footer" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; background: #f8fafc; border-top: 1px solid #edf2f7; padding: 12px 20px;">
+                    <div class="btn-group" id="periodButtonGroup" role="group">
+                        <button type="button" class="btn btn-default btn-sm active" onclick="filterStatementPeriod('all')"><i class="fa fa-calendar"></i> Full Year</button>
+                        <button type="button" class="btn btn-default btn-sm" onclick="filterStatementPeriod('h1')"><i class="fa fa-calendar-check-o"></i> 1st 6 Months (Jan - Jun)</button>
+                        <button type="button" class="btn btn-default btn-sm" onclick="filterStatementPeriod('h2')"><i class="fa fa-calendar-check-o"></i> 2nd 6 Months (Jul - Dec)</button>
                     </div>
-                    <button type="button" class="btn btn-success btn-sm" id="modalWhatsAppBtn" target="_blank"><i class="fa fa-whatsapp"></i> Send WhatsApp Notice</button>
-                    <button type="button" class="btn btn-primary btn-sm" onclick="printStatementArea()"><i class="fa fa-print"></i> Print Statement</button>
-                    <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Close</button>
+                    <div style="display: flex; gap: 8px; align-items: center;">
+                        <button type="button" class="btn btn-success btn-sm" id="modalWhatsAppBtn" target="_blank" style="font-weight: 600;"><i class="fa fa-whatsapp"></i> Send WhatsApp Notice</button>
+                        <button type="button" class="btn btn-primary btn-sm" onclick="printStatementArea()" style="font-weight: 600;"><i class="fa fa-print"></i> Print Statement</button>
+                        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal" data-bs-dismiss="modal">Close</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1143,17 +1210,21 @@ include_once __DIR__ . '/../../include/header.php';
      POINT 11: SAVED DAILY SNAPSHOTS MODAL
      ============================================================== -->
     <div class="modal fade" id="snapshotsModal" tabindex="-1" role="dialog">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header bg-aqua" style="color: #fff; background-color: #00c0ef;">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title"><i class="fa fa-history"></i> Saved Daily Money Report Snapshots</h4>
+        <div class="modal-dialog modal-lg" role="document" style="width: 90%; max-width: 950px; margin: 30px auto;">
+            <div class="modal-content" style="border-radius: 8px; overflow: hidden; border: none; box-shadow: 0 12px 36px rgba(0,0,0,0.22);">
+                <div class="modal-header" style="background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%); color: #fff; display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; border-bottom: none;">
+                    <h4 class="modal-title" style="font-size: 15px; font-weight: 600; margin: 0; color: #fff; display: flex; align-items: center; gap: 8px;">
+                        <i class="fa fa-history"></i> Saved Daily Money Report Snapshots
+                    </h4>
+                    <button type="button" class="close" data-dismiss="modal" data-bs-dismiss="modal" aria-label="Close" style="color: #fff !important; background: transparent !important; border: none !important; font-size: 26px; line-height: 1; opacity: 0.85; cursor: pointer; padding: 0 4px !important; margin: 0 !important; box-shadow: none !important;">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-                <div class="modal-body" id="snapshotsModalContent">
-                    <div class="text-center py-3"><i class="fa fa-spinner fa-spin fa-2x"></i></div>
+                <div class="modal-body" id="snapshotsModalContent" style="padding: 20px; max-height: calc(85vh - 130px); overflow-y: auto;">
+                    <div class="text-center py-3"><i class="fa fa-spinner fa-spin fa-2x text-primary"></i></div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Close</button>
+                <div class="modal-footer" style="display: flex; justify-content: flex-end; background: #f8fafc; border-top: 1px solid #edf2f7; padding: 12px 20px;">
+                    <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
@@ -1442,71 +1513,123 @@ include_once __DIR__ . '/../../include/header.php';
                 $('#modalWhatsAppBtn').hide();
             }
 
-            var html = '<div id="printableStatementArea">';
-            html += '<div class="text-center" style="border-bottom: 2px solid #3c8dbc; padding-bottom: 10px; margin-bottom: 15px;">';
-            html += '<h3 style="margin: 0; font-weight: bold; color: #2c3e50;">RASULPUR RAMKRISHNA SARADA VIDYAPITH</h3>';
-            html += '<p style="margin: 3px 0; font-size: 11px;">Reg. No.: SO196094 | U-DISE Code: 19251610302 | ESTD: 2012</p>';
-            html += '<p style="margin: 0; font-size: 11px;">Baidyadanga, Rasulpur, Memari, Purba Bardhaman, Pin - 713151</p>';
-            html += '<h4 style="margin: 10px 0 0 0; text-transform: uppercase; font-size: 14px; font-weight: bold; color: #3c8dbc;">Fee Statement (' + (period === 'h1' ? '1st 6 Months: Jan - Jun' : (period === 'h2' ? '2nd 6 Months: Jul - Dec' : 'Full Session ' + s.session)) + ')</h4>';
+            var periodLabel = (period === 'h1' ? '1st 6 Months: Jan - Jun' : (period === 'h2' ? '2nd 6 Months: Jul - Dec' : 'Full Session ' + s.session));
+
+            var html = '<div id="printableStatementArea" style="font-family: inherit;">';
+
+            // School Letterhead Header
+            html += '<div style="text-align: center; border-bottom: 2px solid #2563eb; padding-bottom: 14px; margin-bottom: 18px;">';
+            html += '  <h3 style="margin: 0; font-size: 19px; font-weight: 800; color: #1e3a8a; text-transform: uppercase; letter-spacing: 0.5px;">RASULPUR RAMKRISHNA SARADA VIDYAPITH</h3>';
+            html += '  <p style="margin: 3px 0; font-size: 11.5px; color: #475569;">Reg. No.: SO196094 | U-DISE Code: 19251610302 | ESTD: 2012</p>';
+            html += '  <p style="margin: 0; font-size: 11px; color: #64748b;">Baidyadanga, Rasulpur, Memari, Purba Bardhaman, Pin - 713151</p>';
+            html += '  <div style="margin-top: 10px;">';
+            html += '    <span style="display: inline-block; padding: 4px 16px; background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe; border-radius: 20px; font-weight: 700; font-size: 12px; letter-spacing: 0.3px;">';
+            html += '      <i class="fa fa-file-text-o"></i> FEE STATEMENT (' + periodLabel.toUpperCase() + ')';
+            html += '    </span>';
+            html += '  </div>';
             html += '</div>';
 
-            // Student info grid
-            html += '<div class="row" style="margin-bottom: 15px; font-size: 13px; background: #f9f9f9; padding: 10px 5px; border-radius: 4px;">';
-            html += '<div class="col-xs-6 col-sm-3"><strong>Name:</strong> ' + s.name + '</div>';
-            html += '<div class="col-xs-6 col-sm-3"><strong>Reg. No:</strong> ' + s.reg_no + '</div>';
-            html += '<div class="col-xs-6 col-sm-3"><strong>Class / Roll:</strong> ' + s.class + ' (Roll: ' + (s.roll_no || '-') + ')</div>';
-            html += '<div class="col-xs-6 col-sm-3"><strong>Category:</strong> ' + s.type + '</div>';
-            html += '<div class="col-xs-6 col-sm-3" style="margin-top:5px;"><strong>Father:</strong> ' + (s.father_name || '-') + '</div>';
-            html += '<div class="col-xs-6 col-sm-3" style="margin-top:5px;"><strong>Guardian Ph:</strong> ' + (s.phone || 'N/A') + '</div>';
-            html += '<div class="col-xs-6 col-sm-3" style="margin-top:5px;"><strong>Car Service:</strong> ' + s.has_car + (s.car_cost > 0 ? ' (Rs.' + s.car_cost + '/mo)' : '') + '</div>';
-            html += '<div class="col-xs-6 col-sm-3" style="margin-top:5px;"><strong>Monthly Tuition:</strong> Rs. ' + s.monthly_fee + '</div>';
+            // Student Information Grid (Modern CSS Grid with 4 columns on desktop, responsive)
+            html += '<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px 16px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px 16px; margin-bottom: 18px;">';
+            html += '  <div><span style="display:block; font-size:11px; color:#64748b; font-weight:600; text-transform:uppercase;">Student Name</span><strong style="font-size:13.5px; color:#0f172a;">' + s.name + '</strong></div>';
+            html += '  <div><span style="display:block; font-size:11px; color:#64748b; font-weight:600; text-transform:uppercase;">Registration No</span><code style="font-size:12.5px; color:#b45309; background:#fef3c7; padding:2px 6px; border-radius:4px; font-weight:600;">' + s.reg_no + '</code></div>';
+            html += '  <div><span style="display:block; font-size:11px; color:#64748b; font-weight:600; text-transform:uppercase;">Class</span><strong style="font-size:13px; color:#0f172a;">' + s.class + (s.roll_no ? ' (Roll: ' + s.roll_no + ')' : '') + '</strong></div>';
+            html += '  <div><span style="display:block; font-size:11px; color:#64748b; font-weight:600; text-transform:uppercase;">Admission Category</span><span class="badge" style="background:' + (s.type === 'New Admission' ? '#10b981' : '#3b82f6') + '; color:#fff; font-size:11px; padding:3px 8px; border-radius:10px;">' + s.type + '</span></div>';
+            html += '  <div><span style="display:block; font-size:11px; color:#64748b; font-weight:600; text-transform:uppercase;">Father / Guardian</span><strong style="font-size:13px; color:#0f172a;">' + (s.father_name || '-') + '</strong></div>';
+            html += '  <div><span style="display:block; font-size:11px; color:#64748b; font-weight:600; text-transform:uppercase;">Guardian Phone</span><strong style="font-size:13px; color:#0f172a;">' + (s.phone || 'N/A') + '</strong></div>';
+            html += '  <div><span style="display:block; font-size:11px; color:#64748b; font-weight:600; text-transform:uppercase;">Car Service</span><strong style="font-size:13px; color:#0f172a;">' + s.has_car + (s.car_cost > 0 ? ' (₹' + Number(s.car_cost).toLocaleString('en-IN') + '/mo)' : '') + '</strong></div>';
+            html += '  <div><span style="display:block; font-size:11px; color:#64748b; font-weight:600; text-transform:uppercase;">Monthly Tuition</span><strong style="font-size:13px; color:#0f172a;">₹' + Number(s.monthly_fee).toLocaleString('en-IN') + '</strong></div>';
             html += '</div>';
 
-            // Fee breakdown cards
-            html += '<div class="row" style="margin-bottom: 15px;">';
-            html += '<div class="col-xs-3 text-center"><div style="background:#eaf2f8; padding:8px; border-radius:4px;"><strong style="font-size:11px;">FULL PACKAGE</strong><br><span style="font-size:15px; font-weight:bold; color:#2980b9;">₹' + Number(s.full_year_gross).toLocaleString('en-IN') + '</span></div></div>';
-            html += '<div class="col-xs-3 text-center"><div style="background:#e8f8f5; padding:8px; border-radius:4px;"><strong style="font-size:11px;">PERIOD PAID</strong><br><span style="font-size:15px; font-weight:bold; color:#27ae60;">₹' + Number(periodTotalPaid).toLocaleString('en-IN') + '</span></div></div>';
-            html += '<div class="col-xs-3 text-center"><div style="background:#fdedec; padding:8px; border-radius:4px;"><strong style="font-size:11px;">CURRENT DUE</strong><br><span style="font-size:15px; font-weight:bold; color:#c0392b;">₹' + Number(s.current_due).toLocaleString('en-IN') + '</span></div></div>';
-            html += '<div class="col-xs-3 text-center"><div style="background:#f4ecf7; padding:8px; border-radius:4px;"><strong style="font-size:11px;">YEAR-END DUE</strong><br><span style="font-size:15px; font-weight:bold; color:#8e44ad;">₹' + Number(s.year_end_due).toLocaleString('en-IN') + '</span></div></div>';
+            // 4 Key Summary Stat Cards (Side-by-side 4-column cards)
+            html += '<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-bottom: 20px;">';
+            
+            // Full Package
+            html += '  <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 12px 14px; text-align: center;">';
+            html += '    <div style="font-size: 11px; font-weight: 700; color: #1e40af; text-transform: uppercase; letter-spacing: 0.5px;">Full Package</div>';
+            html += '    <div style="font-size: 20px; font-weight: 800; color: #1d4ed8; margin-top: 3px;">₹' + Number(s.full_year_gross).toLocaleString('en-IN') + '</div>';
+            html += '    <div style="font-size: 10.5px; color: #3b82f6; margin-top: 2px;">Entire Academic Year</div>';
+            html += '  </div>';
+
+            // Period Paid
+            html += '  <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 12px 14px; text-align: center;">';
+            html += '    <div style="font-size: 11px; font-weight: 700; color: #166534; text-transform: uppercase; letter-spacing: 0.5px;">Period Paid</div>';
+            html += '    <div style="font-size: 20px; font-weight: 800; color: #15803d; margin-top: 3px;">₹' + Number(periodTotalPaid).toLocaleString('en-IN') + '</div>';
+            html += '    <div style="font-size: 10.5px; color: #22c55e; margin-top: 2px;">Total Collected to Date</div>';
+            html += '  </div>';
+
+            // Current Due
+            html += '  <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 12px 14px; text-align: center;">';
+            html += '    <div style="font-size: 11px; font-weight: 700; color: #991b1b; text-transform: uppercase; letter-spacing: 0.5px;">Current Due</div>';
+            html += '    <div style="font-size: 20px; font-weight: 800; color: #b91c1c; margin-top: 3px;">₹' + Number(s.current_due).toLocaleString('en-IN') + '</div>';
+            html += '    <div style="font-size: 10.5px; color: #ef4444; margin-top: 2px;">As of Current Month' + (s.advance_amount > 0 ? ' (Adv: ₹' + Number(s.advance_amount).toLocaleString('en-IN') + ')' : '') + '</div>';
+            html += '  </div>';
+
+            // Year-End Due
+            html += '  <div style="background: #faf5ff; border: 1px solid #e9d5ff; border-radius: 8px; padding: 12px 14px; text-align: center;">';
+            html += '    <div style="font-size: 11px; font-weight: 700; color: #6b21a8; text-transform: uppercase; letter-spacing: 0.5px;">Year-End Due</div>';
+            html += '    <div style="font-size: 20px; font-weight: 800; color: #7e22ce; margin-top: 3px;">₹' + Number(s.year_end_due).toLocaleString('en-IN') + '</div>';
+            html += '    <div style="font-size: 10.5px; color: #a855f7; margin-top: 2px;">Full Session Balance</div>';
+            html += '  </div>';
+
             html += '</div>';
 
-            // Payment table
-            html += '<h5 style="font-weight:bold; margin-bottom:8px;"><i class="fa fa-list"></i> Payment Transactions Breakdown:</h5>';
-            html += '<table class="table table-bordered table-striped table-condensed text-sm" style="font-size:12px;">';
-            html += '<thead><tr style="background:#eaeded;"><th>#</th><th>Date</th><th>Receipt No</th><th>Month</th><th>Purpose / Description</th><th>Mode</th><th class="text-right">Amount Paid</th></tr></thead>';
-            html += '<tbody>';
+            // Payment Transactions Table
+            html += '<div style="margin-bottom: 8px; display: flex; align-items: center; justify-content: space-between;">';
+            html += '  <h5 style="font-weight: 700; font-size: 13.5px; color: #1e293b; margin: 0;"><i class="fa fa-list text-primary"></i> Payment Transactions Breakdown:</h5>';
+            html += '  <span style="font-size: 12px; color: #64748b;"><strong>' + filteredPayments.length + '</strong> receipt(s) found</span>';
+            html += '</div>';
+
+            html += '<div style="overflow-x: auto; border: 1px solid #e2e8f0; border-radius: 6px; margin-bottom: 22px;">';
+            html += '<table class="table table-bordered table-striped" style="margin-bottom: 0; font-size: 12px; width: 100%; border-collapse: collapse;">';
+            html += '  <thead>';
+            html += '    <tr style="background: #f1f5f9; color: #334155; font-weight: 600;">';
+            html += '      <th style="padding: 9px 10px; width: 40px; text-align: center;">#</th>';
+            html += '      <th style="padding: 9px 10px; width: 95px;">Date</th>';
+            html += '      <th style="padding: 9px 10px; width: 110px;">Receipt No</th>';
+            html += '      <th style="padding: 9px 10px; width: 100px;">Month</th>';
+            html += '      <th style="padding: 9px 10px;">Purpose / Description</th>';
+            html += '      <th style="padding: 9px 10px; width: 85px; text-align: center;">Mode</th>';
+            html += '      <th style="padding: 9px 12px; width: 115px; text-align: right;">Amount Paid</th>';
+            html += '    </tr>';
+            html += '  </thead>';
+            html += '  <tbody>';
 
             if (filteredPayments.length > 0) {
                 for (var j = 0; j < filteredPayments.length; j++) {
                     var row = filteredPayments[j];
-                    html += '<tr>';
-                    html += '<td>' + (j + 1) + '</td>';
-                    html += '<td>' + (row.date ? row.date.split('-').reverse().join('-') : '-') + '</td>';
-                    html += '<td><code>' + (row.recep_no || '-') + '</code></td>';
-                    html += '<td>' + (row.month || '-') + '</td>';
-                    html += '<td>' + (row.purpose || 'Fee Payment') + '</td>';
-                    html += '<td>' + (row.mode || 'Cash') + '</td>';
-                    html += '<td class="text-right font-weight-bold" style="font-weight:bold; color:#1e8449;">₹' + Number(row.paid).toLocaleString('en-IN', {
-                        minimumFractionDigits: 2
-                    }) + '</td>';
-                    html += '</tr>';
+                    html += '  <tr>';
+                    html += '    <td style="padding: 8px 10px; text-align: center;">' + (j + 1) + '</td>';
+                    html += '    <td style="padding: 8px 10px;">' + (row.date ? row.date.split('-').reverse().join('-') : '-') + '</td>';
+                    html += '    <td style="padding: 8px 10px;"><code style="font-size: 11.5px; color: #0284c7; background: #e0f2fe; padding: 2px 5px; border-radius: 3px;">' + (row.recep_no || '-') + '</code></td>';
+                    html += '    <td style="padding: 8px 10px; font-weight: 500;">' + (row.month || '-') + '</td>';
+                    html += '    <td style="padding: 8px 10px;">' + (row.purpose || 'Fee Payment') + '</td>';
+                    html += '    <td style="padding: 8px 10px; text-align: center;"><span class="badge" style="background: #e2e8f0; color: #334155; font-size: 10.5px; padding: 2px 6px;">' + (row.mode || 'Cash') + '</span></td>';
+                    html += '    <td style="padding: 8px 12px; text-align: right; font-weight: 700; color: #15803d; font-size: 12.5px;">₹' + Number(row.paid).toLocaleString('en-IN', { minimumFractionDigits: 2 }) + '</td>';
+                    html += '  </tr>';
                 }
-                html += '<tr style="background:#f2f4f4; font-weight:bold;">';
-                html += '<td colspan="6" class="text-right">TOTAL PAID FOR THIS PERIOD:</td>';
-                html += '<td class="text-right" style="color:#1e8449; font-size:13px;">₹' + Number(periodTotalPaid).toLocaleString('en-IN', {
-                    minimumFractionDigits: 2
-                }) + '</td>';
-                html += '</tr>';
+                html += '  <tr style="background: #f8fafc; font-weight: 700; border-top: 2px solid #cbd5e1;">';
+                html += '    <td colspan="6" style="padding: 10px 12px; text-align: right; font-size: 12.5px; color: #1e293b;">TOTAL PAID FOR THIS PERIOD:</td>';
+                html += '    <td style="padding: 10px 12px; text-align: right; color: #15803d; font-size: 13.5px; font-weight: 800;">₹' + Number(periodTotalPaid).toLocaleString('en-IN', { minimumFractionDigits: 2 }) + '</td>';
+                html += '  </tr>';
             } else {
-                html += '<tr><td colspan="7" class="text-center text-muted" style="padding:15px;">No payment records found for this period.</td></tr>';
+                html += '  <tr><td colspan="7" class="text-center text-muted" style="padding: 22px; font-size: 13px;">No payment records found for this period.</td></tr>';
             }
 
-            html += '</tbody></table>';
+            html += '  </tbody>';
+            html += '</table>';
+            html += '</div>';
 
-            // Signatures for printable statement
-            html += '<div class="row" style="margin-top: 35px; padding-top: 20px; border-top: 1px dashed #ccc;">';
-            html += '<div class="col-xs-6 text-center"><p style="margin-bottom:0;">___________________________</p><small>Guardian Signature</small></div>';
-            html += '<div class="col-xs-6 text-center"><p style="margin-bottom:0;">___________________________</p><small>Authorized Signatory / Principal</small></div>';
+            // Signatures (For printed statement)
+            html += '<div style="display: flex; justify-content: space-between; align-items: flex-end; margin-top: 30px; padding-top: 15px; border-top: 1px dashed #cbd5e1;">';
+            html += '  <div style="text-align: center; width: 220px;">';
+            html += '    <div style="border-bottom: 1px solid #475569; height: 32px; margin-bottom: 6px;"></div>';
+            html += '    <small style="color: #64748b; font-weight: 600; text-transform: uppercase; font-size: 10.5px;">Guardian Signature</small>';
+            html += '  </div>';
+            html += '  <div style="text-align: center; width: 220px;">';
+            html += '    <div style="border-bottom: 1px solid #475569; height: 32px; margin-bottom: 6px;"></div>';
+            html += '    <small style="color: #64748b; font-weight: 600; text-transform: uppercase; font-size: 10.5px;">Authorized Signatory / Principal</small>';
+            html += '  </div>';
             html += '</div>';
 
             html += '</div>'; // End printable area
@@ -1515,12 +1638,27 @@ include_once __DIR__ . '/../../include/header.php';
         }
 
         function printStatementArea() {
-            var printContent = document.getElementById('printableStatementArea').innerHTML;
-            var originalContent = document.body.innerHTML;
-            document.body.innerHTML = printContent;
-            window.print();
-            document.body.innerHTML = originalContent;
-            window.location.reload();
+            var printContent = document.getElementById('printableStatementArea');
+            if (!printContent) return;
+            var printWindow = window.open('', '_blank', 'width=900,height=800');
+            printWindow.document.write('<!DOCTYPE html><html><head><title>Student Fee Statement</title>');
+            printWindow.document.write('<style>');
+            printWindow.document.write('body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; padding: 25px; color: #1e293b; background: #fff; }');
+            printWindow.document.write('table { width: 100%; border-collapse: collapse; margin: 15px 0; }');
+            printWindow.document.write('th, td { border: 1px solid #cbd5e1; padding: 7px 10px; font-size: 12px; }');
+            printWindow.document.write('th { background: #f1f5f9; text-align: left; font-weight: 600; }');
+            printWindow.document.write('.text-right { text-align: right; }');
+            printWindow.document.write('.text-center { text-align: center; }');
+            printWindow.document.write('@page { size: auto; margin: 12mm; }');
+            printWindow.document.write('</style></head><body>');
+            printWindow.document.write(printContent.innerHTML);
+            printWindow.document.write('</body></html>');
+            printWindow.document.close();
+            printWindow.focus();
+            setTimeout(function() {
+                printWindow.print();
+                printWindow.close();
+            }, 400);
         }
 
         // Point 11: Save Daily Snapshot
