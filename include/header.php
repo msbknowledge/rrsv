@@ -23,7 +23,10 @@
 
 //  include('left_nav.php'); 
 
-session_start();
+include_once __DIR__ . '/config.php';
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 $mid = isset($_SESSION['mid']) ? $_SESSION['mid'] : '';
 $token = isset($_SESSION['_token']) ? $_SESSION['_token'] : '';
 
@@ -38,7 +41,8 @@ if (
   $cookie_value = isset($_SERVER['SCRIPT_URI']) ? $_SERVER['SCRIPT_URI'] : $_SERVER['REQUEST_URI'];
   setcookie($cookie_name, $cookie_value, time() + 500, "/");
 
-  header("location:index.php");
+  $loginUrl = defined('BASE_URL') ? BASE_URL . 'login.php' : '/rrsv/login.php';
+  header("location:" . $loginUrl);
   exit;
 }
 
@@ -51,8 +55,7 @@ if (isset($_COOKIE["last_http"])) {
   header("location:" . $lst);
   exit;
 }
-//include('config.php');
-include('left_nav.php');
+include_once __DIR__ . '/left_nav.php';
 ?>
 
 

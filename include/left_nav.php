@@ -3,7 +3,7 @@
 
 <head>
   <?php
-  include('config.php');
+  include_once __DIR__ . '/config.php';
   ?>
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -56,7 +56,7 @@
         <li class="nav-item sidebar-category">
           <p>Menu Bar</p>
         </li>
-         <li class="nav-item">
+        <li class="nav-item">
           <a class="nav-link" data-bs-toggle="collapse" href="#food-menu" aria-expanded="false"
             aria-controls="front-menu">
             <i class="mdi mdi-database menu-icon"></i>
@@ -65,28 +65,28 @@
           </a>
           <div class="collapse" id="food-menu">
             <ul class="nav flex-column sub-menu">
-                 <li class="nav-item"> <a class="nav-link"
+              <li class="nav-item"> <a class="nav-link"
                   href="<?php echo BASE_URL; ?>admin/food/grocery_items_list.php">Grocery Items</a></li>
               <li class="nav-item"> <a class="nav-link"
                   href="<?php echo BASE_URL; ?>admin/food/purchase-list.php">Grocery Purchase</a></li>
               <li class="nav-item"> <a class="nav-link"
                   href="<?php echo BASE_URL; ?>admin/food/stock_report.php">Stock Reports</a></li>
-            
+
               <!--<li class="nav-item"> <a class="nav-link"-->
               <!--    href="<?php echo BASE_URL; ?>admin/food/daily_purchase_expense_report.php">Grocery Purchase & Expenses</a></li>-->
               <li class="nav-item"> <a class="nav-link"
                   href="<?php echo BASE_URL; ?>admin/food/food_items_list.php">Menu Items</a></li>
               <li class="nav-item"> <a class="nav-link"
                   href="<?php echo BASE_URL; ?>admin/food/menu-package-list.php">Menu Package</a></li>
-                  <li class="nav-item"> <a class="nav-link"
+              <li class="nav-item"> <a class="nav-link"
                   href="<?php echo BASE_URL; ?>admin/food/menu_add.php">Menu Set</a></li>
               <li class="nav-item"> <a class="nav-link"
                   href="<?php echo BASE_URL; ?>admin/food/student_list.php">Student Order Detail</a></li>
-                   <li class="nav-item"> <a class="nav-link"
+              <li class="nav-item"> <a class="nav-link"
                   href="<?php echo BASE_URL; ?>admin/food/order_meal_type_token.php">Order Daily List</a></li>
-                   <li class="nav-item"> <a class="nav-link"
+              <li class="nav-item"> <a class="nav-link"
                   href="<?php echo BASE_URL; ?>admin/food/date-wise-purchase-sales-profit-loss.php">Daily Profit Summary (Sales − Purchase)</a></li>
-                 
+
             </ul>
           </div>
         </li>
@@ -116,7 +116,7 @@
                   href="<?php echo BASE_URL; ?>admin/gallery/manage_gallery.php">Gallery</a></li>
               <li class="nav-item"> <a class="nav-link"
                   href="<?php echo BASE_URL; ?>admin/notice/manage_notice.php">Notice</a></li>
-                  <li class="nav-item"> <a class="nav-link"
+              <li class="nav-item"> <a class="nav-link"
                   href="<?php echo BASE_URL; ?>admin/permission/permission_list.php">Permission</a></li>
             </ul>
           </div>
@@ -158,7 +158,7 @@
         <!--    <span class="menu-title">Teachers</span>-->
         <!--  </a>-->
         <!--</li>-->
-         <li class="nav-item">
+        <li class="nav-item">
           <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
             <i class="mdi mdi-account-multiple menu-icon"></i>
             <span class="menu-title">Uniform</span>
@@ -331,7 +331,7 @@
           <div class="collapse" id="teacher3">
             <ul class="nav flex-column sub-menu">
               <li class="nav-item"> <a class="nav-link" href="<?php echo BASE_URL; ?>manage_status.php">Status Report</a></li>
-              <li class="nav-item"> <a class="nav-link" href="<?php echo BASE_URL; ?>manage_print.php">Money Report</a></li>
+              <li class="nav-item"> <a class="nav-link" href="<?php echo BASE_URL; ?>admin/money_reports/index.php">Money Report</a></li>
 
               <li class="nav-item"> <a class="nav-link" href="<?php echo BASE_URL; ?>manage_expenditure.php">Income & Expense Report</a></li>
               <li class="nav-item"> <a class="nav-link" href="<?php echo BASE_URL; ?>manage_report.php">Profite & Loss Report</a></li>

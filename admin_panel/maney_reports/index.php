@@ -411,6 +411,8 @@ thead th {
     opacity: 0.9;
 }
 </style>
+<!-- Dynamic Column Visibility Style Tag -->
+<style id="dynamic-column-css"></style>
 
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
@@ -603,33 +605,50 @@ thead th {
             </div>
 
             <!-- ==============================================================
-                 COLUMN TOGGLE CHECKBOXES
+                 COLUMN TOGGLE CHECKBOXES (CLICK HEADER TO EXPAND / COLLAPSE)
                  ============================================================== -->
-            <div class="box box-solid collapsed-box mb-2" style="margin-bottom: 10px;">
-                <div class="box-header with-border" style="padding: 6px 15px;">
-                    <h5 class="box-title" style="font-size: 13px; cursor: pointer;" data-widget="collapse">
-                        <i class="fa fa-columns"></i> <strong>Show / Hide Columns (Click to Toggle)</strong>
+            <div class="box box-solid collapsed-box mb-2" id="colToggleBox" style="margin-bottom: 12px; border: 1px solid #d2d6de; border-radius: 4px; box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
+                <div class="box-header with-border" id="colToggleHeader" style="padding: 9px 15px; cursor: pointer; background: #fdfefe; user-select: none;">
+                    <h5 class="box-title" style="font-size: 13px; margin: 0; color: #2c3e50; font-weight: 600;">
+                        <i class="fa fa-columns text-primary"></i> <strong>Show / Hide Columns (Click to Toggle)</strong>
+                        <span id="colCountBadge" class="badge bg-green" style="font-size: 11px; margin-left: 8px;">All 27 Columns Visible</span>
                     </h5>
                     <div class="box-tools pull-right">
-                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i></button>
+                        <span class="text-muted hidden-xs" style="font-size: 11px; margin-right: 6px;">Click to expand/collapse</span>
+                        <button type="button" class="btn btn-box-tool" id="colToggleBtn" style="padding: 2px 6px;">
+                            <i class="fa fa-plus text-primary" id="colToggleIcon"></i>
+                        </button>
                     </div>
                 </div>
-                <div class="box-body" style="display: none; padding: 10px 15px;">
+                <div class="box-body" id="colToggleBody" style="display: none; padding: 12px 15px; background: #fbfcfc; border-top: 1px solid #eee;">
+                    <!-- Quick Preset Buttons -->
+                    <div style="margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px dashed #d5dbdb; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+                        <div class="btn-group btn-group-xs">
+                            <span style="font-weight: 600; margin-right: 8px; line-height: 22px; font-size: 12px;"><i class="fa fa-sliders"></i> Quick Views:</span>
+                            <button type="button" class="btn btn-default" onclick="applyColPreset('all')"><i class="fa fa-check-square-o text-green"></i> Show All</button>
+                            <button type="button" class="btn btn-default" onclick="applyColPreset('dues')"><i class="fa fa-money text-blue"></i> Dues &amp; Payments Only</button>
+                            <button type="button" class="btn btn-default" onclick="applyColPreset('breakdown')"><i class="fa fa-list text-purple"></i> Detailed Fee Items</button>
+                            <button type="button" class="btn btn-default" onclick="applyColPreset('hide_all')"><i class="fa fa-square-o text-red"></i> Hide All</button>
+                            <button type="button" class="btn btn-default" onclick="resetColDefaults()"><i class="fa fa-refresh"></i> Reset Default</button>
+                        </div>
+                    </div>
+
                     <div class="row">
                         <?php
                         $colsList = [
+                            4 => "Class",
                             5 => "Admission Fee", 6 => "Re-Admission Fee", 7 => "Monthly Tuition", 8 => "Yearly Tuition",
                             9 => "Car Opted", 10 => "Monthly Car", 11 => "Yearly Car", 12 => "Uniform", 13 => "Shoes",
-                            14 => "Winter", 15 => "Form", 16 => "Bag", 17 => "I.Card", 18 => "Diary", 19 => "Books",
+                            14 => "Winter", 15 => "Adm Form", 16 => "Bag", 17 => "I.Card", 18 => "Diary", 19 => "Books",
                             20 => "Copy", 21 => "Total Items", 22 => "Gross (No Car)", 23 => "Gross (With Car)",
                             24 => "Total Package Gross", 25 => "Range Paid", 26 => "Total Paid", 27 => "Advance",
                             28 => "Current Due", 29 => "Year-End Due", 30 => "Actions"
                         ];
                         foreach ($colsList as $idx => $cname):
                         ?>
-                            <div class="col-md-2 col-sm-3 col-xs-6" style="font-size: 12px; margin-bottom: 5px;">
-                                <label style="font-weight: normal; cursor: pointer;">
-                                    <input type="checkbox" class="col-toggle-cb" data-target="<?= $idx ?>" checked> <?= $cname ?>
+                            <div class="col-md-2 col-sm-3 col-xs-6" style="font-size: 12px; margin-bottom: 6px;">
+                                <label style="font-weight: normal; cursor: pointer; margin-bottom: 0; user-select: none; display: flex; align-items: center;">
+                                    <input type="checkbox" class="col-toggle-cb" data-target="<?= $idx ?>" checked style="margin: 0 6px 0 0; cursor: pointer;"> <?= $cname ?>
                                 </label>
                             </div>
                         <?php endforeach; ?>
@@ -884,14 +903,148 @@ thead th {
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"></script>
 
 <script>
-// Column Toggle Logic
-$('.col-toggle-cb').on('change', function(){
-    var targetIdx = $(this).data('target');
-    if ($(this).is(':checked')) {
-        $('.col-' + targetIdx).show();
-    } else {
-        $('.col-' + targetIdx).hide();
+// ==============================================================
+// COLUMN TOGGLE SYSTEM (BOX COLLAPSE + FAST DYNAMIC CSS TOGGLE)
+// ==============================================================
+function toggleColumnBox() {
+    var body = $('#colToggleBody');
+    var icon = $('#colToggleIcon');
+    body.slideToggle(200, function() {
+        if (body.is(':visible')) {
+            $('#colToggleBox').removeClass('collapsed-box');
+            icon.removeClass('fa-plus').addClass('fa-minus');
+        } else {
+            $('#colToggleBox').addClass('collapsed-box');
+            icon.removeClass('fa-minus').addClass('fa-plus');
+        }
+    });
+}
+
+function applyColumnStyles() {
+    var hiddenCols = [];
+    var totalCols = $('.col-toggle-cb').length;
+    var visibleCount = 0;
+
+    $('.col-toggle-cb').each(function() {
+        var colIdx = $(this).data('target');
+        if (!$(this).is(':checked')) {
+            hiddenCols.push(colIdx);
+        } else {
+            visibleCount++;
+        }
+    });
+
+    // Generate dynamic CSS rules to hide unselected columns cleanly
+    var css = '';
+    if (hiddenCols.length > 0) {
+        var selectors = [];
+        for (var i = 0; i < hiddenCols.length; i++) {
+            selectors.push('.col-' + hiddenCols[i]);
+        }
+        css = selectors.join(', ') + ' { display: none !important; }';
     }
+
+    var styleTag = document.getElementById('dynamic-column-css');
+    if (!styleTag) {
+        styleTag = document.createElement('style');
+        styleTag.id = 'dynamic-column-css';
+        document.head.appendChild(styleTag);
+    }
+    styleTag.innerHTML = css;
+
+    // Update count badge
+    if (hiddenCols.length === 0) {
+        $('#colCountBadge').text('All ' + totalCols + ' Columns Visible').attr('class', 'badge bg-green');
+    } else {
+        $('#colCountBadge').text(visibleCount + ' / ' + totalCols + ' Columns Visible').attr('class', 'badge bg-yellow');
+    }
+
+    // Save preference to localStorage
+    try {
+        localStorage.setItem('rrsv_money_report_hidden_cols', JSON.stringify(hiddenCols));
+    } catch (e) {}
+}
+
+function applyColPreset(type) {
+    if (type === 'all') {
+        $('.col-toggle-cb').prop('checked', true);
+    } else if (type === 'hide_all') {
+        $('.col-toggle-cb').prop('checked', false);
+    } else if (type === 'dues') {
+        // Dues & Payments only: Class (4), Gross (24), Range Paid (25), Total Paid (26), Advance (27), Due (28), Year-End Due (29), Actions (30)
+        var duesCols = [4, 24, 25, 26, 27, 28, 29, 30];
+        $('.col-toggle-cb').each(function() {
+            var idx = parseInt($(this).data('target'));
+            $(this).prop('checked', duesCols.indexOf(idx) !== -1);
+        });
+    } else if (type === 'breakdown') {
+        // Detailed Fee Items: hide intermediate gross subtotals
+        var hideCols = [22, 23, 25];
+        $('.col-toggle-cb').each(function() {
+            var idx = parseInt($(this).data('target'));
+            $(this).prop('checked', hideCols.indexOf(idx) === -1);
+        });
+    }
+    applyColumnStyles();
+}
+
+function resetColDefaults() {
+    try {
+        localStorage.removeItem('rrsv_money_report_hidden_cols');
+    } catch (e) {}
+    $('.col-toggle-cb').prop('checked', true);
+    applyColumnStyles();
+}
+
+$(function() {
+    // Restore saved column visibility from localStorage
+    try {
+        var savedHidden = localStorage.getItem('rrsv_money_report_hidden_cols');
+        if (savedHidden) {
+            var hiddenArray = JSON.parse(savedHidden);
+            if (Array.isArray(hiddenArray) && hiddenArray.length > 0) {
+                $('.col-toggle-cb').each(function() {
+                    var idx = parseInt($(this).data('target'));
+                    if (hiddenArray.indexOf(idx) !== -1) {
+                        $(this).prop('checked', false);
+                    }
+                });
+            }
+        }
+    } catch (e) {}
+
+    // Apply styles on page load
+    applyColumnStyles();
+
+    // Checkbox change listener
+    $('.col-toggle-cb').on('change', function() {
+        applyColumnStyles();
+    });
+
+    // Header click to expand / collapse
+    $('#colToggleHeader').on('click', function(e) {
+        if ($(e.target).closest('button, input, label').length && !$(e.target).closest('#colToggleBtn').length) {
+            return;
+        }
+        toggleColumnBox();
+    });
+
+    // Also support any data-widget="collapse" on other boxes (like Filter box)
+    $(document).on('click', '[data-widget="collapse"]', function(e) {
+        e.preventDefault();
+        var box = $(this).closest('.box');
+        var body = box.children('.box-body');
+        var icon = $(this).find('i.fa');
+        body.slideToggle(200, function() {
+            if (body.is(':visible')) {
+                box.removeClass('collapsed-box');
+                icon.removeClass('fa-plus').addClass('fa-minus');
+            } else {
+                box.addClass('collapsed-box');
+                icon.removeClass('fa-minus').addClass('fa-plus');
+            }
+        });
+    });
 });
 
 // Quick Date Range helper
@@ -1156,19 +1309,24 @@ function openSnapshotsModal() {
     });
 }
 
-// Export Table to CSV
+// Export Table to CSV (Exports visible columns, excluding action column)
 function exportToCSV() {
     var csv = [];
     var rows = document.querySelectorAll("#moneyReportTable tr");
     for (var i = 0; i < rows.length; i++) {
         var row = [], cols = rows[i].querySelectorAll("td, th");
         for (var j = 0; j < cols.length - 1; j++) { // exclude action column
+            if (window.getComputedStyle(cols[j]).display === 'none') {
+                continue; // Skip hidden columns
+            }
             var text = cols[j].innerText.replace(/(\r\n|\n|\r)/gm, " ").replace(/"/g, '""');
             row.push('"' + text.trim() + '"');
         }
-        csv.push(row.join(","));
+        if (row.length > 0) {
+            csv.push(row.join(","));
+        }
     }
-    var csvFile = new Blob([csv.join("\n")], { type: "text/csv" });
+    var csvFile = new Blob([csv.join("\n")], { type: "text/csv;charset=utf-8;" });
     var downloadLink = document.createElement("a");
     downloadLink.download = "Money_Report_" + ($('#fromDateInput').val() || 'export') + ".csv";
     downloadLink.href = window.URL.createObjectURL(csvFile);
