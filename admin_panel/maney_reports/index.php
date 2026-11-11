@@ -1,6 +1,8 @@
 <?php
 include(__DIR__ . '/../../include/config.php');
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 include __DIR__ . '/../dbcon.php';
 
 // Auth check
@@ -304,51 +306,69 @@ include(__DIR__ . '/../header.php');
     border-bottom: 1px solid #e0e0e0;
 }
 
-/* Sticky Columns */
-.col-freeze-1 {
-    position: sticky !important;
-    left: 0px !important;
-    z-index: 10 !important;
-    background-color: #ffffff !important;
-    width: 45px;
-    min-width: 45px;
-    text-align: center;
+/* Sticky Columns on Desktop (Screens >= 769px) */
+@media (min-width: 769px) {
+    .col-freeze-1 {
+        position: sticky !important;
+        left: 0px !important;
+        z-index: 10 !important;
+        background-color: #ffffff !important;
+        width: 45px;
+        min-width: 45px;
+        text-align: center;
+    }
+
+    .col-freeze-2 {
+        position: sticky !important;
+        left: 45px !important;
+        z-index: 10 !important;
+        background-color: #ffffff !important;
+        width: 110px;
+        min-width: 110px;
+    }
+
+    .col-freeze-3 {
+        position: sticky !important;
+        left: 155px !important;
+        z-index: 10 !important;
+        background-color: #ffffff !important;
+        width: 185px;
+        min-width: 185px;
+        box-shadow: 4px 0 6px -2px rgba(0,0,0,0.18) !important;
+        font-weight: 600;
+    }
+
+    /* Sticky Headers */
+    thead th.col-freeze-1,
+    thead th.col-freeze-2,
+    thead th.col-freeze-3 {
+        z-index: 25 !important;
+        background-color: #ecf0f5 !important;
+    }
+
+    /* Hover effect on sticky rows */
+    .table-freeze tbody tr:hover td.col-freeze-1,
+    .table-freeze tbody tr:hover td.col-freeze-2,
+    .table-freeze tbody tr:hover td.col-freeze-3 {
+        background-color: #ebf3ff !important;
+    }
 }
 
-.col-freeze-2 {
-    position: sticky !important;
-    left: 45px !important;
-    z-index: 10 !important;
-    background-color: #ffffff !important;
-    width: 110px;
-    min-width: 110px;
-}
+/* Mobile screens (<= 768px): Smooth Horizontal Scroll without sticky blocking view */
+@media (max-width: 768px) {
+    .col-freeze-1,
+    .col-freeze-2,
+    .col-freeze-3 {
+        position: static !important;
+        left: auto !important;
+        box-shadow: none !important;
+        z-index: 1 !important;
+    }
 
-.col-freeze-3 {
-    position: sticky !important;
-    left: 155px !important;
-    z-index: 10 !important;
-    background-color: #ffffff !important;
-    width: 65px;
-    min-width: 65px;
-    text-align: center;
-}
-
-.col-freeze-4 {
-    position: sticky !important;
-    left: 220px !important;
-    z-index: 10 !important;
-    background-color: #ffffff !important;
-    width: 180px;
-    min-width: 180px;
-    box-shadow: 4px 0 6px -2px rgba(0,0,0,0.18) !important;
-    font-weight: 600;
-}
-
-/* Sticky Headers */
-thead th.col-freeze-1, thead th.col-freeze-2, thead th.col-freeze-3, thead th.col-freeze-4 {
-    z-index: 25 !important;
-    background-color: #ecf0f5 !important;
+    .table-freeze-container {
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+    }
 }
 
 thead th {
@@ -361,12 +381,6 @@ thead th {
 /* Hover effect on sticky rows */
 .table-freeze tbody tr:hover td {
     background-color: #f7faff !important;
-}
-.table-freeze tbody tr:hover td.col-freeze-1,
-.table-freeze tbody tr:hover td.col-freeze-2,
-.table-freeze tbody tr:hover td.col-freeze-3,
-.table-freeze tbody tr:hover td.col-freeze-4 {
-    background-color: #ebf3ff !important;
 }
 
 /* Badge styling */
@@ -670,16 +684,19 @@ thead th {
                     </div>
                 </div>
                 <div class="box-body" style="padding: 0;">
+                    <!-- Mobile swipe hint -->
+                    <div class="visible-xs text-muted" style="font-size: 11.5px; background: #f8fafc; border-bottom: 1px solid #edf2f7; padding: 6px 12px;">
+                        <i class="fa fa-arrows-h text-primary"></i> <strong>Tip:</strong> Scroll horizontally to view all columns
+                    </div>
 
                     <div class="table-freeze-container">
                         <table id="moneyReportTable" class="table table-bordered table-striped table-hover table-freeze text-sm">
                             <thead>
                                 <tr>
-                                    <!-- POINT 9: Frozen Columns on Left -->
+                                    <!-- POINT 9: Frozen Columns on Left (Desktop) -->
                                     <th class="col-freeze-1">Sl.</th>
                                     <th class="col-freeze-2">Reg. No</th>
-                                    <th class="col-freeze-3">Roll No</th>
-                                    <th class="col-freeze-4">Student Name</th>
+                                    <th class="col-freeze-3">Student Name</th>
                                     
                                     <!-- Scrollable Columns -->
                                     <th class="col-item col-4">Class</th>
@@ -719,11 +736,10 @@ thead th {
                                 <?php if (!empty($reportRows)): ?>
                                     <?php $sl = 1; foreach ($reportRows as $row): ?>
                                         <tr>
-                                            <!-- Sticky Columns -->
+                                            <!-- Sticky Columns on Desktop -->
                                             <td class="col-freeze-1"><?= $sl++ ?></td>
                                             <td class="col-freeze-2"><code><?= htmlspecialchars($row['reg_no']) ?></code></td>
-                                            <td class="col-freeze-3"><?= htmlspecialchars($row['roll_no'] ?: '-') ?></td>
-                                            <td class="col-freeze-4" title="<?= htmlspecialchars($row['name']) ?>">
+                                            <td class="col-freeze-3" title="<?= htmlspecialchars($row['name']) ?>">
                                                 <?= htmlspecialchars($row['name']) ?>
                                                 <br>
                                                 <small class="text-muted" style="font-size:10px;">
@@ -817,7 +833,7 @@ thead th {
                                     <?php endforeach; ?>
                                 <?php else: ?>
                                     <tr>
-                                        <td colspan="31" class="text-center py-4 text-muted" style="padding: 30px;">
+                                        <td colspan="30" class="text-center py-4 text-muted" style="padding: 30px;">
                                             <i class="fa fa-info-circle fa-2x text-blue"></i>
                                             <p class="mt-2" style="font-size:15px; margin-top:10px;">No student records found for the selected session and filter criteria.</p>
                                             <a href="index.php?scl_session=<?= $scl_session ?>" class="btn btn-primary btn-sm">Reset Date Filter to Full Session</a>
