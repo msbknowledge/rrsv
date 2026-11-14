@@ -314,3 +314,4 @@ $pdf->writeHTML($html, true, false, true, false, '');
 
 $fileName = 'Money_Report_' . preg_replace('/[^A-Za-z0-9_-]/', '_', $scl_session) . '_' . date('d-m-Y') . '.pdf';
 $pdf->Output($fileName, 'D');
+

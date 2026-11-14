@@ -861,14 +861,14 @@ include_once __DIR__ . '/../../include/header.php';
         <!-- ==============================================================
              POINT 8 & 11: ADVANCED SEARCH & DROPDOWN FILTER BAR
              ============================================================== -->
-        <div class="box box-primary" style="margin-bottom: 20px;">
-            <div class="box-header with-border" style="cursor: pointer;" data-widget="collapse">
+        <div class="box box-primary" id="filterBox" style="margin-bottom: 20px;">
+            <div class="box-header with-border" style="cursor: pointer;" onclick="toggleFilterBox(event)">
                 <h3 class="box-title"><i class="fa fa-filter text-primary"></i> Search, Session &amp; Date-wise Filters</h3>
                 <div class="box-tools pull-right">
-                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                    <button type="button" class="btn btn-box-tool" id="filterCollapseBtn" onclick="toggleFilterBox(event)"><i class="fa fa-minus" id="filterCollapseIcon"></i></button>
                 </div>
             </div>
-            <div class="box-body" style="padding: 16px 20px;">
+            <div class="box-body" id="filterBoxBody" style="display: block !important; padding: 16px 20px;">
                 <form method="get" action="" id="filterForm">
                     <!-- Row 1: Primary Dropdown Selectors -->
                     <div class="row">
@@ -1102,37 +1102,37 @@ include_once __DIR__ . '/../../include/header.php';
                                         <th class="col-freeze-3">Student Name</th>
 
                                         <!-- Scrollable Columns -->
-                                        <th class="col-item col-4">Class</th>
-                                        <th class="col-item col-5" style="background:#eaf2f8 !important;">Admission Fee</th>
-                                        <th class="col-item col-6" style="background:#eaf2f8 !important;">Re-Adm Fee</th>
-                                        <th class="col-item col-7">Tuition/Mo</th>
-                                        <th class="col-item col-8">Tuition/Yr</th>
-                                        <th class="col-item col-9">Car?</th>
-                                        <th class="col-item col-10">Car Rate/Mo</th>
-                                        <th class="col-item col-11">Car Cost/Yr</th>
-                                        <th class="col-item col-12">Uniform</th>
-                                        <th class="col-item col-13">Shoes</th>
-                                        <th class="col-item col-14">Winter</th>
-                                        <th class="col-item col-15" title="Admission Form Fee - Already Paid when Admission taken">Adm Form <small class="text-green" style="font-weight:bold;">(Paid)</small></th>
-                                        <th class="col-item col-16">Bag</th>
-                                        <th class="col-item col-17">I.Card</th>
-                                        <th class="col-item col-18">Diary</th>
-                                        <th class="col-item col-19">Books</th>
-                                        <th class="col-item col-20">Copy</th>
-                                        <th class="col-item col-21">Total Items</th>
-                                        <th class="col-item col-22">Gross (w/o Car)</th>
-                                        <th class="col-item col-23">Gross (with Car)</th>
-                                        <th class="col-item col-24" style="background:#fef9e7 !important; font-weight:700;">Full Package Gross</th>
-                                        <th class="col-item col-25">Range Paid</th>
-                                        <th class="col-item col-26" style="background:#e8f8f5 !important; font-weight:700;">Total Paid (Yr)</th>
+                                        <th class="col-item tbl-col-4">Class</th>
+                                        <th class="col-item tbl-col-5" style="background:#eaf2f8 !important;">Admission Fee</th>
+                                        <th class="col-item tbl-col-6" style="background:#eaf2f8 !important;">Re-Adm Fee</th>
+                                        <th class="col-item tbl-col-7">Tuition/Mo</th>
+                                        <th class="col-item tbl-col-8">Tuition/Yr</th>
+                                        <th class="col-item tbl-col-9">Car?</th>
+                                        <th class="col-item tbl-col-10">Car Rate/Mo</th>
+                                        <th class="col-item tbl-col-11">Car Cost/Yr</th>
+                                        <th class="col-item tbl-col-12">Uniform</th>
+                                        <th class="col-item tbl-col-13">Shoes</th>
+                                        <th class="col-item tbl-col-14">Winter</th>
+                                        <th class="col-item tbl-col-15" title="Admission Form Fee - Already Paid when Admission taken">Adm Form <small class="text-green" style="font-weight:bold;">(Paid)</small></th>
+                                        <th class="col-item tbl-col-16">Bag</th>
+                                        <th class="col-item tbl-col-17">I.Card</th>
+                                        <th class="col-item tbl-col-18">Diary</th>
+                                        <th class="col-item tbl-col-19">Books</th>
+                                        <th class="col-item tbl-col-20">Copy</th>
+                                        <th class="col-item tbl-col-21">Total Items</th>
+                                        <th class="col-item tbl-col-22">Gross (w/o Car)</th>
+                                        <th class="col-item tbl-col-23">Gross (with Car)</th>
+                                        <th class="col-item tbl-col-24" style="background:#fef9e7 !important; font-weight:700;">Full Package Gross</th>
+                                        <th class="col-item tbl-col-25">Range Paid</th>
+                                        <th class="col-item tbl-col-26" style="background:#e8f8f5 !important; font-weight:700;">Total Paid (Yr)</th>
                                         <!-- POINT 6: Advance + Due after payment -->
-                                        <th class="col-item col-27" style="background:#eafaf1 !important;">Advance</th>
+                                        <th class="col-item tbl-col-27" style="background:#eafaf1 !important;">Advance</th>
                                         <!-- POINT 5: Auto generated end of month due -->
-                                        <th class="col-item col-28" style="background:#fdedec !important;">Due (<?= $months[$upToMonth] ?>)</th>
+                                        <th class="col-item tbl-col-28" style="background:#fdedec !important;">Due (<?= $months[$upToMonth] ?>)</th>
                                         <!-- POINT 7: End of year due -->
-                                        <th class="col-item col-29" style="background:#f4ecf7 !important;">Year-End Due</th>
+                                        <th class="col-item tbl-col-29" style="background:#f4ecf7 !important;">Year-End Due</th>
                                         <!-- POINT 5 & 10: Guardian Send & Statement Print -->
-                                        <th class="col-item col-30 text-center" style="min-width: 170px;">Actions</th>
+                                        <th class="col-item tbl-col-30 text-center" style="min-width: 170px;">Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -1154,38 +1154,38 @@ include_once __DIR__ . '/../../include/header.php';
                                                 </td>
 
                                                 <!-- Scrollable Data Cells -->
-                                                <td class="col-item col-4"><?= htmlspecialchars($row['class']) ?></td>
-                                                <td class="col-item col-5"><?= ($row['admission_fee'] > 0) ? '₹' . number_format($row['admission_fee']) : '-' ?></td>
-                                                <td class="col-item col-6"><?= ($row['readmission_fee'] > 0) ? '₹' . number_format($row['readmission_fee']) : '-' ?></td>
-                                                <td class="col-item col-7">₹<?= number_format($row['monthly_fee']) ?></td>
-                                                <td class="col-item col-8">₹<?= number_format($row['yearly_tuition']) ?></td>
-                                                <td class="col-item col-9"><?= $row['has_car'] ? '<span class="label label-warning">Yes</span>' : '<span class="label label-default">No</span>' ?></td>
-                                                <td class="col-item col-10"><?= ($row['car_monthly'] > 0) ? '₹' . number_format($row['car_monthly']) : '-' ?></td>
-                                                <td class="col-item col-11"><?= ($row['yearly_car'] > 0) ? '₹' . number_format($row['yearly_car']) : '-' ?></td>
-                                                <td class="col-item col-12"><?= ($row['uniform'] > 0) ? '₹' . number_format($row['uniform']) : '-' ?></td>
-                                                <td class="col-item col-13"><?= ($row['shoes'] > 0) ? '₹' . number_format($row['shoes']) : '-' ?></td>
-                                                <td class="col-item col-14"><?= ($row['winter'] > 0) ? '₹' . number_format($row['winter']) : '-' ?></td>
-                                                <td class="col-item col-15"><?= ($row['adm_form'] > 0) ? '₹' . number_format($row['adm_form']) . ' <span class="label label-success" style="font-size:9px; padding:1px 4px;" title="Already paid when admission taken"><i class="fa fa-check"></i> Paid</span>' : '-' ?></td>
-                                                <td class="col-item col-16"><?= ($row['bag'] > 0) ? '₹' . number_format($row['bag']) : '-' ?></td>
-                                                <td class="col-item col-17"><?= ($row['icard'] > 0) ? '₹' . number_format($row['icard']) : '-' ?></td>
-                                                <td class="col-item col-18"><?= ($row['diary'] > 0) ? '₹' . number_format($row['diary']) : '-' ?></td>
-                                                <td class="col-item col-19"><?= ($row['books'] > 0) ? '₹' . number_format($row['books']) : '-' ?></td>
-                                                <td class="col-item col-20"><?= ($row['copy'] > 0) ? '₹' . number_format($row['copy']) : '-' ?></td>
-                                                <td class="col-item col-21">₹<?= number_format($row['total_items']) ?></td>
-                                                <td class="col-item col-22">₹<?= number_format($row['gross_without_car']) ?></td>
-                                                <td class="col-item col-23">₹<?= number_format($row['gross_with_car']) ?></td>
+                                                <td class="col-item tbl-col-4"><?= htmlspecialchars($row['class']) ?></td>
+                                                <td class="col-item tbl-col-5"><?= ($row['admission_fee'] > 0) ? '₹' . number_format($row['admission_fee']) : '-' ?></td>
+                                                <td class="col-item tbl-col-6"><?= ($row['readmission_fee'] > 0) ? '₹' . number_format($row['readmission_fee']) : '-' ?></td>
+                                                <td class="col-item tbl-col-7">₹<?= number_format($row['monthly_fee']) ?></td>
+                                                <td class="col-item tbl-col-8">₹<?= number_format($row['yearly_tuition']) ?></td>
+                                                <td class="col-item tbl-col-9"><?= $row['has_car'] ? '<span class="label label-warning">Yes</span>' : '<span class="label label-default">No</span>' ?></td>
+                                                <td class="col-item tbl-col-10"><?= ($row['car_monthly'] > 0) ? '₹' . number_format($row['car_monthly']) : '-' ?></td>
+                                                <td class="col-item tbl-col-11"><?= ($row['yearly_car'] > 0) ? '₹' . number_format($row['yearly_car']) : '-' ?></td>
+                                                <td class="col-item tbl-col-12"><?= ($row['uniform'] > 0) ? '₹' . number_format($row['uniform']) : '-' ?></td>
+                                                <td class="col-item tbl-col-13"><?= ($row['shoes'] > 0) ? '₹' . number_format($row['shoes']) : '-' ?></td>
+                                                <td class="col-item tbl-col-14"><?= ($row['winter'] > 0) ? '₹' . number_format($row['winter']) : '-' ?></td>
+                                                <td class="col-item tbl-col-15"><?= ($row['adm_form'] > 0) ? '₹' . number_format($row['adm_form']) . ' <span class="label label-success" style="font-size:9px; padding:1px 4px;" title="Already paid when admission taken"><i class="fa fa-check"></i> Paid</span>' : '-' ?></td>
+                                                <td class="col-item tbl-col-16"><?= ($row['bag'] > 0) ? '₹' . number_format($row['bag']) : '-' ?></td>
+                                                <td class="col-item tbl-col-17"><?= ($row['icard'] > 0) ? '₹' . number_format($row['icard']) : '-' ?></td>
+                                                <td class="col-item tbl-col-18"><?= ($row['diary'] > 0) ? '₹' . number_format($row['diary']) : '-' ?></td>
+                                                <td class="col-item tbl-col-19"><?= ($row['books'] > 0) ? '₹' . number_format($row['books']) : '-' ?></td>
+                                                <td class="col-item tbl-col-20"><?= ($row['copy'] > 0) ? '₹' . number_format($row['copy']) : '-' ?></td>
+                                                <td class="col-item tbl-col-21">₹<?= number_format($row['total_items']) ?></td>
+                                                <td class="col-item tbl-col-22">₹<?= number_format($row['gross_without_car']) ?></td>
+                                                <td class="col-item tbl-col-23">₹<?= number_format($row['gross_with_car']) ?></td>
                                                 <!-- POINT 1 & 4: Full Package Gross -->
-                                                <td class="col-item col-24" style="font-weight:700; color:#b7950b;">₹<?= number_format($row['total_gross']) ?></td>
-                                                <td class="col-item col-25">₹<?= number_format($row['range_paid']) ?></td>
+                                                <td class="col-item tbl-col-24" style="font-weight:700; color:#b7950b;">₹<?= number_format($row['total_gross']) ?></td>
+                                                <td class="col-item tbl-col-25">₹<?= number_format($row['range_paid']) ?></td>
                                                 <!-- Total Paid -->
-                                                <td class="col-item col-26" style="font-weight:700; color:#117a65;">
+                                                <td class="col-item tbl-col-26" style="font-weight:700; color:#117a65;">
                                                     ₹<?= number_format($row['total_paid']) ?>
                                                     <?php if ($row['adm_form'] > 0): ?>
                                                         <br><small class="text-muted" style="font-size:10px; font-weight:normal;" title="Includes ₹<?= number_format($row['adm_form']) ?> Admission Form fee paid at admission">(inc. Form)</small>
                                                     <?php endif; ?>
                                                 </td>
                                                 <!-- POINT 6: Advance Amount -->
-                                                <td class="col-item col-27">
+                                                <td class="col-item tbl-col-27">
                                                     <?php if ($row['advance'] > 0): ?>
                                                         <span class="badge-advance">+₹<?= number_format($row['advance']) ?></span>
                                                     <?php else: ?>
@@ -1193,7 +1193,7 @@ include_once __DIR__ . '/../../include/header.php';
                                                     <?php endif; ?>
                                                 </td>
                                                 <!-- POINT 5 & 6: Current Due End of Month -->
-                                                <td class="col-item col-28">
+                                                <td class="col-item tbl-col-28">
                                                     <?php if ($row['current_due'] > 0): ?>
                                                         <span class="badge-due">₹<?= number_format($row['current_due']) ?></span>
                                                     <?php else: ?>
@@ -1201,7 +1201,7 @@ include_once __DIR__ . '/../../include/header.php';
                                                     <?php endif; ?>
                                                 </td>
                                                 <!-- POINT 7: End of Year Due -->
-                                                <td class="col-item col-29">
+                                                <td class="col-item tbl-col-29">
                                                     <?php if ($row['year_end_due'] > 0): ?>
                                                         <span class="badge-yeardue">₹<?= number_format($row['year_end_due']) ?></span>
                                                     <?php else: ?>
@@ -1209,7 +1209,7 @@ include_once __DIR__ . '/../../include/header.php';
                                                     <?php endif; ?>
                                                 </td>
                                                 <!-- POINT 5 & 10: Guardian Notice & Statement Print -->
-                                                <td class="col-item col-30 text-center">
+                                                <td class="col-item tbl-col-30 text-center">
                                                     <!-- WhatsApp Send (Point 5) -->
                                                     <?php if (!empty($row['clean_phone'])): ?>
                                                         <?php
@@ -1253,34 +1253,34 @@ include_once __DIR__ . '/../../include/header.php';
                                         <td class="col-freeze-2 text-center" style="font-weight: 700; background: #e2e8f0 !important; color: #1e3a8a;">-</td>
                                         <td class="col-freeze-3" style="font-weight: 900; background: #e2e8f0 !important; color: #1e3a8a;"><?= count($reportRows) ?> Students</td>
 
-                                        <!-- Scrollable Data Cells matching col-4 to col-30 -->
-                                        <td class="col-item col-4 text-center" style="font-weight: 700;">-</td>
-                                        <td class="col-item col-5" style="background:#e0effa !important; font-weight:800; color:#1e40af;"><?= ($col_totals['admission_fee'] > 0) ? '₹' . number_format($col_totals['admission_fee']) : '-' ?></td>
-                                        <td class="col-item col-6" style="background:#e0effa !important; font-weight:800; color:#1e40af;"><?= ($col_totals['readmission_fee'] > 0) ? '₹' . number_format($col_totals['readmission_fee']) : '-' ?></td>
-                                        <td class="col-item col-7" style="font-weight:700;">₹<?= number_format($col_totals['monthly_fee']) ?></td>
-                                        <td class="col-item col-8" style="font-weight:700;">₹<?= number_format($col_totals['yearly_tuition']) ?></td>
-                                        <td class="col-item col-9 text-center" style="font-weight:700;"><?= $col_totals['car_count'] ?> Cars</td>
-                                        <td class="col-item col-10" style="font-weight:700;"><?= ($col_totals['car_monthly'] > 0) ? '₹' . number_format($col_totals['car_monthly']) : '-' ?></td>
-                                        <td class="col-item col-11" style="font-weight:700;"><?= ($col_totals['yearly_car'] > 0) ? '₹' . number_format($col_totals['yearly_car']) : '-' ?></td>
-                                        <td class="col-item col-12" style="font-weight:700;"><?= ($col_totals['uniform'] > 0) ? '₹' . number_format($col_totals['uniform']) : '-' ?></td>
-                                        <td class="col-item col-13" style="font-weight:700;"><?= ($col_totals['shoes'] > 0) ? '₹' . number_format($col_totals['shoes']) : '-' ?></td>
-                                        <td class="col-item col-14" style="font-weight:700;"><?= ($col_totals['winter'] > 0) ? '₹' . number_format($col_totals['winter']) : '-' ?></td>
-                                        <td class="col-item col-15" style="font-weight:700;"><?= ($col_totals['adm_form'] > 0) ? '₹' . number_format($col_totals['adm_form']) : '-' ?></td>
-                                        <td class="col-item col-16" style="font-weight:700;"><?= ($col_totals['bag'] > 0) ? '₹' . number_format($col_totals['bag']) : '-' ?></td>
-                                        <td class="col-item col-17" style="font-weight:700;"><?= ($col_totals['icard'] > 0) ? '₹' . number_format($col_totals['icard']) : '-' ?></td>
-                                        <td class="col-item col-18" style="font-weight:700;"><?= ($col_totals['diary'] > 0) ? '₹' . number_format($col_totals['diary']) : '-' ?></td>
-                                        <td class="col-item col-19" style="font-weight:700;"><?= ($col_totals['books'] > 0) ? '₹' . number_format($col_totals['books']) : '-' ?></td>
-                                        <td class="col-item col-20" style="font-weight:700;"><?= ($col_totals['copy'] > 0) ? '₹' . number_format($col_totals['copy']) : '-' ?></td>
-                                        <td class="col-item col-21" style="font-weight:800; background:#f8fafc !important;">₹<?= number_format($col_totals['total_items']) ?></td>
-                                        <td class="col-item col-22" style="font-weight:700;">₹<?= number_format($col_totals['gross_no_car']) ?></td>
-                                        <td class="col-item col-23" style="font-weight:700;">₹<?= number_format($col_totals['gross_with_car']) ?></td>
-                                        <td class="col-item col-24" style="background:#fef3c7 !important; font-weight:900; color:#92400e;">₹<?= number_format($col_totals['total_package_gross']) ?></td>
-                                        <td class="col-item col-25" style="font-weight:800; color:#166534;">₹<?= number_format($col_totals['range_paid']) ?></td>
-                                        <td class="col-item col-26" style="background:#dcfce7 !important; font-weight:900; color:#15803d;">₹<?= number_format($col_totals['total_paid']) ?></td>
-                                        <td class="col-item col-27" style="background:#ecfdf5 !important; font-weight:800; color:#047857;"><?= ($col_totals['advance'] > 0) ? '+₹' . number_format($col_totals['advance']) : '₹0' ?></td>
-                                        <td class="col-item col-28" style="background:#fee2e2 !important; font-weight:900; color:#b91c1c;"><?= ($col_totals['current_due'] > 0) ? '₹' . number_format($col_totals['current_due']) : 'Cleared' ?></td>
-                                        <td class="col-item col-29" style="background:#f3e8ff !important; font-weight:900; color:#7e22ce;"><?= ($col_totals['year_end_due'] > 0) ? '₹' . number_format($col_totals['year_end_due']) : 'Paid' ?></td>
-                                        <td class="col-item col-30 text-center">-</td>
+                                        <!-- Scrollable Data Cells matching tbl-col-4 to tbl-col-30 -->
+                                        <td class="col-item tbl-col-4 text-center" style="font-weight: 700;">-</td>
+                                        <td class="col-item tbl-col-5" style="background:#e0effa !important; font-weight:800; color:#1e40af;"><?= ($col_totals['admission_fee'] > 0) ? '₹' . number_format($col_totals['admission_fee']) : '-' ?></td>
+                                        <td class="col-item tbl-col-6" style="background:#e0effa !important; font-weight:800; color:#1e40af;"><?= ($col_totals['readmission_fee'] > 0) ? '₹' . number_format($col_totals['readmission_fee']) : '-' ?></td>
+                                        <td class="col-item tbl-col-7" style="font-weight:700;">₹<?= number_format($col_totals['monthly_fee']) ?></td>
+                                        <td class="col-item tbl-col-8" style="font-weight:700;">₹<?= number_format($col_totals['yearly_tuition']) ?></td>
+                                        <td class="col-item tbl-col-9 text-center" style="font-weight:700;"><?= $col_totals['car_count'] ?> Cars</td>
+                                        <td class="col-item tbl-col-10" style="font-weight:700;"><?= ($col_totals['car_monthly'] > 0) ? '₹' . number_format($col_totals['car_monthly']) : '-' ?></td>
+                                        <td class="col-item tbl-col-11" style="font-weight:700;"><?= ($col_totals['yearly_car'] > 0) ? '₹' . number_format($col_totals['yearly_car']) : '-' ?></td>
+                                        <td class="col-item tbl-col-12" style="font-weight:700;"><?= ($col_totals['uniform'] > 0) ? '₹' . number_format($col_totals['uniform']) : '-' ?></td>
+                                        <td class="col-item tbl-col-13" style="font-weight:700;"><?= ($col_totals['shoes'] > 0) ? '₹' . number_format($col_totals['shoes']) : '-' ?></td>
+                                        <td class="col-item tbl-col-14" style="font-weight:700;"><?= ($col_totals['winter'] > 0) ? '₹' . number_format($col_totals['winter']) : '-' ?></td>
+                                        <td class="col-item tbl-col-15" style="font-weight:700;"><?= ($col_totals['adm_form'] > 0) ? '₹' . number_format($col_totals['adm_form']) : '-' ?></td>
+                                        <td class="col-item tbl-col-16" style="font-weight:700;"><?= ($col_totals['bag'] > 0) ? '₹' . number_format($col_totals['bag']) : '-' ?></td>
+                                        <td class="col-item tbl-col-17" style="font-weight:700;"><?= ($col_totals['icard'] > 0) ? '₹' . number_format($col_totals['icard']) : '-' ?></td>
+                                        <td class="col-item tbl-col-18" style="font-weight:700;"><?= ($col_totals['diary'] > 0) ? '₹' . number_format($col_totals['diary']) : '-' ?></td>
+                                        <td class="col-item tbl-col-19" style="font-weight:700;"><?= ($col_totals['books'] > 0) ? '₹' . number_format($col_totals['books']) : '-' ?></td>
+                                        <td class="col-item tbl-col-20" style="font-weight:700;"><?= ($col_totals['copy'] > 0) ? '₹' . number_format($col_totals['copy']) : '-' ?></td>
+                                        <td class="col-item tbl-col-21" style="font-weight:800; background:#f8fafc !important;">₹<?= number_format($col_totals['total_items']) ?></td>
+                                        <td class="col-item tbl-col-22" style="font-weight:700;">₹<?= number_format($col_totals['gross_no_car']) ?></td>
+                                        <td class="col-item tbl-col-23" style="font-weight:700;">₹<?= number_format($col_totals['gross_with_car']) ?></td>
+                                        <td class="col-item tbl-col-24" style="background:#fef3c7 !important; font-weight:900; color:#92400e;">₹<?= number_format($col_totals['total_package_gross']) ?></td>
+                                        <td class="col-item tbl-col-25" style="font-weight:800; color:#166534;">₹<?= number_format($col_totals['range_paid']) ?></td>
+                                        <td class="col-item tbl-col-26" style="background:#dcfce7 !important; font-weight:900; color:#15803d;">₹<?= number_format($col_totals['total_paid']) ?></td>
+                                        <td class="col-item tbl-col-27" style="background:#ecfdf5 !important; font-weight:800; color:#047857;"><?= ($col_totals['advance'] > 0) ? '+₹' . number_format($col_totals['advance']) : '₹0' ?></td>
+                                        <td class="col-item tbl-col-28" style="background:#fee2e2 !important; font-weight:900; color:#b91c1c;"><?= ($col_totals['current_due'] > 0) ? '₹' . number_format($col_totals['current_due']) : 'Cleared' ?></td>
+                                        <td class="col-item tbl-col-29" style="background:#f3e8ff !important; font-weight:900; color:#7e22ce;"><?= ($col_totals['year_end_due'] > 0) ? '₹' . number_format($col_totals['year_end_due']) : 'Paid' ?></td>
+                                        <td class="col-item tbl-col-30 text-center">-</td>
                                     </tr>
                                 </tfoot>
                                 <?php endif; ?>
@@ -1407,12 +1407,12 @@ include_once __DIR__ . '/../../include/header.php';
                 }
             });
 
-            // Generate dynamic CSS rules to hide unselected columns cleanly
+            // Generate dynamic CSS rules to hide unselected columns cleanly (strictly scoped to #moneyReportTable)
             var css = '';
             if (hiddenCols.length > 0) {
                 var selectors = [];
                 for (var i = 0; i < hiddenCols.length; i++) {
-                    selectors.push('.col-' + hiddenCols[i]);
+                    selectors.push('#moneyReportTable .tbl-col-' + hiddenCols[i]);
                 }
                 css = selectors.join(', ') + ' { display: none !important; }';
             }
@@ -1432,9 +1432,9 @@ include_once __DIR__ . '/../../include/header.php';
                 $('#colCountBadge').text(visibleCount + ' / ' + totalCols + ' Columns Visible').attr('class', 'badge bg-yellow');
             }
 
-            // Save preference to localStorage
+            // Save preference to localStorage (version 2 key to avoid legacy collision)
             try {
-                localStorage.setItem('rrsv_money_report_hidden_cols', JSON.stringify(hiddenCols));
+                localStorage.setItem('rrsv_money_report_hidden_cols_v2', JSON.stringify(hiddenCols));
             } catch (e) {}
         }
 
@@ -1464,15 +1464,40 @@ include_once __DIR__ . '/../../include/header.php';
         function resetColDefaults() {
             try {
                 localStorage.removeItem('rrsv_money_report_hidden_cols');
+                localStorage.removeItem('rrsv_money_report_hidden_cols_v2');
             } catch (e) {}
             $('.col-toggle-cb').prop('checked', true);
             applyColumnStyles();
         }
 
+        // Dedicated toggle for Filter box
+        function toggleFilterBox(e) {
+            if (e) {
+                // Do not collapse if clicked inside form inputs, buttons or labels
+                if ($(e.target).closest('input, select, button:not(#filterCollapseBtn), a, label').length) {
+                    return;
+                }
+                e.preventDefault();
+                e.stopPropagation();
+            }
+            var body = $('#filterBoxBody');
+            var icon = $('#filterCollapseIcon');
+            body.slideToggle(200, function() {
+                if (body.is(':visible')) {
+                    $('#filterBox').removeClass('collapsed-box');
+                    icon.removeClass('fa-plus').addClass('fa-minus');
+                } else {
+                    $('#filterBox').addClass('collapsed-box');
+                    icon.removeClass('fa-minus').addClass('fa-plus');
+                }
+            });
+        }
+
         $(function() {
-            // Restore saved column visibility from localStorage
+            // Clean up old legacy localStorage key that might have contained conflicting indices
             try {
-                var savedHidden = localStorage.getItem('rrsv_money_report_hidden_cols');
+                localStorage.removeItem('rrsv_money_report_hidden_cols');
+                var savedHidden = localStorage.getItem('rrsv_money_report_hidden_cols_v2');
                 if (savedHidden) {
                     var hiddenArray = JSON.parse(savedHidden);
                     if (Array.isArray(hiddenArray) && hiddenArray.length > 0) {
@@ -1500,23 +1525,6 @@ include_once __DIR__ . '/../../include/header.php';
                     return;
                 }
                 toggleColumnBox();
-            });
-
-            // Also support any data-widget="collapse" on other boxes (like Filter box)
-            $(document).on('click', '[data-widget="collapse"]', function(e) {
-                e.preventDefault();
-                var box = $(this).closest('.box');
-                var body = box.children('.box-body');
-                var icon = $(this).find('i.fa');
-                body.slideToggle(200, function() {
-                    if (body.is(':visible')) {
-                        box.removeClass('collapsed-box');
-                        icon.removeClass('fa-plus').addClass('fa-minus');
-                    } else {
-                        box.addClass('collapsed-box');
-                        icon.removeClass('fa-minus').addClass('fa-plus');
-                    }
-                });
             });
         });
 
