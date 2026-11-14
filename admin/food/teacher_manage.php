@@ -1366,6 +1366,33 @@ $teacher_img = !empty($teacher['image']) && file_exists('../../teacher_image/' .
 <script src="<?php echo BASE_URL; ?>libray/DataTables/datatables.min.js"></script>
 
 <script>
+// Tab Switching Safeguard Handler
+$(document).on('click', '.nav-tabs li a', function (e) {
+    e.preventDefault();
+    var $link = $(this);
+    var target = $link.attr('href');
+    if (!target || target === '#' || !target.startsWith('#')) return;
+
+    if (typeof $link.tab === 'function') {
+        $link.tab('show');
+    }
+
+    $link.closest('.nav-tabs').find('li').removeClass('active');
+    $link.parent('li').addClass('active');
+
+    var $container = $link.closest('.card-body').find('.tab-content');
+    $container.children('.tab-pane').removeClass('active in');
+    $(target).addClass('active in');
+
+    if (target === '#d_order') {
+        setTimeout(function () {
+            if (calendarLoaded && calendar) {
+                calendar.updateSize();
+            }
+        }, 150);
+    }
+});
+
 let calendar;
 let calendarLoaded = false;
 

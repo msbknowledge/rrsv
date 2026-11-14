@@ -220,6 +220,7 @@ while ($r = mysqli_fetch_assoc($q)) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <?php include('../../header.php'); ?>
+    <script src="<?php echo BASE_URL; ?>admin_panel/assets/js/jquery-2.2.3.min.js"></script>
 
     <style>
         .food-banner-card {
@@ -243,14 +244,20 @@ while ($r = mysqli_fetch_assoc($q)) {
             font-size: 18px;
             color: #fff;
         }
-        .boxed-tabs > li > a {
+        .nav-tabs > li > a {
+            cursor: pointer;
             font-weight: 600;
-            border-radius: 4px 4px 0 0;
         }
         .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover {
             border-top: 3px solid #2a5298;
             font-weight: 700;
             color: #2a5298;
+        }
+        .tab-content > .tab-pane {
+            display: none !important;
+        }
+        .tab-content > .tab-pane.active {
+            display: block !important;
         }
         .succWrap {
             padding: 10px 15px;
@@ -754,23 +761,63 @@ while ($r = mysqli_fetch_assoc($q)) {
     </div>
 
     <?php include '../../footer.php'; ?>
+    <div class="control-sidebar-bg"></div>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="<?php echo BASE_URL; ?>admin_panel/assets/js/jquery-2.2.3.min.js"></script>
+<script src="<?php echo BASE_URL; ?>admin_panel/assets/js/bootstrap.min.js"></script>
+<script src="<?php echo BASE_URL; ?>admin_panel/assets/js/jquery.dataTables.min.js"></script>
+<script src="<?php echo BASE_URL; ?>admin_panel/assets/js/dataTables.bootstrap.min.js"></script>
+<script src="<?php echo BASE_URL; ?>admin_panel/assets/js/app.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <script>
+// ==========================================
+// 1. ROCK-SOLID TAB SWITCHING HANDLER
+// ==========================================
+$(document).on('click', '.nav-tabs li a', function (e) {
+    e.preventDefault();
+    var $link = $(this);
+    var target = $link.attr('href');
+    if (!target || target === '#' || !target.startsWith('#')) return;
+
+    // Bootstrap Tab plugin trigger if available
+    if (typeof $link.tab === 'function') {
+        $link.tab('show');
+    }
+
+    // Explicit manual tab & pane activation for 100% guarantee
+    $link.closest('.nav-tabs').find('li').removeClass('active');
+    $link.parent('li').addClass('active');
+
+    var $container = $link.closest('.box-body').find('.tab-content');
+    $container.children('.tab-pane').removeClass('active in');
+    $(target).addClass('active in');
+
+    // Calendar render / resize if calendar tab is selected
+    if (target === '#d_order') {
+        setTimeout(function () {
+            if (!calendarLoaded) {
+                renderCalendar();
+            } else if (calendar) {
+                calendar.updateSize();
+            }
+        }, 150);
+    }
+});
+
+// ==========================================
+// 2. CALENDAR INITIALIZATION
+// ==========================================
 let calendar;
 let calendarLoaded = false;
 
-$('a[href="#d_order"]').on('shown.bs.tab', function () {
-    if (calendarLoaded) {
-        calendar.updateSize();
-        return;
-    }
+function renderCalendar() {
+    var calendarEl = document.getElementById('calendar');
+    if (!calendarEl || calendarLoaded) return;
 
-    calendar = new FullCalendar.Calendar(document.getElementById('calendar'), {
+    calendar = new FullCalendar.Calendar(calendarEl, {
         initialView: 'dayGridMonth',
         height: 'auto',
         headerToolbar: {
@@ -816,6 +863,14 @@ $('a[href="#d_order"]').on('shown.bs.tab', function () {
 
     calendar.render();
     calendarLoaded = true;
+}
+
+$('a[href="#d_order"]').on('shown.bs.tab', function () {
+    if (!calendarLoaded) {
+        renderCalendar();
+    } else if (calendar) {
+        calendar.updateSize();
+    }
 });
 
 // Auto refresh wallet balance
