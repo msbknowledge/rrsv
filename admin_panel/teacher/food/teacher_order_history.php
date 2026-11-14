@@ -65,6 +65,12 @@ if (isset($_GET['ajax']) && $_GET['ajax'] == 'get_orders') {
 /* =========================================================
    ORDER SUBMISSION
 ========================================================= */
+$success = $_SESSION['food_success'] ?? '';
+unset($_SESSION['food_success']);
+$error = $_SESSION['food_error'] ?? '';
+unset($_SESSION['food_error']);
+$curr_tab = $_GET['tab'] ?? 'food_order';
+
 $wallet_q = mysqli_query($con, "SELECT balance FROM rrsv_food_wallet WHERE student_id = '$teacher_code' OR student_id = '$teacher_id' LIMIT 1");
 $wallet = mysqli_fetch_assoc($wallet_q);
 $balance = (float)($wallet['balance'] ?? 0);
@@ -163,8 +169,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit_orders'])) {
                     ");
 
                     mysqli_commit($con);
-                    $success = "Order placed successfully! Total ₹" . number_format($total, 2) . " for " . count($items) . " meals.";
-                    $balance -= $total;
+                    $_SESSION['food_success'] = "Order placed successfully! Total ₹" . number_format($total, 2) . " for " . count($items) . " meals.";
+                    header("Location: teacher_order_history.php?tab=order_summary");
+                    exit;
                 } catch (Exception $e) {
                     mysqli_rollback($con);
                     $error = "Order failed: " . $e->getMessage();
@@ -341,18 +348,18 @@ while ($r = mysqli_fetch_assoc($q)) {
 
                             <!-- Navigation Tabs -->
                             <ul class="nav nav-tabs" role="tablist">
-                                <li class="active"><a href="#food_order" role="tab" data-toggle="tab"><i class="fa fa-calendar-plus-o"></i> Food Order</a></li>
-                                <li><a href="#d_order" role="tab" data-toggle="tab"><i class="fa fa-calendar"></i> Calendar Order 📅</a></li>
-                                <li><a href="#recharge_history" role="tab" data-toggle="tab"><i class="fa fa-history"></i> Recharge History</a></li>
-                                <li><a href="#order_summary" role="tab" data-toggle="tab"><i class="fa fa-list-alt"></i> Order Summary</a></li>
-                                <li><a href="#wallet_ledger" role="tab" data-toggle="tab"><i class="fa fa-exchange"></i> Your Transactions</a></li>
-                                <li><a href="#monthly_slip" role="tab" data-toggle="tab"><i class="fa fa-file-text-o"></i> Monthly Statement</a></li>
+                                <li class="<?= $curr_tab === 'food_order' ? 'active' : ''; ?>"><a href="#food_order" role="tab" data-toggle="tab"><i class="fa fa-calendar-plus-o"></i> Food Order</a></li>
+                                <li class="<?= $curr_tab === 'd_order' ? 'active' : ''; ?>"><a href="#d_order" role="tab" data-toggle="tab"><i class="fa fa-calendar"></i> Calendar Order 📅</a></li>
+                                <li class="<?= $curr_tab === 'recharge_history' ? 'active' : ''; ?>"><a href="#recharge_history" role="tab" data-toggle="tab"><i class="fa fa-history"></i> Recharge History</a></li>
+                                <li class="<?= $curr_tab === 'order_summary' ? 'active' : ''; ?>"><a href="#order_summary" role="tab" data-toggle="tab"><i class="fa fa-list-alt"></i> Order Summary</a></li>
+                                <li class="<?= $curr_tab === 'wallet_ledger' ? 'active' : ''; ?>"><a href="#wallet_ledger" role="tab" data-toggle="tab"><i class="fa fa-exchange"></i> Your Transactions</a></li>
+                                <li class="<?= $curr_tab === 'monthly_slip' ? 'active' : ''; ?>"><a href="#monthly_slip" role="tab" data-toggle="tab"><i class="fa fa-file-text-o"></i> Monthly Statement</a></li>
                             </ul>
 
                             <div class="tab-content" style="margin-top: 15px;">
 
                                 <!-- ================= TAB 1: FOOD ORDER ================= -->
-                                <div class="tab-pane active" id="food_order">
+                                <div class="tab-pane <?= $curr_tab === 'food_order' ? 'active in' : ''; ?>" id="food_order">
                                     <div class="d-flex justify-content-between align-items-center mb-2" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
                                         <h4 style="margin: 0; font-weight: bold; color: #2a5298;">Select Meals & Date Range</h4>
                                         <div>
@@ -447,7 +454,7 @@ while ($r = mysqli_fetch_assoc($q)) {
                                 </div>
 
                                 <!-- ================= TAB 2: CALENDAR ORDER ================= -->
-                                <div class="tab-pane" id="d_order">
+                                <div class="tab-pane <?= $curr_tab === 'd_order' ? 'active in' : ''; ?>" id="d_order">
                                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
                                         <h4 style="margin: 0; font-weight: bold; color: #2a5298;"><i class="fa fa-calendar"></i> Your Meal Calendar</h4>
                                         <div>
@@ -480,7 +487,7 @@ while ($r = mysqli_fetch_assoc($q)) {
                                 </div>
 
                                 <!-- ================= TAB 3: RECHARGE HISTORY ================= -->
-                                <div class="tab-pane table-responsive" id="recharge_history">
+                                <div class="tab-pane table-responsive <?= $curr_tab === 'recharge_history' ? 'active in' : ''; ?>" id="recharge_history">
                                     <table class="table table-bordered table-striped">
                                         <thead style="background: #f4f6f9;">
                                             <tr>
@@ -526,7 +533,7 @@ while ($r = mysqli_fetch_assoc($q)) {
                                 </div>
 
                                 <!-- ================= TAB 4: ORDER SUMMARY ================= -->
-                                <div class="tab-pane table-responsive" id="order_summary">
+                                <div class="tab-pane table-responsive <?= $curr_tab === 'order_summary' ? 'active in' : ''; ?>" id="order_summary">
                                     <table class="table table-striped table-bordered">
                                         <thead style="background: #f4f6f9;">
                                             <tr>
@@ -604,7 +611,7 @@ while ($r = mysqli_fetch_assoc($q)) {
                                                     </td>
                                                     <td class="text-center">
                                                         <?php if ($orow['status'] === 'Confirmed' && strtotime($orow['order_date']) >= strtotime(date('Y-m-d'))): ?>
-                                                            <button class="btn btn-danger btn-xs" onclick="cancelOrderItem(<?= $orow['item_id']; ?>)">
+                                                            <button type="button" class="btn btn-danger btn-xs btn-cancel-order" data-id="<?= $orow['item_id']; ?>" onclick="cancelOrderItem(<?= $orow['item_id']; ?>)">
                                                                 <i class="fa fa-times"></i> Cancel
                                                             </button>
                                                         <?php elseif ($orow['status'] === 'Cancelled'): ?>
@@ -626,7 +633,7 @@ while ($r = mysqli_fetch_assoc($q)) {
                                 </div>
 
                                 <!-- ================= TAB 5: TRANSACTIONS ================= -->
-                                <div class="tab-pane table-responsive" id="wallet_ledger">
+                                <div class="tab-pane table-responsive <?= $curr_tab === 'wallet_ledger' ? 'active in' : ''; ?>" id="wallet_ledger">
                                     <table class="table table-bordered table-striped">
                                         <thead style="background: #f4f6f9;">
                                             <tr>
@@ -687,7 +694,7 @@ while ($r = mysqli_fetch_assoc($q)) {
                                 </div>
 
                                 <!-- ================= TAB 6: MONTHLY STATEMENT ================= -->
-                                <div class="tab-pane" id="monthly_slip">
+                                <div class="tab-pane <?= $curr_tab === 'monthly_slip' ? 'active in' : ''; ?>" id="monthly_slip">
                                     <?php
                                     $curr_month = date('Y-m');
                                     $m_start = $curr_month . '-01';
@@ -968,12 +975,27 @@ function cancelOrderItem(id) {
                         icon: 'success',
                         title: 'Cancelled',
                         text: res.msg,
-                        timer: 2000,
+                        timer: 1500,
                         showConfirmButton: false
                     });
                     $('#orderModal').modal('hide');
                     refreshBalance();
-                    setTimeout(function() { location.reload(); }, 1500);
+
+                    // Update row in table immediately
+                    var $btn = $('button[data-id="' + id + '"]');
+                    if ($btn.length) {
+                        var $tr = $btn.closest('tr');
+                        $tr.find('td:nth-child(5)').html('<span class="label label-default">Cancelled</span>');
+                        var priceCell = $tr.find('td:nth-child(6)');
+                        var priceVal = priceCell.text().replace('-', '').trim();
+                        priceCell.html('<span class="text-muted" style="text-decoration: line-through;">' + priceVal + '</span>');
+                        $btn.replaceWith('<small class="text-muted">Refunded</small>');
+                    }
+
+                    // Pure GET navigation (NEVER resubmit POST!)
+                    setTimeout(function() {
+                        window.location.href = window.location.pathname + '?tab=order_summary';
+                    }, 1000);
                 } else {
                     Swal.fire('Error', res.msg || 'Cancellation failed', 'error');
                 }

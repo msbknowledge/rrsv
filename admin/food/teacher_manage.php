@@ -37,6 +37,12 @@ if (!$teacher) {
 
 $teacher_code = 'T-' . $teacher['id'];
 
+$success = $_SESSION['food_success'] ?? '';
+unset($_SESSION['food_success']);
+$error = $_SESSION['food_error'] ?? '';
+unset($_SESSION['food_error']);
+$curr_tab = $_GET['tab'] ?? 'recharge';
+
 // Helper function for transaction ID
 function generateTeacherTxnId($myDB) {
     $date = date('ymd');
@@ -107,7 +113,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['recharge'])) {
                 ");
 
                 mysqli_commit($myDB);
-                $success = "Teacher wallet recharged successfully with ₹" . number_format($amount, 2) . " via " . htmlspecialchars($payment_mode) . ".";
+                $_SESSION['food_success'] = "Teacher wallet recharged successfully with ₹" . number_format($amount, 2) . " via " . htmlspecialchars($payment_mode) . ".";
+                header("Location: teacher_manage.php?teacher_id=" . $teacher['id'] . "&tab=recharge");
+                exit;
             } catch (Exception $e) {
                 mysqli_rollback($myDB);
                 $error = "Recharge transaction failed: " . $e->getMessage();
@@ -392,8 +400,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit_orders'])) {
                     ");
 
                     mysqli_commit($myDB);
-                    $success = "Food orders placed successfully! Total ₹" . number_format($total, 2) . " for " . count($items) . " meal items.";
-                    $balance -= $total;
+                    $_SESSION['food_success'] = "Food orders placed successfully! Total ₹" . number_format($total, 2) . " for " . count($items) . " meal items.";
+                    header("Location: teacher_manage.php?teacher_id=" . $teacher['id'] . "&tab=order_summary");
+                    exit;
                 } catch (Exception $e) {
                     mysqli_rollback($myDB);
                     $error = "Failed to place orders: " . $e->getMessage();
@@ -649,25 +658,25 @@ $teacher_img = !empty($teacher['image']) && file_exists('../../teacher_image/' .
             <div class="card-body p-0">
 
                 <ul class="nav nav-tabs boxed-tabs px-3 pt-3">
-                    <li class="active">
+                    <li class="<?= $curr_tab === 'recharge' ? 'active' : ''; ?>">
                         <a href="#recharge" data-toggle="tab"><i class="fa fa-plus-circle"></i> RECHARGE</a>
                     </li>
-                    <li>
+                    <li class="<?= $curr_tab === 'recharge_history' ? 'active' : ''; ?>">
                         <a href="#recharge_history" data-toggle="tab"><i class="fa fa-history"></i> RECHARGE HISTORY</a>
                     </li>
-                    <li>
+                    <li class="<?= $curr_tab === 'food_order' ? 'active' : ''; ?>">
                         <a href="#food_order" data-toggle="tab"><i class="fa fa-cutlery"></i> FOOD ORDER 📅</a>
                     </li>
-                    <li>
+                    <li class="<?= $curr_tab === 'd_order' ? 'active' : ''; ?>">
                         <a href="#d_order" data-toggle="tab"><i class="fa fa-calendar"></i> CALENDAR ORDER 📅</a>
                     </li>
-                    <li>
+                    <li class="<?= $curr_tab === 'order_summary' ? 'active' : ''; ?>">
                         <a href="#order_summary" data-toggle="tab"><i class="fa fa-list-alt"></i> ORDER SUMMARY</a>
                     </li>
-                    <li>
+                    <li class="<?= $curr_tab === 'wallet_ledger' ? 'active' : ''; ?>">
                         <a href="#wallet_ledger" data-toggle="tab"><i class="fa fa-exchange"></i> TRANSACTIONS</a>
                     </li>
-                    <li>
+                    <li class="<?= $curr_tab === 'monthly_bill' ? 'active' : ''; ?>">
                         <a href="#monthly_bill" data-toggle="tab"><i class="fa fa-file-text-o"></i> MONTHLY BILL / SALARY SLIP 🖨️</a>
                     </li>
                 </ul>
@@ -677,7 +686,7 @@ $teacher_img = !empty($teacher['image']) && file_exists('../../teacher_image/' .
                     <!-- ========================================================
                          TAB 1: RECHARGE (With Teacher Salary Deduction option)
                     ======================================================== -->
-                    <div class="tab-pane active" id="recharge">
+                    <div class="tab-pane <?= $curr_tab === 'recharge' ? 'active in' : ''; ?>" id="recharge">
                         <div class="row">
                             <div class="col-md-7">
                                 <h5 class="font-weight-bold text-primary mb-3">
@@ -765,7 +774,7 @@ $teacher_img = !empty($teacher['image']) && file_exists('../../teacher_image/' .
                     <!-- ========================================================
                          TAB 2: RECHARGE HISTORY
                     ======================================================== -->
-                    <div class="tab-pane" id="recharge_history">
+                    <div class="tab-pane <?= $curr_tab === 'recharge_history' ? 'active in' : ''; ?>" id="recharge_history">
                         <h5 class="font-weight-bold text-primary mb-3">
                             <i class="fa fa-history"></i> Recharge & Top-up History
                         </h5>
@@ -831,7 +840,7 @@ $teacher_img = !empty($teacher['image']) && file_exists('../../teacher_image/' .
                     <!-- ========================================================
                          TAB 3: FOOD ORDER (With Quick Mon-Sat lunch buttons)
                     ======================================================== -->
-                    <div class="tab-pane" id="food_order">
+                    <div class="tab-pane <?= $curr_tab === 'food_order' ? 'active in' : ''; ?>" id="food_order">
                         <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap">
                             <h5 class="font-weight-bold text-primary m-0">
                                 <i class="fa fa-calendar-check-o"></i> Book Meals for Teacher
@@ -941,7 +950,7 @@ $teacher_img = !empty($teacher['image']) && file_exists('../../teacher_image/' .
                     <!-- ========================================================
                          TAB 4: CALENDAR ORDER
                     ======================================================== -->
-                    <div class="tab-pane" id="d_order">
+                    <div class="tab-pane <?= $curr_tab === 'd_order' ? 'active in' : ''; ?>" id="d_order">
                         <div class="d-flex justify-content-between align-items-center mb-3">
                             <h5 class="font-weight-bold text-primary m-0">
                                 <i class="fa fa-calendar"></i> Monthly Food Order Calendar
@@ -983,7 +992,7 @@ $teacher_img = !empty($teacher['image']) && file_exists('../../teacher_image/' .
                     <!-- ========================================================
                          TAB 5: ORDER SUMMARY
                     ======================================================== -->
-                    <div class="tab-pane" id="order_summary">
+                    <div class="tab-pane <?= $curr_tab === 'order_summary' ? 'active in' : ''; ?>" id="order_summary">
                         <h5 class="font-weight-bold text-primary mb-3">
                             <i class="fa fa-list-alt"></i> Detailed Food Orders Breakdown
                         </h5>
@@ -1093,7 +1102,7 @@ $teacher_img = !empty($teacher['image']) && file_exists('../../teacher_image/' .
                     <!-- ========================================================
                          TAB 6: TRANSACTIONS / LEDGER
                     ======================================================== -->
-                    <div class="tab-pane" id="wallet_ledger">
+                    <div class="tab-pane <?= $curr_tab === 'wallet_ledger' ? 'active in' : ''; ?>" id="wallet_ledger">
                         <h5 class="font-weight-bold text-primary mb-3">
                             <i class="fa fa-exchange"></i> Teacher Food Wallet Ledger
                         </h5>
@@ -1177,7 +1186,7 @@ $teacher_img = !empty($teacher['image']) && file_exists('../../teacher_image/' .
                     <!-- ========================================================
                          TAB 7: MONTHLY BILL / SALARY ATTACHMENT SLIP
                     ======================================================== -->
-                    <div class="tab-pane" id="monthly_bill">
+                    <div class="tab-pane <?= $curr_tab === 'monthly_bill' ? 'active in' : ''; ?>" id="monthly_bill">
                         <?php
                         $selected_month = $_GET['bill_month'] ?? date('Y-m');
                         $bill_start = $selected_month . '-01';
