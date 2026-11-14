@@ -18,21 +18,22 @@ $sql = "
 SELECT 
     oi.meal_type,
     oi.order_date,
-    s.scl_name AS student_name,
+    COALESCE(s.scl_name, CONCAT(t.full_name, ' [Teacher]'), o.student_id) AS student_name,
     o.student_id,
     f.package_name AS food_name,
     oi.price
 FROM rrsv_food_orders o
 JOIN rrsv_food_order_items oi ON oi.order_id = o.id
-JOIN rrsv_student_registration s ON s.scl_reg_no = o.student_id
+LEFT JOIN rrsv_student_registration s ON s.scl_reg_no = o.student_id
+LEFT JOIN rrsv_teacher t ON (o.student_id = CONCAT('T-', t.id) OR o.student_id = CAST(t.id AS CHAR))
 JOIN rrsv_menu_package f ON f.id = oi.food_id
 WHERE 
     oi.status='Confirmed'
     AND oi.order_date BETWEEN '$from' AND '$to'
 ORDER BY
-FIELD(oi.meal_type,'Breakfast','Lunch','Dinner'),
+FIELD(oi.meal_type,'Breakfast','Lunch','Dinner','Tiffin'),
 oi.order_date,
-s.scl_name
+student_name
 ";
 
 $result = mysqli_query($myDB,$sql);

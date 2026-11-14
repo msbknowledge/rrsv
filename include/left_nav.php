@@ -83,6 +83,8 @@
               <li class="nav-item"> <a class="nav-link"
                   href="<?php echo BASE_URL; ?>admin/food/student_list.php">Student Order Detail</a></li>
               <li class="nav-item"> <a class="nav-link"
+                  href="<?php echo BASE_URL; ?>admin/food/teacher_list.php">Teacher Order Detail</a></li>
+              <li class="nav-item"> <a class="nav-link"
                   href="<?php echo BASE_URL; ?>admin/food/order_meal_type_token.php">Order Daily List</a></li>
               <li class="nav-item"> <a class="nav-link"
                   href="<?php echo BASE_URL; ?>admin/food/date-wise-purchase-sales-profit-loss.php">Daily Profit Summary (Sales − Purchase)</a></li>

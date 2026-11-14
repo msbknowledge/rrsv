@@ -24,6 +24,7 @@
             <li><a href="<?=BASE_URL?>admin_panel/head"><i class="fa fa-circle-o"></i>Head Type</a></li>
             <li><a href="<?=BASE_URL?>admin_panel/exam/teach/dash.php?q=10"><i class="fa fa-circle-o"></i> Exam</a></li>
             <li><a href="<?=BASE_URL?>admin_panel/teacher/homework_exam.php"><i class="fa fa-circle-o"></i> Class Work</a></li>
+            <li><a href="<?=BASE_URL?>admin_panel/teacher/food/teacher_order_history.php"><i class="fa fa-cutlery"></i> Food Orders</a></li>
             <li class="active"><a href="<?=BASE_URL?>admin_panel/student_behaviour"><i class="fa fa-circle-o"></i>Student Behaviour</a></li>
             <!--<li><a href="<?=BASE_URL?>admin_panel/view_results.php"><i class="fa fa-circle-o"></i>Result</a></li>-->
             <?php
