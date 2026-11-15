@@ -49,9 +49,9 @@ if ($scl_class !== 'All' && !empty($scl_class)) {
 
 if ($add_status !== 'All' && !empty($add_status)) {
     if ($add_status === 'New Admission') {
-        $whereConditions[] = "(s.add_status = 'New Admission' OR s.admission_fee_val > 0)";
-    } elseif ($add_status === 'Re-Admission') {
-        $whereConditions[] = "(s.add_status != 'New Admission' AND (s.admission_fee_val = 0 OR s.admission_fee_val IS NULL))";
+        $whereConditions[] = "(s.add_status = 'New Admission' OR (s.admission_fee_val > 0 AND s.add_status != 'Readmission'))";
+    } elseif ($add_status === 'Re-Admission' || $add_status === 'Readmission') {
+        $whereConditions[] = "(s.add_status = 'Readmission' OR (s.re_admission_fee_val > 0 AND s.add_status != 'New Admission'))";
     }
 }
 
@@ -127,10 +127,10 @@ $col_totals = [
 if ($students_result) {
     while ($row = mysqli_fetch_assoc($students_result)) {
         $sid = $row['id'];
-        $isNew = ($row['add_status'] === 'New Admission' || floatval($row['admission_fee_val']) > 0);
+        $isNew = ($row['add_status'] === 'New Admission' || (floatval($row['admission_fee_val']) > 0 && $row['add_status'] !== 'Readmission'));
 
-        $admFee = $isNew ? floatval($row['admission_fee_val']) : 0;
-        $readmFee = !$isNew ? floatval($row['re_admission_fee_val']) : 0;
+        $admFee = $isNew ? (floatval($row['admission_fee_val']) > 0 ? floatval($row['admission_fee_val']) : floatval($row['re_admission_fee_val'])) : 0;
+        $readmFee = !$isNew ? (floatval($row['re_admission_fee_val']) > 0 ? floatval($row['re_admission_fee_val']) : floatval($row['admission_fee_val'])) : 0;
         $monthlyFee = floatval($row['monthly_fee']);
         $fullYearTuition = $monthlyFee * 12;
 

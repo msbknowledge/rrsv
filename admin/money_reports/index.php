@@ -101,9 +101,9 @@ if ($scl_class !== 'All' && !empty($scl_class)) {
 }
 
 if ($add_status === 'New Admission') {
-    $whereConditions[] = "(s.add_status = 'New Admission' OR s.admission_fee_val > 0)";
+    $whereConditions[] = "(s.add_status = 'New Admission' OR (s.admission_fee_val > 0 AND s.add_status != 'Readmission'))";
 } elseif ($add_status === 'Readmission') {
-    $whereConditions[] = "(s.add_status = 'Readmission' OR s.re_admission_fee_val > 0)";
+    $whereConditions[] = "(s.add_status = 'Readmission' OR (s.re_admission_fee_val > 0 AND s.add_status != 'New Admission'))";
 }
 
 if (!empty($search_text)) {
@@ -215,13 +215,13 @@ if ($students_result) {
         $sid = $row['id'];
 
         $total_session_students++;
-        $isNew = ($row['add_status'] === 'New Admission' || floatval($row['admission_fee_val']) > 0);
+        $isNew = ($row['add_status'] === 'New Admission' || (floatval($row['admission_fee_val']) > 0 && $row['add_status'] !== 'Readmission'));
         if ($isNew) $count_new_adm++;
         else $count_readm++;
 
         // Admission & Re-Admission Fee
-        $admFee = $isNew ? floatval($row['admission_fee_val']) : 0;
-        $readmFee = !$isNew ? floatval($row['re_admission_fee_val']) : 0;
+        $admFee = $isNew ? (floatval($row['admission_fee_val']) > 0 ? floatval($row['admission_fee_val']) : floatval($row['re_admission_fee_val'])) : 0;
+        $readmFee = !$isNew ? (floatval($row['re_admission_fee_val']) > 0 ? floatval($row['re_admission_fee_val']) : floatval($row['admission_fee_val'])) : 0;
 
         // Tuition Fee (Point 1 & 2: Variable tuition fees)
         $monthlyFee = floatval($row['monthly_fee']);
