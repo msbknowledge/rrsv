@@ -470,6 +470,7 @@ include_once __DIR__ . '/../../include/header.php';
         border-top: 3px solid #1e3c72 !important;
         border-bottom: 3px solid #1e3c72 !important;
     }
+
     tfoot td {
         vertical-align: middle !important;
         padding: 9px 10px !important;
@@ -480,6 +481,7 @@ include_once __DIR__ . '/../../include/header.php';
 
     /* Mobile screens (<= 768px): Smooth Horizontal Scroll without sticky blocking view */
     @media (max-width: 768px) {
+
         .col-freeze-1,
         .col-freeze-2,
         .col-freeze-3 {
@@ -540,12 +542,15 @@ include_once __DIR__ . '/../../include/header.php';
         margin-bottom: 20px;
         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
     }
+
     .box.box-primary {
         border-top: 3px solid #1a337e;
     }
+
     .box.box-solid {
         border: 1px solid #d2d6de;
     }
+
     .box-header {
         display: flex;
         align-items: center;
@@ -556,6 +561,7 @@ include_once __DIR__ . '/../../include/header.php';
         border-top-left-radius: 6px;
         border-top-right-radius: 6px;
     }
+
     .box-header .box-title {
         font-size: 14px;
         font-weight: 700;
@@ -565,9 +571,11 @@ include_once __DIR__ . '/../../include/header.php';
         align-items: center;
         gap: 6px;
     }
+
     .box-tools {
         margin-left: auto;
     }
+
     .box-tools .btn-box-tool {
         padding: 3px 8px;
         font-size: 13px;
@@ -576,15 +584,20 @@ include_once __DIR__ . '/../../include/header.php';
         border: none;
         cursor: pointer;
     }
+
     .box-tools .btn-box-tool:hover {
         color: #2c3e50;
     }
+
     .box-body {
         padding: 18px;
     }
 
     /* Complete Form Control Override (Removes red glow from left_nav.php) */
-    .form-control, input.form-control, select.form-control, textarea.form-control {
+    .form-control,
+    input.form-control,
+    select.form-control,
+    textarea.form-control {
         border: 1px solid #d1d5db !important;
         box-shadow: none !important;
         border-radius: 6px !important;
@@ -595,14 +608,20 @@ include_once __DIR__ . '/../../include/header.php';
         padding: 6px 12px !important;
         outline: none !important;
     }
-    .form-control:focus, input.form-control:focus, select.form-control:focus, textarea.form-control:focus {
+
+    .form-control:focus,
+    input.form-control:focus,
+    select.form-control:focus,
+    textarea.form-control:focus {
         border-color: #1a337e !important;
         box-shadow: 0 0 0 3px rgba(26, 51, 126, 0.12) !important;
         outline: none !important;
     }
+
     select.form-control {
         cursor: pointer;
     }
+
     .form-group label {
         font-size: 12px !important;
         font-weight: 600 !important;
@@ -618,6 +637,7 @@ include_once __DIR__ . '/../../include/header.php';
         border-top-right-radius: 0 !important;
         border-bottom-right-radius: 0 !important;
     }
+
     .input-group .btn {
         height: 38px !important;
         line-height: 24px !important;
@@ -626,48 +646,59 @@ include_once __DIR__ . '/../../include/header.php';
     }
 
     /* Button Enhancements for Spica */
-    .btn-default, .btn-outline-secondary {
+    .btn-default,
+    .btn-outline-secondary {
         background-color: #f8fafc !important;
         border: 1px solid #cbd5e1 !important;
         color: #334155 !important;
     }
-    .btn-default:hover, .btn-outline-secondary:hover {
+
+    .btn-default:hover,
+    .btn-outline-secondary:hover {
         background-color: #e2e8f0 !important;
         border-color: #94a3b8 !important;
         color: #0f172a !important;
     }
+
     .btn-primary {
         background-color: #1a337e !important;
         border-color: #1a337e !important;
         color: #ffffff !important;
     }
+
     .btn-primary:hover {
         background-color: #132760 !important;
         border-color: #132760 !important;
     }
+
     .btn-success {
         background-color: #10b981 !important;
         border-color: #10b981 !important;
         color: #ffffff !important;
     }
+
     .btn-success:hover {
         background-color: #059669 !important;
         border-color: #059669 !important;
     }
+
     .btn-info {
         background-color: #0ea5e9 !important;
         border-color: #0ea5e9 !important;
         color: #ffffff !important;
     }
+
     .btn-info:hover {
         background-color: #0284c7 !important;
         border-color: #0284c7 !important;
     }
+
     .btn-warning {
         background-color: #f59e0b !important;
         border-color: #f59e0b !important;
         color: #1e293b !important;
     }
+
     .btn-warning:hover {
         background-color: #d97706 !important;
         border-color: #d97706 !important;
@@ -686,12 +717,31 @@ include_once __DIR__ . '/../../include/header.php';
         vertical-align: baseline;
         border-radius: .25em;
     }
-    .label-success { background-color: #28a745; }
-    .label-primary { background-color: #007bff; }
-    .label-warning { background-color: #ffc107; color: #212529 !important; }
-    .label-default { background-color: #6c757d; }
-    .label-info { background-color: #17a2b8; }
-    .label-danger { background-color: #dc3545; }
+
+    .label-success {
+        background-color: #28a745;
+    }
+
+    .label-primary {
+        background-color: #007bff;
+    }
+
+    .label-warning {
+        background-color: #ffc107;
+        color: #212529 !important;
+    }
+
+    .label-default {
+        background-color: #6c757d;
+    }
+
+    .label-info {
+        background-color: #17a2b8;
+    }
+
+    .label-danger {
+        background-color: #dc3545;
+    }
 
     /* Stat Cards Container - 5 Equal Columns */
     .stat-cards-container {
@@ -700,11 +750,13 @@ include_once __DIR__ . '/../../include/header.php';
         gap: 12px;
         margin-bottom: 22px;
     }
+
     .stat-card-wrapper {
         flex: 1 1 calc(20% - 12px);
         min-width: 190px;
         display: flex;
     }
+
     .stat-card-custom {
         flex: 1;
         border-radius: 8px;
@@ -719,10 +771,12 @@ include_once __DIR__ . '/../../include/header.php';
         position: relative;
         overflow: hidden;
     }
+
     .stat-card-custom:hover {
         transform: translateY(-2px);
         box-shadow: 0 5px 14px rgba(0, 0, 0, 0.14);
     }
+
     .stat-card-custom h3 {
         margin: 0 0 6px 0;
         font-weight: 700;
@@ -734,6 +788,7 @@ include_once __DIR__ . '/../../include/header.php';
         overflow: hidden;
         text-overflow: ellipsis;
     }
+
     .stat-card-custom p {
         margin: 0 0 4px 0;
         font-size: 13px;
@@ -745,6 +800,7 @@ include_once __DIR__ . '/../../include/header.php';
         gap: 6px;
         white-space: nowrap;
     }
+
     .stat-card-custom small {
         font-size: 11px;
         opacity: 0.88;
@@ -752,11 +808,30 @@ include_once __DIR__ . '/../../include/header.php';
         white-space: nowrap;
     }
 
-    .bg-green { background: linear-gradient(135deg, #1e8449, #27ae60) !important; color: #fff !important; }
-    .bg-aqua { background: linear-gradient(135deg, #0e86d4, #00b4d8) !important; color: #fff !important; }
-    .bg-blue { background: linear-gradient(135deg, #1f4e79, #2980b9) !important; color: #fff !important; }
-    .bg-yellow { background: linear-gradient(135deg, #d35400, #e67e22) !important; color: #fff !important; }
-    .bg-purple { background: linear-gradient(135deg, #6c3483, #8e44ad) !important; color: #fff !important; }
+    .bg-green {
+        background: linear-gradient(135deg, #1e8449, #27ae60) !important;
+        color: #fff !important;
+    }
+
+    .bg-aqua {
+        background: linear-gradient(135deg, #0e86d4, #00b4d8) !important;
+        color: #fff !important;
+    }
+
+    .bg-blue {
+        background: linear-gradient(135deg, #1f4e79, #2980b9) !important;
+        color: #fff !important;
+    }
+
+    .bg-yellow {
+        background: linear-gradient(135deg, #d35400, #e67e22) !important;
+        color: #fff !important;
+    }
+
+    .bg-purple {
+        background: linear-gradient(135deg, #6c3483, #8e44ad) !important;
+        color: #fff !important;
+    }
 
     /* Modal Dialog & Header Modern Styling */
     .modal-content {
@@ -765,10 +840,12 @@ include_once __DIR__ . '/../../include/header.php';
         border: none !important;
         box-shadow: 0 12px 36px rgba(0, 0, 0, 0.22) !important;
     }
+
     .modal-header {
         border-bottom: none !important;
         padding: 14px 20px !important;
     }
+
     .modal-header .close,
     button.close,
     .modal-header button.close {
@@ -794,6 +871,7 @@ include_once __DIR__ . '/../../include/header.php';
         border-radius: 4px !important;
         text-shadow: none !important;
     }
+
     .modal-header .close:hover,
     button.close:hover,
     .modal-header button.close:hover {
@@ -801,11 +879,13 @@ include_once __DIR__ . '/../../include/header.php';
         background: rgba(255, 255, 255, 0.2) !important;
         color: #ffffff !important;
     }
+
     .modal-footer {
         border-top: 1px solid #edf2f7 !important;
         padding: 12px 20px !important;
         background: #f8fafc !important;
     }
+
     #periodButtonGroup .btn {
         font-size: 12px;
         padding: 6px 12px;
@@ -814,6 +894,7 @@ include_once __DIR__ . '/../../include/header.php';
         background: #ffffff;
         color: #334155;
     }
+
     #periodButtonGroup .btn.active,
     #periodButtonGroup .btn:hover {
         background: #2563eb !important;
@@ -834,7 +915,7 @@ include_once __DIR__ . '/../../include/header.php';
                     <i class="fa fa-money text-success"></i> Money Report &amp; Fee Management Ledger
                 </h4>
                 <p class="text-muted mb-0 font-weight-normal" style="font-size: 13px;">
-                    Active Session: <strong><?= htmlspecialchars($scl_session) ?></strong> | 
+                    Active Session: <strong><?= htmlspecialchars($scl_session) ?></strong> |
                     Due Calculation Benchmark: <strong><?= $months[$upToMonth] ?></strong>
                 </p>
             </div>
@@ -972,7 +1053,7 @@ include_once __DIR__ . '/../../include/header.php';
                         </div>
 
                         <!-- Point 5: Auto-generated End of Month Due Benchmark Dropdown -->
-                        <div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-3">
+                        <div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-3 d-none">
                             <div class="form-group mb-0">
                                 <label><i class="fa fa-hourglass-half text-primary"></i> Due Up To Month</label>
                                 <select name="upToMonth" class="form-control" onchange="document.getElementById('filterForm').submit()">
@@ -999,7 +1080,7 @@ include_once __DIR__ . '/../../include/header.php';
                                 <label><i class="fa fa-calendar-check-o text-primary"></i> To Date</label>
                                 <div class="input-group">
                                     <input type="date" name="endDate" id="endDateInput" class="form-control" value="<?= htmlspecialchars($endDate) ?>" onchange="onDateInputChange()">
-                                    <div class="input-group-append">
+                                    <div class="input-group-append d-none">
                                         <button type="submit" class="btn btn-primary" title="Apply Date Filter"><i class="fa fa-filter"></i></button>
                                     </div>
                                 </div>
@@ -1025,7 +1106,7 @@ include_once __DIR__ . '/../../include/header.php';
                         </div>
 
                         <!-- Quick Date Preset Buttons -->
-                        <div class="col-lg-4 col-md-7 col-12 mb-lg-0 mb-3">
+                        <div class="col-lg-4 col-md-7 col-12 mb-lg-0 mb-3 d-none">
                             <div class="form-group mb-0">
                                 <label><i class="fa fa-clock-o text-primary"></i> Quick Date Range</label>
                                 <div class="btn-group d-flex w-100" role="group">
@@ -1038,17 +1119,17 @@ include_once __DIR__ . '/../../include/header.php';
                         </div>
 
                         <!-- Point 11: Day-Wise Save Snapshot & Print Options -->
-                        <div class="col-lg-4 col-md-12 col-12 text-lg-right text-left">
+                        <div class="col-lg-4 col-md-12 col-12 text-lg-right text-left d-none">
                             <div class="form-group mb-0">
                                 <label class="d-none d-lg-block" style="color: transparent;">Actions</label>
                                 <div class="btn-group" role="group">
-                                    <button type="button" class="btn btn-success btn-sm font-weight-bold" onclick="saveDaySnapshot()" title="Save today's collection snapshot into database">
+                                    <button type="button" class="btn btn-success btn-sm font-weight-bold d-none" onclick="saveDaySnapshot()" title="Save today's collection snapshot into database">
                                         <i class="fa fa-save"></i> Save Day Report
                                     </button>
-                                    <button type="button" class="btn btn-info btn-sm font-weight-bold text-white" onclick="openSnapshotsModal()" title="View previously saved daily snapshots">
+                                    <button type="button" class="btn btn-info btn-sm font-weight-bold text-white d-none" onclick="openSnapshotsModal()" title="View previously saved daily snapshots">
                                         <i class="fa fa-history"></i> Saved Reports
                                     </button>
-                                    <button type="button" class="btn btn-danger btn-sm font-weight-bold text-white" onclick="downloadMoneyReportPDF()" title="Download PDF of Money Report">
+                                    <button type="button" class="btn btn-danger btn-sm font-weight-bold text-white d-none" onclick="downloadMoneyReportPDF()" title="Download PDF of Money Report">
                                         <i class="fa fa-file-pdf-o"></i> PDF
                                     </button>
                                     <button type="button" class="btn btn-warning btn-sm font-weight-bold text-dark" onclick="printMoneyReport()" title="Print complete report">
@@ -1062,387 +1143,387 @@ include_once __DIR__ . '/../../include/header.php';
             </div>
         </div>
 
-                <!-- ==============================================================
+        <!-- ==============================================================
                  COLUMN TOGGLE CHECKBOXES (CLICK HEADER TO EXPAND / COLLAPSE)
                  ============================================================== -->
-                <div class="box box-solid collapsed-box mb-2" id="colToggleBox" style="margin-bottom: 12px; border: 1px solid #d2d6de; border-radius: 4px; box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
-                    <div class="box-header with-border" id="colToggleHeader" style="padding: 9px 15px; cursor: pointer; background: #fdfefe; user-select: none;">
-                        <h5 class="box-title" style="font-size: 13px; margin: 0; color: #2c3e50; font-weight: 600;">
-                            <i class="fa fa-columns text-primary"></i> <strong>Show / Hide Columns (Click to Toggle)</strong>
-                            <span id="colCountBadge" class="badge bg-green" style="font-size: 11px; margin-left: 8px;">All 27 Columns Visible</span>
-                        </h5>
-                        <div class="box-tools pull-right">
-                            <span class="text-muted hidden-xs" style="font-size: 11px; margin-right: 6px;">Click to expand/collapse</span>
-                            <button type="button" class="btn btn-box-tool" id="colToggleBtn" style="padding: 2px 6px;">
-                                <i class="fa fa-plus text-primary" id="colToggleIcon"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="box-body" id="colToggleBody" style="display: none; padding: 12px 15px; background: #fbfcfc; border-top: 1px solid #eee;">
-                        <!-- Quick Preset Buttons -->
-                        <div style="margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px dashed #e2e8f0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
-                            <div class="btn-group btn-group-sm">
-                                <span style="font-weight: 600; margin-right: 8px; line-height: 30px; font-size: 12px; color: #475569;"><i class="fa fa-sliders text-primary"></i> Quick Views:</span>
-                                <button type="button" class="btn btn-outline-primary btn-sm" onclick="applyColPreset('all')"><i class="fa fa-check-square-o text-success"></i> Show All</button>
-                                <button type="button" class="btn btn-outline-primary btn-sm" onclick="applyColPreset('dues')"><i class="fa fa-money text-info"></i> Dues &amp; Payments Only</button>
-                                <button type="button" class="btn btn-outline-primary btn-sm" onclick="applyColPreset('breakdown')"><i class="fa fa-list text-purple"></i> Detailed Fee Items</button>
-                                <button type="button" class="btn btn-outline-danger btn-sm" onclick="applyColPreset('hide_all')"><i class="fa fa-square-o text-danger"></i> Hide All</button>
-                                <button type="button" class="btn btn-outline-secondary btn-sm" onclick="resetColDefaults()"><i class="fa fa-refresh"></i> Reset Default</button>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <?php
-                            $colsList = [
-                                4 => "Class",
-                                5 => "Admission Fee",
-                                6 => "Re-Admission Fee",
-                                7 => "Monthly Tuition",
-                                8 => "Yearly Tuition",
-                                9 => "Car Opted",
-                                10 => "Monthly Car",
-                                11 => "Yearly Car",
-                                12 => "Uniform",
-                                13 => "Shoes",
-                                14 => "Winter",
-                                15 => "Adm Form",
-                                16 => "Bag",
-                                17 => "I.Card",
-                                18 => "Diary",
-                                19 => "Books",
-                                20 => "Copy",
-                                21 => "Total Items",
-                                22 => "Gross (No Car)",
-                                23 => "Gross (With Car)",
-                                24 => "Total Package Gross",
-                                25 => "Range Paid",
-                                26 => "Total Paid",
-                                27 => "Advance",
-                                28 => "Current Due",
-                                29 => "Year-End Due",
-                                30 => "Actions"
-                            ];
-                            foreach ($colsList as $idx => $cname):
-                            ?>
-                                <div class="col-md-2 col-sm-3 col-xs-6" style="font-size: 12px; margin-bottom: 6px;">
-                                    <label style="font-weight: normal; cursor: pointer; margin-bottom: 0; user-select: none; display: flex; align-items: center;">
-                                        <input type="checkbox" class="col-toggle-cb" data-target="<?= $idx ?>" checked style="margin: 0 6px 0 0; cursor: pointer;"> <?= $cname ?>
-                                    </label>
-                                </div>
-                            <?php endforeach; ?>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ==============================================================
-                 POINT 9: MONEY REPORT DATA TABLE WITH FREEZE PANES
-                 ============================================================== -->
-                <div class="box box-primary">
-                    <div class="box-header with-border" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
-                        <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 8px;">
-                            <h3 class="box-title" style="margin: 0;">
-                                <i class="fa fa-table"></i> Student Fee Master Ledger
-                            </h3>
-                            <span class="badge bg-blue" id="tableCountBadge"><?= count($reportRows) ?> Students <?= ($date_filter_mode === 'paid_only') ? 'Paid in Range' : 'Found' ?></span>
-                            <div class="btn-group btn-group-xs" role="group">
-                                <button type="button" class="btn btn-xs <?= ($date_filter_mode === 'paid_only') ? 'btn-primary font-weight-bold text-white' : 'btn-default' ?>" onclick="setDateFilterMode('paid_only')" title="Show only students who made payments in selected date range">
-                                    <i class="fa fa-filter"></i> Paid in Range (<?= $count_range_students ?>)
-                                </button>
-                                <button type="button" class="btn btn-xs <?= ($date_filter_mode === 'all') ? 'btn-primary font-weight-bold text-white' : 'btn-default' ?>" onclick="setDateFilterMode('all')" title="Show all registered students in session">
-                                    <i class="fa fa-users"></i> All Students (<?= $total_session_students ?>)
-                                </button>
-                            </div>
-                        </div>
-                        <div class="box-tools" style="display: flex; gap: 6px; align-items: center;">
-                            <button type="button" class="btn btn-danger btn-xs font-weight-bold" onclick="downloadMoneyReportPDF()" title="Download PDF of Money Report"><i class="fa fa-file-pdf-o"></i> Download PDF</button>
-                            <button type="button" class="btn btn-warning btn-xs font-weight-bold text-dark" onclick="printMoneyReport()" title="Print Money Report Ledger"><i class="fa fa-print"></i> Print Report</button>
-                            <button type="button" class="btn btn-success btn-xs font-weight-bold" onclick="exportToCSV()" title="Export CSV Spreadsheet"><i class="fa fa-file-excel-o"></i> Export CSV</button>
-                        </div>
-                    </div>
-                    <div class="box-body" style="padding: 0;">
-                        <!-- Mobile swipe hint -->
-                        <div class="d-md-none text-muted px-3 py-1" style="font-size: 11.5px; background: #f8fafc; border-bottom: 1px solid #edf2f7;">
-                            <i class="fa fa-arrows-h text-primary"></i> <strong>Tip:</strong> Scroll horizontally to view all columns
-                        </div>
-
-                        <div class="table-freeze-container">
-                            <table id="moneyReportTable" class="table table-bordered table-striped table-hover table-freeze text-sm">
-                                <thead>
-                                    <tr>
-                                        <!-- POINT 9: Frozen Columns on Left (Desktop) -->
-                                        <th class="col-freeze-1">Sl.</th>
-                                        <th class="col-freeze-2">Reg. No</th>
-                                        <th class="col-freeze-3">Student Name</th>
-
-                                        <!-- Scrollable Columns -->
-                                        <th class="col-item tbl-col-4">Class</th>
-                                        <th class="col-item tbl-col-5" style="background:#eaf2f8 !important;">Admission Fee</th>
-                                        <th class="col-item tbl-col-6" style="background:#eaf2f8 !important;">Re-Adm Fee</th>
-                                        <th class="col-item tbl-col-7">Tuition/Mo</th>
-                                        <th class="col-item tbl-col-8">Tuition/Yr</th>
-                                        <th class="col-item tbl-col-9">Car?</th>
-                                        <th class="col-item tbl-col-10">Car Rate/Mo</th>
-                                        <th class="col-item tbl-col-11">Car Cost/Yr</th>
-                                        <th class="col-item tbl-col-12">Uniform</th>
-                                        <th class="col-item tbl-col-13">Shoes</th>
-                                        <th class="col-item tbl-col-14">Winter</th>
-                                        <th class="col-item tbl-col-15" title="Admission Form Fee - Already Paid when Admission taken">Adm Form <small class="text-green" style="font-weight:bold;">(Paid)</small></th>
-                                        <th class="col-item tbl-col-16">Bag</th>
-                                        <th class="col-item tbl-col-17">I.Card</th>
-                                        <th class="col-item tbl-col-18">Diary</th>
-                                        <th class="col-item tbl-col-19">Books</th>
-                                        <th class="col-item tbl-col-20">Copy</th>
-                                        <th class="col-item tbl-col-21">Total Items</th>
-                                        <th class="col-item tbl-col-22">Gross (w/o Car)</th>
-                                        <th class="col-item tbl-col-23">Gross (with Car)</th>
-                                        <th class="col-item tbl-col-24" style="background:#fef9e7 !important; font-weight:700;">Full Package Gross</th>
-                                        <th class="col-item tbl-col-25">Range Paid</th>
-                                        <th class="col-item tbl-col-26" style="background:#e8f8f5 !important; font-weight:700;">Total Paid (Yr)</th>
-                                        <!-- POINT 6: Advance + Due after payment -->
-                                        <th class="col-item tbl-col-27" style="background:#eafaf1 !important;">Advance</th>
-                                        <!-- POINT 5: Auto generated end of month due -->
-                                        <th class="col-item tbl-col-28" style="background:#fdedec !important;">Due (<?= $months[$upToMonth] ?>)</th>
-                                        <!-- POINT 7: End of year due -->
-                                        <th class="col-item tbl-col-29" style="background:#f4ecf7 !important;">Year-End Due</th>
-                                        <!-- POINT 5 & 10: Guardian Send & Statement Print -->
-                                        <th class="col-item tbl-col-30 text-center" style="min-width: 170px;">Actions</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php if (!empty($reportRows)): ?>
-                                        <?php $sl = 1;
-                                        foreach ($reportRows as $row): ?>
-                                            <tr>
-                                                <!-- Sticky Columns on Desktop -->
-                                                <td class="col-freeze-1"><?= $sl++ ?></td>
-                                                <td class="col-freeze-2"><code><?= htmlspecialchars($row['reg_no']) ?></code></td>
-                                                <td class="col-freeze-3" title="<?= htmlspecialchars($row['name']) ?>">
-                                                    <?= htmlspecialchars($row['name']) ?>
-                                                    <br>
-                                                    <small class="text-muted" style="font-size:10px;">
-                                                        <span class="label <?= $row['is_new'] ? 'label-success' : 'label-primary' ?>" style="font-size:9px; padding:1px 4px;">
-                                                            <?= $row['status_label'] ?>
-                                                        </span>
-                                                    </small>
-                                                </td>
-
-                                                <!-- Scrollable Data Cells -->
-                                                <td class="col-item tbl-col-4"><?= htmlspecialchars($row['class']) ?></td>
-                                                <td class="col-item tbl-col-5"><?= ($row['admission_fee'] > 0) ? '₹' . number_format($row['admission_fee']) : '-' ?></td>
-                                                <td class="col-item tbl-col-6"><?= ($row['readmission_fee'] > 0) ? '₹' . number_format($row['readmission_fee']) : '-' ?></td>
-                                                <td class="col-item tbl-col-7">₹<?= number_format($row['monthly_fee']) ?></td>
-                                                <td class="col-item tbl-col-8">₹<?= number_format($row['yearly_tuition']) ?></td>
-                                                <td class="col-item tbl-col-9"><?= $row['has_car'] ? '<span class="label label-warning">Yes</span>' : '<span class="label label-default">No</span>' ?></td>
-                                                <td class="col-item tbl-col-10"><?= ($row['car_monthly'] > 0) ? '₹' . number_format($row['car_monthly']) : '-' ?></td>
-                                                <td class="col-item tbl-col-11"><?= ($row['yearly_car'] > 0) ? '₹' . number_format($row['yearly_car']) : '-' ?></td>
-                                                <td class="col-item tbl-col-12"><?= ($row['uniform'] > 0) ? '₹' . number_format($row['uniform']) : '-' ?></td>
-                                                <td class="col-item tbl-col-13"><?= ($row['shoes'] > 0) ? '₹' . number_format($row['shoes']) : '-' ?></td>
-                                                <td class="col-item tbl-col-14"><?= ($row['winter'] > 0) ? '₹' . number_format($row['winter']) : '-' ?></td>
-                                                <td class="col-item tbl-col-15"><?= ($row['adm_form'] > 0) ? '₹' . number_format($row['adm_form']) . ' <span class="label label-success" style="font-size:9px; padding:1px 4px;" title="Already paid when admission taken"><i class="fa fa-check"></i> Paid</span>' : '-' ?></td>
-                                                <td class="col-item tbl-col-16"><?= ($row['bag'] > 0) ? '₹' . number_format($row['bag']) : '-' ?></td>
-                                                <td class="col-item tbl-col-17"><?= ($row['icard'] > 0) ? '₹' . number_format($row['icard']) : '-' ?></td>
-                                                <td class="col-item tbl-col-18"><?= ($row['diary'] > 0) ? '₹' . number_format($row['diary']) : '-' ?></td>
-                                                <td class="col-item tbl-col-19"><?= ($row['books'] > 0) ? '₹' . number_format($row['books']) : '-' ?></td>
-                                                <td class="col-item tbl-col-20"><?= ($row['copy'] > 0) ? '₹' . number_format($row['copy']) : '-' ?></td>
-                                                <td class="col-item tbl-col-21">₹<?= number_format($row['total_items']) ?></td>
-                                                <td class="col-item tbl-col-22">₹<?= number_format($row['gross_without_car']) ?></td>
-                                                <td class="col-item tbl-col-23">₹<?= number_format($row['gross_with_car']) ?></td>
-                                                <!-- POINT 1 & 4: Full Package Gross -->
-                                                <td class="col-item tbl-col-24" style="font-weight:700; color:#b7950b;">₹<?= number_format($row['total_gross']) ?></td>
-                                                <td class="col-item tbl-col-25">₹<?= number_format($row['range_paid']) ?></td>
-                                                <!-- Total Paid -->
-                                                <td class="col-item tbl-col-26" style="font-weight:700; color:#117a65;">
-                                                    ₹<?= number_format($row['total_paid']) ?>
-                                                    <?php if ($row['adm_form'] > 0): ?>
-                                                        <br><small class="text-muted" style="font-size:10px; font-weight:normal;" title="Includes ₹<?= number_format($row['adm_form']) ?> Admission Form fee paid at admission">(inc. Form)</small>
-                                                    <?php endif; ?>
-                                                </td>
-                                                <!-- POINT 6: Advance Amount -->
-                                                <td class="col-item tbl-col-27">
-                                                    <?php if ($row['advance'] > 0): ?>
-                                                        <span class="badge-advance">+₹<?= number_format($row['advance']) ?></span>
-                                                    <?php else: ?>
-                                                        <span class="text-muted">₹0</span>
-                                                    <?php endif; ?>
-                                                </td>
-                                                <!-- POINT 5 & 6: Current Due End of Month -->
-                                                <td class="col-item tbl-col-28">
-                                                    <?php if ($row['current_due'] > 0): ?>
-                                                        <span class="badge-due">₹<?= number_format($row['current_due']) ?></span>
-                                                    <?php else: ?>
-                                                        <span class="text-green"><i class="fa fa-check"></i> Cleared</span>
-                                                    <?php endif; ?>
-                                                </td>
-                                                <!-- POINT 7: End of Year Due -->
-                                                <td class="col-item tbl-col-29">
-                                                    <?php if ($row['year_end_due'] > 0): ?>
-                                                        <span class="badge-yeardue">₹<?= number_format($row['year_end_due']) ?></span>
-                                                    <?php else: ?>
-                                                        <span class="text-green"><i class="fa fa-check-circle"></i> Paid</span>
-                                                    <?php endif; ?>
-                                                </td>
-                                                <!-- POINT 5 & 10: Guardian Notice & Statement Print -->
-                                                <td class="col-item tbl-col-30 text-center">
-                                                    <!-- WhatsApp Send (Point 5) -->
-                                                    <?php if (!empty($row['clean_phone'])): ?>
-                                                        <?php
-                                                        $waText = "Dear Guardian, Fee Notice for " . $row['name'] . " (Reg: " . $row['reg_no'] . ", Class: " . $row['class'] . "):\n"
-                                                            . "- Up to " . $months[$upToMonth] . " Total Paid: Rs. " . number_format($row['total_paid']) . "\n"
-                                                            . ($row['current_due'] > 0 ? "- Current Due: Rs. " . number_format($row['current_due']) . "\n" : "- Dues: Cleared\n")
-                                                            . ($row['advance'] > 0 ? "- Advance Balance: Rs. " . number_format($row['advance']) . "\n" : "")
-                                                            . "- Full Year Balance: Rs. " . number_format($row['year_end_due']) . "\n"
-                                                            . "Rasulpur Ramkrishna Sarada Vidyapith";
-                                                        $waUrl = "https://api.whatsapp.com/send?phone=" . $row['clean_phone'] . "&text=" . urlencode($waText);
-                                                        ?>
-                                                        <a href="<?= $waUrl ?>" target="_blank" class="btn btn-xs btn-success" title="Send WhatsApp Due Notice to Guardian">
-                                                            <i class="fa fa-whatsapp"></i> Send
-                                                        </a>
-                                                    <?php else: ?>
-                                                        <button type="button" class="btn btn-xs btn-default disabled" title="No phone registered"><i class="fa fa-whatsapp"></i></button>
-                                                    <?php endif; ?>
-
-                                                    <!-- 6-Month / Monthly Statement & Print (Point 10) -->
-                                                    <button type="button" class="btn btn-xs btn-info" onclick="openStudentStatement(<?= $row['id'] ?>)" title="View 6-Month &amp; Monthly Payment Statement">
-                                                        <i class="fa fa-file-text-o"></i> 6-Mo
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                        <?php endforeach; ?>
-                                    <?php else: ?>
-                                        <tr>
-                                            <td colspan="30" class="text-center py-4 text-muted" style="padding: 30px;">
-                                                <i class="fa fa-info-circle fa-2x text-blue"></i>
-                                                <p class="mt-2" style="font-size:15px; margin-top:10px;">No student records found for the selected session and filter criteria.</p>
-                                                <a href="index.php?scl_session=<?= $scl_session ?>" class="btn btn-primary btn-sm">Reset Date Filter to Full Session</a>
-                                            </td>
-                                        </tr>
-                                    <?php endif; ?>
-                                </tbody>
-                                <?php if (!empty($reportRows)): ?>
-                                <tfoot>
-                                    <tr style="background: #f1f5f9; font-weight: 800; border-top: 3px solid #1e3c72; border-bottom: 3px solid #1e3c72;">
-                                        <!-- Sticky Columns on Desktop -->
-                                        <td class="col-freeze-1 text-center" style="font-weight: 900; background: #e2e8f0 !important; color: #1e3a8a;">TOTAL</td>
-                                        <td class="col-freeze-2 text-center" style="font-weight: 700; background: #e2e8f0 !important; color: #1e3a8a;">-</td>
-                                        <td class="col-freeze-3" style="font-weight: 900; background: #e2e8f0 !important; color: #1e3a8a;"><?= count($reportRows) ?> Students</td>
-
-                                        <!-- Scrollable Data Cells matching tbl-col-4 to tbl-col-30 -->
-                                        <td class="col-item tbl-col-4 text-center" style="font-weight: 700;">-</td>
-                                        <td class="col-item tbl-col-5" style="background:#e0effa !important; font-weight:800; color:#1e40af;"><?= ($col_totals['admission_fee'] > 0) ? '₹' . number_format($col_totals['admission_fee']) : '-' ?></td>
-                                        <td class="col-item tbl-col-6" style="background:#e0effa !important; font-weight:800; color:#1e40af;"><?= ($col_totals['readmission_fee'] > 0) ? '₹' . number_format($col_totals['readmission_fee']) : '-' ?></td>
-                                        <td class="col-item tbl-col-7" style="font-weight:700;">₹<?= number_format($col_totals['monthly_fee']) ?></td>
-                                        <td class="col-item tbl-col-8" style="font-weight:700;">₹<?= number_format($col_totals['yearly_tuition']) ?></td>
-                                        <td class="col-item tbl-col-9 text-center" style="font-weight:700;"><?= $col_totals['car_count'] ?> Cars</td>
-                                        <td class="col-item tbl-col-10" style="font-weight:700;"><?= ($col_totals['car_monthly'] > 0) ? '₹' . number_format($col_totals['car_monthly']) : '-' ?></td>
-                                        <td class="col-item tbl-col-11" style="font-weight:700;"><?= ($col_totals['yearly_car'] > 0) ? '₹' . number_format($col_totals['yearly_car']) : '-' ?></td>
-                                        <td class="col-item tbl-col-12" style="font-weight:700;"><?= ($col_totals['uniform'] > 0) ? '₹' . number_format($col_totals['uniform']) : '-' ?></td>
-                                        <td class="col-item tbl-col-13" style="font-weight:700;"><?= ($col_totals['shoes'] > 0) ? '₹' . number_format($col_totals['shoes']) : '-' ?></td>
-                                        <td class="col-item tbl-col-14" style="font-weight:700;"><?= ($col_totals['winter'] > 0) ? '₹' . number_format($col_totals['winter']) : '-' ?></td>
-                                        <td class="col-item tbl-col-15" style="font-weight:700;"><?= ($col_totals['adm_form'] > 0) ? '₹' . number_format($col_totals['adm_form']) : '-' ?></td>
-                                        <td class="col-item tbl-col-16" style="font-weight:700;"><?= ($col_totals['bag'] > 0) ? '₹' . number_format($col_totals['bag']) : '-' ?></td>
-                                        <td class="col-item tbl-col-17" style="font-weight:700;"><?= ($col_totals['icard'] > 0) ? '₹' . number_format($col_totals['icard']) : '-' ?></td>
-                                        <td class="col-item tbl-col-18" style="font-weight:700;"><?= ($col_totals['diary'] > 0) ? '₹' . number_format($col_totals['diary']) : '-' ?></td>
-                                        <td class="col-item tbl-col-19" style="font-weight:700;"><?= ($col_totals['books'] > 0) ? '₹' . number_format($col_totals['books']) : '-' ?></td>
-                                        <td class="col-item tbl-col-20" style="font-weight:700;"><?= ($col_totals['copy'] > 0) ? '₹' . number_format($col_totals['copy']) : '-' ?></td>
-                                        <td class="col-item tbl-col-21" style="font-weight:800; background:#f8fafc !important;">₹<?= number_format($col_totals['total_items']) ?></td>
-                                        <td class="col-item tbl-col-22" style="font-weight:700;">₹<?= number_format($col_totals['gross_no_car']) ?></td>
-                                        <td class="col-item tbl-col-23" style="font-weight:700;">₹<?= number_format($col_totals['gross_with_car']) ?></td>
-                                        <td class="col-item tbl-col-24" style="background:#fef3c7 !important; font-weight:900; color:#92400e;">₹<?= number_format($col_totals['total_package_gross']) ?></td>
-                                        <td class="col-item tbl-col-25" style="font-weight:800; color:#166534;">₹<?= number_format($col_totals['range_paid']) ?></td>
-                                        <td class="col-item tbl-col-26" style="background:#dcfce7 !important; font-weight:900; color:#15803d;">₹<?= number_format($col_totals['total_paid']) ?></td>
-                                        <td class="col-item tbl-col-27" style="background:#ecfdf5 !important; font-weight:800; color:#047857;"><?= ($col_totals['advance'] > 0) ? '+₹' . number_format($col_totals['advance']) : '₹0' ?></td>
-                                        <td class="col-item tbl-col-28" style="background:#fee2e2 !important; font-weight:900; color:#b91c1c;"><?= ($col_totals['current_due'] > 0) ? '₹' . number_format($col_totals['current_due']) : 'Cleared' ?></td>
-                                        <td class="col-item tbl-col-29" style="background:#f3e8ff !important; font-weight:900; color:#7e22ce;"><?= ($col_totals['year_end_due'] > 0) ? '₹' . number_format($col_totals['year_end_due']) : 'Paid' ?></td>
-                                        <td class="col-item tbl-col-30 text-center">-</td>
-                                    </tr>
-                                </tfoot>
-                                <?php endif; ?>
-                            </table>
-                        </div>
-
-                    </div>
-                </div>
-
-    <!-- ==============================================================
-     POINT 10: 6-MONTH & MONTHLY PAYMENT STATEMENT MODAL
-     ============================================================== -->
-    <div class="modal fade" id="statementModal" tabindex="-1" role="dialog" aria-labelledby="statementModalLabel">
-        <div class="modal-dialog modal-lg" role="document" style="width: 90%; max-width: 950px; margin: 30px auto;">
-            <div class="modal-content" style="border-radius: 8px; overflow: hidden; border: none; box-shadow: 0 12px 36px rgba(0,0,0,0.22);">
-                <div class="modal-header" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: #fff; display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; border-bottom: none;">
-                    <h4 class="modal-title" id="statementModalLabel" style="font-size: 15px; font-weight: 600; margin: 0; color: #fff; display: flex; align-items: center; gap: 8px;">
-                        <i class="fa fa-print"></i> Student Monthly Fee Statement &amp; Report
-                    </h4>
-                    <button type="button" class="close" data-dismiss="modal" data-bs-dismiss="modal" aria-label="Close" style="color: #fff !important; background: transparent !important; border: none !important; font-size: 26px; line-height: 1; opacity: 0.85; cursor: pointer; padding: 0 4px !important; margin: 0 !important; box-shadow: none !important;">
-                        <span aria-hidden="true">&times;</span>
+        <div class="box box-solid collapsed-box mb-2" id="colToggleBox" style="margin-bottom: 12px; border: 1px solid #d2d6de; border-radius: 4px; box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
+            <div class="box-header with-border" id="colToggleHeader" style="padding: 9px 15px; cursor: pointer; background: #fdfefe; user-select: none;">
+                <h5 class="box-title" style="font-size: 13px; margin: 0; color: #2c3e50; font-weight: 600;">
+                    <i class="fa fa-columns text-primary"></i> <strong>Show / Hide Columns (Click to Toggle)</strong>
+                    <span id="colCountBadge" class="badge bg-green" style="font-size: 11px; margin-left: 8px;">All 27 Columns Visible</span>
+                </h5>
+                <div class="box-tools pull-right">
+                    <span class="text-muted hidden-xs" style="font-size: 11px; margin-right: 6px;">Click to expand/collapse</span>
+                    <button type="button" class="btn btn-box-tool" id="colToggleBtn" style="padding: 2px 6px;">
+                        <i class="fa fa-plus text-primary" id="colToggleIcon"></i>
                     </button>
                 </div>
-                <div class="modal-body" id="statementModalContent" style="padding: 22px 24px; max-height: calc(85vh - 130px); overflow-y: auto;">
-                    <div class="text-center py-4" style="padding: 40px;">
-                        <i class="fa fa-spinner fa-spin fa-3x text-primary"></i>
-                        <p class="mt-2" style="margin-top:10px;">Loading student payment history...</p>
+            </div>
+            <div class="box-body" id="colToggleBody" style="display: none; padding: 12px 15px; background: #fbfcfc; border-top: 1px solid #eee;">
+                <!-- Quick Preset Buttons -->
+                <div style="margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px dashed #e2e8f0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+                    <div class="btn-group btn-group-sm">
+                        <span style="font-weight: 600; margin-right: 8px; line-height: 30px; font-size: 12px; color: #475569;"><i class="fa fa-sliders text-primary"></i> Quick Views:</span>
+                        <button type="button" class="btn btn-outline-primary btn-sm" onclick="applyColPreset('all')"><i class="fa fa-check-square-o text-success"></i> Show All</button>
+                        <button type="button" class="btn btn-outline-primary btn-sm d-none" onclick="applyColPreset('dues')"><i class="fa fa-money text-info"></i> Dues &amp; Payments Only</button>
+                        <button type="button" class="btn btn-outline-primary btn-sm d-none" onclick="applyColPreset('breakdown')"><i class="fa fa-list text-purple"></i> Detailed Fee Items</button>
+                        <button type="button" class="btn btn-outline-danger btn-sm" onclick="applyColPreset('hide_all')"><i class="fa fa-square-o text-danger"></i> Hide All</button>
+                        <button type="button" class="btn btn-outline-secondary btn-sm" onclick="resetColDefaults()"><i class="fa fa-refresh"></i> Reset Default</button>
                     </div>
                 </div>
-                <div class="modal-footer" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; background: #f8fafc; border-top: 1px solid #edf2f7; padding: 12px 20px;">
-                    <div class="btn-group" id="periodButtonGroup" role="group">
-                        <button type="button" class="btn btn-default btn-sm active" onclick="filterStatementPeriod('all')"><i class="fa fa-calendar"></i> Full Year</button>
-                        <button type="button" class="btn btn-default btn-sm" onclick="filterStatementPeriod('h1')"><i class="fa fa-calendar-check-o"></i> 1st 6 Months (Jan - Jun)</button>
-                        <button type="button" class="btn btn-default btn-sm" onclick="filterStatementPeriod('h2')"><i class="fa fa-calendar-check-o"></i> 2nd 6 Months (Jul - Dec)</button>
+
+                <div class="row">
+                    <?php
+                    $colsList = [
+                        4 => "Class",
+                        5 => "Admission Fee",
+                        6 => "Re-Admission Fee",
+                        7 => "Monthly Tuition",
+                        8 => "Yearly Tuition",
+                        9 => "Car Opted",
+                        10 => "Monthly Car",
+                        11 => "Yearly Car",
+                        12 => "Uniform",
+                        13 => "Shoes",
+                        14 => "Winter",
+                        15 => "Adm Form",
+                        16 => "Bag",
+                        17 => "I.Card",
+                        18 => "Diary",
+                        19 => "Books",
+                        20 => "Copy",
+                        21 => "Total Items",
+                        22 => "Gross (No Car)",
+                        23 => "Gross (With Car)",
+                        24 => "Total Package Gross",
+                        25 => "Range Paid",
+                        26 => "Total Paid",
+                        27 => "Advance",
+                        28 => "Current Due",
+                        29 => "Year-End Due",
+                        30 => "Actions"
+                    ];
+                    foreach ($colsList as $idx => $cname):
+                    ?>
+                        <div class="col-md-2 col-sm-3 col-xs-6" style="font-size: 12px; margin-bottom: 6px;">
+                            <label style="font-weight: normal; cursor: pointer; margin-bottom: 0; user-select: none; display: flex; align-items: center;">
+                                <input type="checkbox" class="col-toggle-cb" data-target="<?= $idx ?>" checked style="margin: 0 6px 0 0; cursor: pointer;"> <?= $cname ?>
+                            </label>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==============================================================
+                 POINT 9: MONEY REPORT DATA TABLE WITH FREEZE PANES
+                 ============================================================== -->
+        <div class="box box-primary">
+            <div class="box-header with-border" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+                <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 8px;">
+                    <h3 class="box-title" style="margin: 0;">
+                        <i class="fa fa-table"></i> Student Fee Master Ledger
+                    </h3>
+                    <span class="badge bg-blue" id="tableCountBadge"><?= count($reportRows) ?> Students <?= ($date_filter_mode === 'paid_only') ? 'Paid in Range' : 'Found' ?></span>
+                    <div class="btn-group btn-group-xs" role="group">
+                        <button type="button" class="d-none btn btn-xs <?= ($date_filter_mode === 'paid_only') ? 'btn-primary font-weight-bold text-white' : 'btn-default' ?>" onclick="setDateFilterMode('paid_only')" title="Show only students who made payments in selected date range">
+                            <i class="fa fa-filter"></i> Paid in Range (<?= $count_range_students ?>)
+                        </button>
+                        <button type="button" class="btn btn-xs <?= ($date_filter_mode === 'all') ? 'btn-primary font-weight-bold text-white' : 'btn-default' ?>" onclick="setDateFilterMode('all')" title="Show all registered students in session">
+                            <i class="fa fa-users"></i> All Students (<?= $total_session_students ?>)
+                        </button>
                     </div>
-                    <div style="display: flex; gap: 8px; align-items: center;">
-                        <button type="button" class="btn btn-success btn-sm" id="modalWhatsAppBtn" target="_blank" style="font-weight: 600;"><i class="fa fa-whatsapp"></i> Send WhatsApp Notice</button>
-                        <button type="button" class="btn btn-primary btn-sm" onclick="printStatementArea()" style="font-weight: 600;"><i class="fa fa-print"></i> Print Statement</button>
+                </div>
+                <div class="box-tools" style="display: flex; gap: 6px; align-items: center;">
+                    <button type="button" class="btn btn-danger btn-xs font-weight-bold d-none" onclick="downloadMoneyReportPDF()" title="Download PDF of Money Report"><i class="fa fa-file-pdf-o"></i> Download PDF</button>
+                    <button type="button" class="btn btn-warning btn-xs font-weight-bold text-dark" onclick="printMoneyReport()" title="Print Money Report Ledger"><i class="fa fa-print"></i> Print Report</button>
+                    <button type="button" class="btn btn-success btn-xs font-weight-bold d-none" onclick="exportToCSV()" title="Export CSV Spreadsheet"><i class="fa fa-file-excel-o"></i> Export CSV</button>
+                </div>
+            </div>
+            <div class="box-body" style="padding: 0;">
+                <!-- Mobile swipe hint -->
+                <div class="d-md-none text-muted px-3 py-1" style="font-size: 11.5px; background: #f8fafc; border-bottom: 1px solid #edf2f7;">
+                    <i class="fa fa-arrows-h text-primary"></i> <strong>Tip:</strong> Scroll horizontally to view all columns
+                </div>
+
+                <div class="table-freeze-container">
+                    <table id="moneyReportTable" class="table table-bordered table-striped table-hover table-freeze text-sm">
+                        <thead>
+                            <tr>
+                                <!-- POINT 9: Frozen Columns on Left (Desktop) -->
+                                <th class="col-freeze-1">Sl.</th>
+                                <th class="col-freeze-2">Reg. No</th>
+                                <th class="col-freeze-3">Student Name</th>
+
+                                <!-- Scrollable Columns -->
+                                <th class="col-item tbl-col-4">Class</th>
+                                <th class="col-item tbl-col-5">Admission Fee</th>
+                                <th class="col-item tbl-col-6">Re-Adm Fee</th>
+                                <th class="col-item tbl-col-7">Tuition/Mo</th>
+                                <th class="col-item tbl-col-8">Tuition/Yr</th>
+                                <th class="col-item tbl-col-9">Car?</th>
+                                <th class="col-item tbl-col-10">Car Rate/Mo</th>
+                                <th class="col-item tbl-col-11">Car Cost/Yr</th>
+                                <th class="col-item tbl-col-12">Uniform</th>
+                                <th class="col-item tbl-col-13">Shoes</th>
+                                <th class="col-item tbl-col-14">Winter</th>
+                                <th class="col-item tbl-col-15" title="Admission Form Fee - Already Paid when Admission taken">Adm Form <small class="text-green" style="font-weight:bold;">(Paid)</small></th>
+                                <th class="col-item tbl-col-16">Bag</th>
+                                <th class="col-item tbl-col-17">I.Card</th>
+                                <th class="col-item tbl-col-18">Diary</th>
+                                <th class="col-item tbl-col-19">Books</th>
+                                <th class="col-item tbl-col-20">Copy</th>
+                                <th class="col-item tbl-col-21">Total Items</th>
+                                <th class="col-item tbl-col-22">Gross (w/o Car)</th>
+                                <th class="col-item tbl-col-23">Gross (with Car)</th>
+                                <th class="col-item tbl-col-24" style=" font-weight:700;">Full Package Gross</th>
+                                <th class="col-item tbl-col-25">Range Paid</th>
+                                <th class="col-item tbl-col-26" style=" font-weight:700;">Total Paid (Yr)</th>
+                                <!-- POINT 6: Advance + Due after payment -->
+                                <th class="col-item tbl-col-27">Advance</th>
+                                <!-- POINT 5: Auto generated end of month due -->
+                                <th class="col-item tbl-col-28">Due (<?= $months[$upToMonth] ?>)</th>
+                                <!-- POINT 7: End of year due -->
+                                <th class="col-item tbl-col-29">Year-End Due</th>
+                                <!-- POINT 5 & 10: Guardian Send & Statement Print -->
+                                <th class="col-item tbl-col-30 text-center d-none" style="min-width: 170px;">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php if (!empty($reportRows)): ?>
+                                <?php $sl = 1;
+                                foreach ($reportRows as $row): ?>
+                                    <tr>
+                                        <!-- Sticky Columns on Desktop -->
+                                        <td class="col-freeze-1"><?= $sl++ ?></td>
+                                        <td class="col-freeze-2"><code><?= htmlspecialchars($row['reg_no']) ?></code></td>
+                                        <td class="col-freeze-3" title="<?= htmlspecialchars($row['name']) ?>">
+                                            <?= htmlspecialchars($row['name']) ?>
+                                            <br>
+                                            <small class="text-muted" style="font-size:10px;">
+                                                <span class="label <?= $row['is_new'] ? 'label-success' : 'label-primary' ?>" style="font-size:9px; padding:1px 4px;">
+                                                    <?= $row['status_label'] ?>
+                                                </span>
+                                            </small>
+                                        </td>
+
+                                        <!-- Scrollable Data Cells -->
+                                        <td class="col-item tbl-col-4"><?= htmlspecialchars($row['class']) ?></td>
+                                        <td class="col-item tbl-col-5"><?= ($row['admission_fee'] > 0) ? '₹' . number_format($row['admission_fee']) : '-' ?></td>
+                                        <td class="col-item tbl-col-6"><?= ($row['readmission_fee'] > 0) ? '₹' . number_format($row['readmission_fee']) : '-' ?></td>
+                                        <td class="col-item tbl-col-7">₹<?= number_format($row['monthly_fee']) ?></td>
+                                        <td class="col-item tbl-col-8">₹<?= number_format($row['yearly_tuition']) ?></td>
+                                        <td class="col-item tbl-col-9"><?= $row['has_car'] ? '<span class="label label-warning">Yes</span>' : '<span class="label label-default">No</span>' ?></td>
+                                        <td class="col-item tbl-col-10"><?= ($row['car_monthly'] > 0) ? '₹' . number_format($row['car_monthly']) : '-' ?></td>
+                                        <td class="col-item tbl-col-11"><?= ($row['yearly_car'] > 0) ? '₹' . number_format($row['yearly_car']) : '-' ?></td>
+                                        <td class="col-item tbl-col-12"><?= ($row['uniform'] > 0) ? '₹' . number_format($row['uniform']) : '-' ?></td>
+                                        <td class="col-item tbl-col-13"><?= ($row['shoes'] > 0) ? '₹' . number_format($row['shoes']) : '-' ?></td>
+                                        <td class="col-item tbl-col-14"><?= ($row['winter'] > 0) ? '₹' . number_format($row['winter']) : '-' ?></td>
+                                        <td class="col-item tbl-col-15"><?= ($row['adm_form'] > 0) ? '₹' . number_format($row['adm_form']) . ' <span class="label label-success" style="font-size:9px; padding:1px 4px;" title="Already paid when admission taken"><i class="fa fa-check"></i> Paid</span>' : '-' ?></td>
+                                        <td class="col-item tbl-col-16"><?= ($row['bag'] > 0) ? '₹' . number_format($row['bag']) : '-' ?></td>
+                                        <td class="col-item tbl-col-17"><?= ($row['icard'] > 0) ? '₹' . number_format($row['icard']) : '-' ?></td>
+                                        <td class="col-item tbl-col-18"><?= ($row['diary'] > 0) ? '₹' . number_format($row['diary']) : '-' ?></td>
+                                        <td class="col-item tbl-col-19"><?= ($row['books'] > 0) ? '₹' . number_format($row['books']) : '-' ?></td>
+                                        <td class="col-item tbl-col-20"><?= ($row['copy'] > 0) ? '₹' . number_format($row['copy']) : '-' ?></td>
+                                        <td class="col-item tbl-col-21">₹<?= number_format($row['total_items']) ?></td>
+                                        <td class="col-item tbl-col-22">₹<?= number_format($row['gross_without_car']) ?></td>
+                                        <td class="col-item tbl-col-23">₹<?= $row['has_car'] ? number_format($row['gross_with_car']) : '0' ?></td>
+                                        <!-- POINT 1 & 4: Full Package Gross -->
+                                        <td class="col-item tbl-col-24" style="font-weight:700; color:#b7950b;">₹<?= number_format($row['total_gross']) ?></td>
+                                        <td class="col-item tbl-col-25">₹<?= number_format($row['range_paid']) ?></td>
+                                        <!-- Total Paid -->
+                                        <td class="col-item tbl-col-26" style="font-weight:700; color:#117a65;">
+                                            ₹<?= number_format($row['total_paid']) ?>
+                                            <?php if ($row['adm_form'] > 0): ?>
+                                                <br><small class="text-muted" style="font-size:10px; font-weight:normal;" title="Includes ₹<?= number_format($row['adm_form']) ?> Admission Form fee paid at admission">(inc. Form)</small>
+                                            <?php endif; ?>
+                                        </td>
+                                        <!-- POINT 6: Advance Amount -->
+                                        <td class="col-item tbl-col-27">
+                                            <?php if ($row['advance'] > 0): ?>
+                                                <span class="badge-advance">+₹<?= number_format($row['advance']) ?></span>
+                                            <?php else: ?>
+                                                <span class="text-muted">₹0</span>
+                                            <?php endif; ?>
+                                        </td>
+                                        <!-- POINT 5 & 6: Current Due End of Month -->
+                                        <td class="col-item tbl-col-28">
+                                            <?php if ($row['current_due'] > 0): ?>
+                                                <span class="badge-due">₹<?= number_format($row['current_due']) ?></span>
+                                            <?php else: ?>
+                                                <span class="text-green"><i class="fa fa-check"></i> Cleared</span>
+                                            <?php endif; ?>
+                                        </td>
+                                        <!-- POINT 7: End of Year Due -->
+                                        <td class="col-item tbl-col-29">
+                                            <?php if ($row['year_end_due'] > 0): ?>
+                                                <span class="badge-yeardue">₹<?= number_format($row['year_end_due']) ?></span>
+                                            <?php else: ?>
+                                                <span class="text-green"><i class="fa fa-check-circle"></i> Paid</span>
+                                            <?php endif; ?>
+                                        </td>
+                                        <!-- POINT 5 & 10: Guardian Notice & Statement Print -->
+                                        <td class="col-item tbl-col-30 text-center d-none">
+                                            <!-- WhatsApp Send (Point 5) -->
+                                            <?php if (!empty($row['clean_phone'])): ?>
+                                                <?php
+                                                $waText = "Dear Guardian, Fee Notice for " . $row['name'] . " (Reg: " . $row['reg_no'] . ", Class: " . $row['class'] . "):\n"
+                                                    . "- Up to " . $months[$upToMonth] . " Total Paid: Rs. " . number_format($row['total_paid']) . "\n"
+                                                    . ($row['current_due'] > 0 ? "- Current Due: Rs. " . number_format($row['current_due']) . "\n" : "- Dues: Cleared\n")
+                                                    . ($row['advance'] > 0 ? "- Advance Balance: Rs. " . number_format($row['advance']) . "\n" : "")
+                                                    . "- Full Year Balance: Rs. " . number_format($row['year_end_due']) . "\n"
+                                                    . "Rasulpur Ramkrishna Sarada Vidyapith";
+                                                $waUrl = "https://api.whatsapp.com/send?phone=" . $row['clean_phone'] . "&text=" . urlencode($waText);
+                                                ?>
+                                                <a href="<?= $waUrl ?>" target="_blank" class="btn btn-xs btn-success" title="Send WhatsApp Due Notice to Guardian">
+                                                    <i class="fa fa-whatsapp"></i> Send
+                                                </a>
+                                            <?php else: ?>
+                                                <button type="button" class="btn btn-xs btn-default disabled" title="No phone registered"><i class="fa fa-whatsapp"></i></button>
+                                            <?php endif; ?>
+
+                                            <!-- 6-Month / Monthly Statement & Print (Point 10) -->
+                                            <button type="button" class="btn btn-xs btn-info" onclick="openStudentStatement(<?= $row['id'] ?>)" title="View 6-Month &amp; Monthly Payment Statement">
+                                                <i class="fa fa-file-text-o"></i> 6-Mo
+                                            </button>
+                                        </td>
+                                    </tr>
+                                <?php endforeach; ?>
+                            <?php else: ?>
+                                <tr>
+                                    <td colspan="30" class="text-center py-4 text-muted" style="padding: 30px;">
+                                        <i class="fa fa-info-circle fa-2x text-blue"></i>
+                                        <p class="mt-2" style="font-size:15px; margin-top:10px;">No student records found for the selected session and filter criteria.</p>
+                                        <a href="index.php?scl_session=<?= $scl_session ?>" class="btn btn-primary btn-sm">Reset Date Filter to Full Session</a>
+                                    </td>
+                                </tr>
+                            <?php endif; ?>
+                        </tbody>
+                        <?php if (!empty($reportRows)): ?>
+                            <tfoot>
+                                <tr style="background: #f1f5f9; font-weight: 800; border-top: 3px solid #1e3c72; border-bottom: 3px solid #1e3c72;">
+                                    <!-- Sticky Columns on Desktop -->
+                                    <td class="col-freeze-1 text-center" style="font-weight: 900; background: #e2e8f0 !important; color: #1e3a8a;">TOTAL</td>
+                                    <td class="col-freeze-2 text-center" style="font-weight: 700; background: #e2e8f0 !important; color: #1e3a8a;">-</td>
+                                    <td class="col-freeze-3" style="font-weight: 900; background: #e2e8f0 !important; color: #1e3a8a;"><?= count($reportRows) ?> Students</td>
+
+                                    <!-- Scrollable Data Cells matching tbl-col-4 to tbl-col-30 -->
+                                    <td class="col-item tbl-col-4 text-center" style="font-weight: 700;">-</td>
+                                    <td class="col-item tbl-col-5" style="background:#e0effa !important; font-weight:800; color:#1e40af;"><?= ($col_totals['admission_fee'] > 0) ? '₹' . number_format($col_totals['admission_fee']) : '-' ?></td>
+                                    <td class="col-item tbl-col-6" style="background:#e0effa !important; font-weight:800; color:#1e40af;"><?= ($col_totals['readmission_fee'] > 0) ? '₹' . number_format($col_totals['readmission_fee']) : '-' ?></td>
+                                    <td class="col-item tbl-col-7" style="font-weight:700;">₹<?= number_format($col_totals['monthly_fee']) ?></td>
+                                    <td class="col-item tbl-col-8" style="font-weight:700;">₹<?= number_format($col_totals['yearly_tuition']) ?></td>
+                                    <td class="col-item tbl-col-9 text-center" style="font-weight:700;"><?= $col_totals['car_count'] ?> Cars</td>
+                                    <td class="col-item tbl-col-10" style="font-weight:700;"><?= ($col_totals['car_monthly'] > 0) ? '₹' . number_format($col_totals['car_monthly']) : '-' ?></td>
+                                    <td class="col-item tbl-col-11" style="font-weight:700;"><?= ($col_totals['yearly_car'] > 0) ? '₹' . number_format($col_totals['yearly_car']) : '-' ?></td>
+                                    <td class="col-item tbl-col-12" style="font-weight:700;"><?= ($col_totals['uniform'] > 0) ? '₹' . number_format($col_totals['uniform']) : '-' ?></td>
+                                    <td class="col-item tbl-col-13" style="font-weight:700;"><?= ($col_totals['shoes'] > 0) ? '₹' . number_format($col_totals['shoes']) : '-' ?></td>
+                                    <td class="col-item tbl-col-14" style="font-weight:700;"><?= ($col_totals['winter'] > 0) ? '₹' . number_format($col_totals['winter']) : '-' ?></td>
+                                    <td class="col-item tbl-col-15" style="font-weight:700;"><?= ($col_totals['adm_form'] > 0) ? '₹' . number_format($col_totals['adm_form']) : '-' ?></td>
+                                    <td class="col-item tbl-col-16" style="font-weight:700;"><?= ($col_totals['bag'] > 0) ? '₹' . number_format($col_totals['bag']) : '-' ?></td>
+                                    <td class="col-item tbl-col-17" style="font-weight:700;"><?= ($col_totals['icard'] > 0) ? '₹' . number_format($col_totals['icard']) : '-' ?></td>
+                                    <td class="col-item tbl-col-18" style="font-weight:700;"><?= ($col_totals['diary'] > 0) ? '₹' . number_format($col_totals['diary']) : '-' ?></td>
+                                    <td class="col-item tbl-col-19" style="font-weight:700;"><?= ($col_totals['books'] > 0) ? '₹' . number_format($col_totals['books']) : '-' ?></td>
+                                    <td class="col-item tbl-col-20" style="font-weight:700;"><?= ($col_totals['copy'] > 0) ? '₹' . number_format($col_totals['copy']) : '-' ?></td>
+                                    <td class="col-item tbl-col-21" style="font-weight:800; background:#f8fafc !important;">₹<?= number_format($col_totals['total_items']) ?></td>
+                                    <td class="col-item tbl-col-22" style="font-weight:700;">₹<?= number_format($col_totals['gross_no_car']) ?></td>
+                                    <td class="col-item tbl-col-23" style="font-weight:700;">₹<?= $col_totals['has_car'] ? number_format($col_totals['gross_with_car']) : '01' ?></td>
+                                    <td class="col-item tbl-col-24" style="background:#fef3c7 !important; font-weight:900; color:#92400e;">₹<?= number_format($col_totals['total_package_gross']) ?></td>
+                                    <td class="col-item tbl-col-25" style="font-weight:800; color:#166534;">₹<?= number_format($col_totals['range_paid']) ?></td>
+                                    <td class="col-item tbl-col-26" style="background:#dcfce7 !important; font-weight:900; color:#15803d;">₹<?= number_format($col_totals['total_paid']) ?></td>
+                                    <td class="col-item tbl-col-27" style="background:#ecfdf5 !important; font-weight:800; color:#047857;"><?= ($col_totals['advance'] > 0) ? '+₹' . number_format($col_totals['advance']) : '₹0' ?></td>
+                                    <td class="col-item tbl-col-28" style="background:#fee2e2 !important; font-weight:900; color:#b91c1c;"><?= ($col_totals['current_due'] > 0) ? '₹' . number_format($col_totals['current_due']) : 'Cleared' ?></td>
+                                    <td class="col-item tbl-col-29" style="background:#f3e8ff !important; font-weight:900; color:#7e22ce;"><?= ($col_totals['year_end_due'] > 0) ? '₹' . number_format($col_totals['year_end_due']) : 'Paid' ?></td>
+                                    <td class="col-item tbl-col-30 text-center">-</td>
+                                </tr>
+                            </tfoot>
+                        <?php endif; ?>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ==============================================================
+     POINT 10: 6-MONTH & MONTHLY PAYMENT STATEMENT MODAL
+     ============================================================== -->
+        <div class="modal fade" id="statementModal" tabindex="-1" role="dialog" aria-labelledby="statementModalLabel">
+            <div class="modal-dialog modal-lg" role="document" style="width: 90%; max-width: 950px; margin: 30px auto;">
+                <div class="modal-content" style="border-radius: 8px; overflow: hidden; border: none; box-shadow: 0 12px 36px rgba(0,0,0,0.22);">
+                    <div class="modal-header" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: #fff; display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; border-bottom: none;">
+                        <h4 class="modal-title" id="statementModalLabel" style="font-size: 15px; font-weight: 600; margin: 0; color: #fff; display: flex; align-items: center; gap: 8px;">
+                            <i class="fa fa-print"></i> Student Monthly Fee Statement &amp; Report
+                        </h4>
+                        <button type="button" class="close" data-dismiss="modal" data-bs-dismiss="modal" aria-label="Close" style="color: #fff !important; background: transparent !important; border: none !important; font-size: 26px; line-height: 1; opacity: 0.85; cursor: pointer; padding: 0 4px !important; margin: 0 !important; box-shadow: none !important;">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" id="statementModalContent" style="padding: 22px 24px; max-height: calc(85vh - 130px); overflow-y: auto;">
+                        <div class="text-center py-4" style="padding: 40px;">
+                            <i class="fa fa-spinner fa-spin fa-3x text-primary"></i>
+                            <p class="mt-2" style="margin-top:10px;">Loading student payment history...</p>
+                        </div>
+                    </div>
+                    <div class="modal-footer" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; background: #f8fafc; border-top: 1px solid #edf2f7; padding: 12px 20px;">
+                        <div class="btn-group" id="periodButtonGroup" role="group">
+                            <button type="button" class="btn btn-default btn-sm active" onclick="filterStatementPeriod('all')"><i class="fa fa-calendar"></i> Full Year</button>
+                            <button type="button" class="btn btn-default btn-sm" onclick="filterStatementPeriod('h1')"><i class="fa fa-calendar-check-o"></i> 1st 6 Months (Jan - Jun)</button>
+                            <button type="button" class="btn btn-default btn-sm" onclick="filterStatementPeriod('h2')"><i class="fa fa-calendar-check-o"></i> 2nd 6 Months (Jul - Dec)</button>
+                        </div>
+                        <div style="display: flex; gap: 8px; align-items: center;">
+                            <button type="button" class="btn btn-success btn-sm" id="modalWhatsAppBtn" target="_blank" style="font-weight: 600;"><i class="fa fa-whatsapp"></i> Send WhatsApp Notice</button>
+                            <button type="button" class="btn btn-primary btn-sm" onclick="printStatementArea()" style="font-weight: 600;"><i class="fa fa-print"></i> Print Statement</button>
+                            <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==============================================================
+     POINT 11: SAVED DAILY SNAPSHOTS MODAL
+     ============================================================== -->
+        <div class="modal fade" id="snapshotsModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document" style="width: 90%; max-width: 950px; margin: 30px auto;">
+                <div class="modal-content" style="border-radius: 8px; overflow: hidden; border: none; box-shadow: 0 12px 36px rgba(0,0,0,0.22);">
+                    <div class="modal-header" style="background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%); color: #fff; display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; border-bottom: none;">
+                        <h4 class="modal-title" style="font-size: 15px; font-weight: 600; margin: 0; color: #fff; display: flex; align-items: center; gap: 8px;">
+                            <i class="fa fa-history"></i> Saved Daily Money Report Snapshots
+                        </h4>
+                        <button type="button" class="close" data-dismiss="modal" data-bs-dismiss="modal" aria-label="Close" style="color: #fff !important; background: transparent !important; border: none !important; font-size: 26px; line-height: 1; opacity: 0.85; cursor: pointer; padding: 0 4px !important; margin: 0 !important; box-shadow: none !important;">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" id="snapshotsModalContent" style="padding: 20px; max-height: calc(85vh - 130px); overflow-y: auto;">
+                        <div class="text-center py-3"><i class="fa fa-spinner fa-spin fa-2x text-primary"></i></div>
+                    </div>
+                    <div class="modal-footer" style="display: flex; justify-content: flex-end; background: #f8fafc; border-top: 1px solid #edf2f7; padding: 12px 20px;">
                         <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- ==============================================================
-     POINT 11: SAVED DAILY SNAPSHOTS MODAL
-     ============================================================== -->
-    <div class="modal fade" id="snapshotsModal" tabindex="-1" role="dialog">
-        <div class="modal-dialog modal-lg" role="document" style="width: 90%; max-width: 950px; margin: 30px auto;">
-            <div class="modal-content" style="border-radius: 8px; overflow: hidden; border: none; box-shadow: 0 12px 36px rgba(0,0,0,0.22);">
-                <div class="modal-header" style="background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%); color: #fff; display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; border-bottom: none;">
-                    <h4 class="modal-title" style="font-size: 15px; font-weight: 600; margin: 0; color: #fff; display: flex; align-items: center; gap: 8px;">
-                        <i class="fa fa-history"></i> Saved Daily Money Report Snapshots
-                    </h4>
-                    <button type="button" class="close" data-dismiss="modal" data-bs-dismiss="modal" aria-label="Close" style="color: #fff !important; background: transparent !important; border: none !important; font-size: 26px; line-height: 1; opacity: 0.85; cursor: pointer; padding: 0 4px !important; margin: 0 !important; box-shadow: none !important;">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body" id="snapshotsModalContent" style="padding: 20px; max-height: calc(85vh - 130px); overflow-y: auto;">
-                    <div class="text-center py-3"><i class="fa fa-spinner fa-spin fa-2x text-primary"></i></div>
-                </div>
-                <div class="modal-footer" style="display: flex; justify-content: flex-end; background: #f8fafc; border-top: 1px solid #edf2f7; padding: 12px 20px;">
-                    <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- ==============================================================
+        <!-- ==============================================================
      PRINTABLE STYLES FOR STATEMENT
      ============================================================== -->
-    <style media="print">
-        body * {
-            visibility: hidden;
-        }
+        <style media="print">
+            body * {
+                visibility: hidden;
+            }
 
-        #printableStatementArea,
-        #printableStatementArea * {
-            visibility: visible;
-        }
+            #printableStatementArea,
+            #printableStatementArea * {
+                visibility: visible;
+            }
 
-        #printableStatementArea {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-        }
-    </style>
+            #printableStatementArea {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+            }
+        </style>
 
     </div>
     <!-- content-wrapper ends -->
@@ -1765,7 +1846,7 @@ include_once __DIR__ . '/../../include/header.php';
 
             // 4 Key Summary Stat Cards (Side-by-side 4-column cards)
             html += '<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-bottom: 20px;">';
-            
+
             // Full Package
             html += '  <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 12px 14px; text-align: center;">';
             html += '    <div style="font-size: 11px; font-weight: 700; color: #1e40af; text-transform: uppercase; letter-spacing: 0.5px;">Full Package</div>';
@@ -1827,12 +1908,16 @@ include_once __DIR__ . '/../../include/header.php';
                     html += '    <td style="padding: 8px 10px; font-weight: 500;">' + (row.month || '-') + '</td>';
                     html += '    <td style="padding: 8px 10px;">' + (row.purpose || 'Fee Payment') + '</td>';
                     html += '    <td style="padding: 8px 10px; text-align: center;"><span class="badge" style="background: #e2e8f0; color: #334155; font-size: 10.5px; padding: 2px 6px;">' + (row.mode || 'Cash') + '</span></td>';
-                    html += '    <td style="padding: 8px 12px; text-align: right; font-weight: 700; color: #15803d; font-size: 12.5px;">₹' + Number(row.paid).toLocaleString('en-IN', { minimumFractionDigits: 2 }) + '</td>';
+                    html += '    <td style="padding: 8px 12px; text-align: right; font-weight: 700; color: #15803d; font-size: 12.5px;">₹' + Number(row.paid).toLocaleString('en-IN', {
+                        minimumFractionDigits: 2
+                    }) + '</td>';
                     html += '  </tr>';
                 }
                 html += '  <tr style="background: #f8fafc; font-weight: 700; border-top: 2px solid #cbd5e1;">';
                 html += '    <td colspan="6" style="padding: 10px 12px; text-align: right; font-size: 12.5px; color: #1e293b;">TOTAL PAID FOR THIS PERIOD:</td>';
-                html += '    <td style="padding: 10px 12px; text-align: right; color: #15803d; font-size: 13.5px; font-weight: 800;">₹' + Number(periodTotalPaid).toLocaleString('en-IN', { minimumFractionDigits: 2 }) + '</td>';
+                html += '    <td style="padding: 10px 12px; text-align: right; color: #15803d; font-size: 13.5px; font-weight: 800;">₹' + Number(periodTotalPaid).toLocaleString('en-IN', {
+                    minimumFractionDigits: 2
+                }) + '</td>';
                 html += '  </tr>';
             } else {
                 html += '  <tr><td colspan="7" class="text-center text-muted" style="padding: 22px; font-size: 13px;">No payment records found for this period.</td></tr>';
