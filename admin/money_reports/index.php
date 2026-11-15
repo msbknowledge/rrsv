@@ -27,6 +27,7 @@ if ($upToMonth < 1 || $upToMonth > 12) $upToMonth = $currentMonthNum;
 
 $fromDate = trim($_REQUEST['fromDate'] ?? '');
 $endDate  = trim($_REQUEST['endDate'] ?? '');
+$date_filter_mode = trim($_REQUEST['date_filter_mode'] ?? '');
 
 // If user clicked quick presets or first visit
 if (empty($fromDate) && empty($endDate)) {
@@ -37,11 +38,17 @@ if (empty($fromDate) && empty($endDate)) {
     $endDate = $fromDate;
 }
 
+$is_full_year = ($fromDate === ($scl_session . '-01-01') && $endDate === ($scl_session . '-12-31'));
+if (empty($date_filter_mode)) {
+    $date_filter_mode = $is_full_year ? 'all' : 'paid_only';
+}
+
 // Store in session for export / persistence
-$_SESSION['m_fromDate']    = $fromDate;
-$_SESSION['m_endDate']     = $endDate;
-$_SESSION['m_scl_session'] = $scl_session;
-$_SESSION['m_scl_class']   = $scl_class;
+$_SESSION['m_fromDate']         = $fromDate;
+$_SESSION['m_endDate']          = $endDate;
+$_SESSION['m_scl_session']      = $scl_session;
+$_SESSION['m_scl_class']        = $scl_class;
+$_SESSION['m_date_filter_mode'] = $date_filter_mode;
 
 // Available sessions from DB
 $sessionsList = [];
@@ -157,10 +164,16 @@ if ($pq_all) {
 // ---------------------- 3. PROCESS ROWS & AGGREGATE SUMMARY ---------------------- //
 $reportRows = [];
 
-$sum_actual_collection = 0; // Total payment received across all students
-$sum_new_adm_collection = 0; // New admission actual collection
-$sum_readm_collection = 0;  // Re-admission actual collection
-$sum_range_collection = 0;  // Period / Day collection
+$sum_actual_collection = 0; // Total payment received across all students in session
+$sum_new_adm_collection = 0; // New admission actual collection (session total)
+$sum_readm_collection = 0;  // Re-admission actual collection (session total)
+$sum_range_collection = 0;  // Collection in selected date range
+$range_new_adm_collection = 0; // New admission in range
+$range_readm_collection = 0;  // Re-admission in range
+$count_range_students = 0;
+$count_range_new_adm = 0;
+$count_range_readm = 0;
+$total_session_students = 0;
 $sum_current_due = 0;       // Auto generated end of month due
 $sum_year_end_due = 0;      // Due amount at the end of the year
 $sum_advance_amount = 0;    // Total advance
@@ -201,6 +214,7 @@ if ($students_result) {
     while ($row = mysqli_fetch_assoc($students_result)) {
         $sid = $row['id'];
 
+        $total_session_students++;
         $isNew = ($row['add_status'] === 'New Admission' || floatval($row['admission_fee_val']) > 0);
         if ($isNew) $count_new_adm++;
         else $count_readm++;
@@ -257,18 +271,36 @@ if ($students_result) {
         // Point 7: Year-End Due amount
         $yearEndDue = max(0, $totalGross - $totalPaid);
 
-        // Accumulate Top Cards (Point 3)
+        // Session Totals Accumulation (All students in session)
         $sum_actual_collection += $totalPaid;
-        $sum_range_collection  += $rangePaid;
-        $sum_current_due       += $currentDue;
-        $sum_year_end_due      += $yearEndDue;
-        $sum_advance_amount    += $advance;
-
         if ($isNew) {
             $sum_new_adm_collection += $totalPaid;
         } else {
             $sum_readm_collection   += $totalPaid;
         }
+
+        // Date Range Accumulation
+        if ($rangePaid > 0) {
+            $sum_range_collection += $rangePaid;
+            $count_range_students++;
+            if ($isNew) {
+                $range_new_adm_collection += $rangePaid;
+                $count_range_new_adm++;
+            } else {
+                $range_readm_collection += $rangePaid;
+                $count_range_readm++;
+            }
+        }
+
+        // If date filter mode is paid_only, only show students who made payments in selected date range
+        if ($date_filter_mode === 'paid_only' && $rangePaid <= 0) {
+            continue;
+        }
+
+        // Dues & Advance accumulated for students currently displayed in view
+        $sum_current_due       += $currentDue;
+        $sum_year_end_due      += $yearEndDue;
+        $sum_advance_amount    += $advance;
 
         // Accumulate Column Totals for Table Footer
         $col_totals['count']++;
@@ -813,31 +845,56 @@ include_once __DIR__ . '/../../include/header.php';
             </div>
         </div>
 
+        <?php
+        $isDateFiltered = !$is_full_year;
+        $rangeLabel = date('d M Y', strtotime($fromDate));
+        if ($fromDate !== $endDate) {
+            $rangeLabel = date('d M', strtotime($fromDate)) . ' - ' . date('d M Y', strtotime($endDate));
+        }
+        ?>
         <!-- ==============================================================
              POINT 3: TOP SUMMARY STAT CARDS (New vs Re-Admission Separately)
              ============================================================== -->
         <div class="stat-cards-container">
             <div class="stat-card-wrapper">
                 <div class="stat-card-custom bg-green">
-                    <h3>₹<?= number_format($sum_actual_collection, 2) ?></h3>
-                    <p><i class="fa fa-check-circle"></i> Actual Collection</p>
-                    <small>Selected Range: ₹<?= number_format($sum_range_collection, 2) ?></small>
+                    <?php if ($isDateFiltered): ?>
+                        <h3>₹<?= number_format($sum_range_collection, 2) ?></h3>
+                        <p><i class="fa fa-calendar-check-o"></i> Range Collection</p>
+                        <small><?= $rangeLabel ?> | Session: ₹<?= number_format($sum_actual_collection, 2) ?></small>
+                    <?php else: ?>
+                        <h3>₹<?= number_format($sum_actual_collection, 2) ?></h3>
+                        <p><i class="fa fa-check-circle"></i> Actual Collection (Year)</p>
+                        <small>Full Session: <?= htmlspecialchars($scl_session) ?></small>
+                    <?php endif; ?>
                 </div>
             </div>
 
             <div class="stat-card-wrapper">
                 <div class="stat-card-custom bg-aqua">
-                    <h3>₹<?= number_format($sum_new_adm_collection, 2) ?></h3>
-                    <p><i class="fa fa-user-plus"></i> New Admission (<?= $count_new_adm ?>)</p>
-                    <small>Full Package Collection</small>
+                    <?php if ($isDateFiltered): ?>
+                        <h3>₹<?= number_format($range_new_adm_collection, 2) ?></h3>
+                        <p><i class="fa fa-user-plus"></i> New Admission (Range: <?= $count_range_new_adm ?>)</p>
+                        <small>Session Total: ₹<?= number_format($sum_new_adm_collection, 2) ?> (<?= $count_new_adm ?>)</small>
+                    <?php else: ?>
+                        <h3>₹<?= number_format($sum_new_adm_collection, 2) ?></h3>
+                        <p><i class="fa fa-user-plus"></i> New Admission (<?= $count_new_adm ?>)</p>
+                        <small>Full Package Collection</small>
+                    <?php endif; ?>
                 </div>
             </div>
 
             <div class="stat-card-wrapper">
                 <div class="stat-card-custom bg-blue">
-                    <h3>₹<?= number_format($sum_readm_collection, 2) ?></h3>
-                    <p><i class="fa fa-refresh"></i> Re-Admission (<?= $count_readm ?>)</p>
-                    <small>Tuition + Car + Items</small>
+                    <?php if ($isDateFiltered): ?>
+                        <h3>₹<?= number_format($range_readm_collection, 2) ?></h3>
+                        <p><i class="fa fa-refresh"></i> Re-Admission (Range: <?= $count_range_readm ?>)</p>
+                        <small>Session Total: ₹<?= number_format($sum_readm_collection, 2) ?> (<?= $count_readm ?>)</small>
+                    <?php else: ?>
+                        <h3>₹<?= number_format($sum_readm_collection, 2) ?></h3>
+                        <p><i class="fa fa-refresh"></i> Re-Admission (<?= $count_readm ?>)</p>
+                        <small>Tuition + Car + Items</small>
+                    <?php endif; ?>
                 </div>
             </div>
 
@@ -853,7 +910,7 @@ include_once __DIR__ . '/../../include/header.php';
                 <div class="stat-card-custom bg-purple">
                     <h3>₹<?= number_format($sum_year_end_due, 2) ?></h3>
                     <p><i class="fa fa-calendar-check-o"></i> Year-End Due</p>
-                    <small>Total Students: <?= count($reportRows) ?></small>
+                    <small>Students in View: <?= count($reportRows) ?> / <?= $total_session_students ?></small>
                 </div>
             </div>
         </div>
@@ -932,7 +989,7 @@ include_once __DIR__ . '/../../include/header.php';
                         <div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-3">
                             <div class="form-group mb-0">
                                 <label><i class="fa fa-calendar-check-o text-primary"></i> From Date</label>
-                                <input type="date" name="fromDate" id="fromDateInput" class="form-control" value="<?= htmlspecialchars($fromDate) ?>">
+                                <input type="date" name="fromDate" id="fromDateInput" class="form-control" value="<?= htmlspecialchars($fromDate) ?>" onchange="onDateInputChange()">
                             </div>
                         </div>
 
@@ -940,10 +997,16 @@ include_once __DIR__ . '/../../include/header.php';
                         <div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-3">
                             <div class="form-group mb-0">
                                 <label><i class="fa fa-calendar-check-o text-primary"></i> To Date</label>
-                                <input type="date" name="endDate" id="endDateInput" class="form-control" value="<?= htmlspecialchars($endDate) ?>">
+                                <div class="input-group">
+                                    <input type="date" name="endDate" id="endDateInput" class="form-control" value="<?= htmlspecialchars($endDate) ?>" onchange="onDateInputChange()">
+                                    <div class="input-group-append">
+                                        <button type="submit" class="btn btn-primary" title="Apply Date Filter"><i class="fa fa-filter"></i></button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <input type="hidden" name="date_filter_mode" id="dateFilterModeInput" value="<?= htmlspecialchars($date_filter_mode) ?>">
 
                     <!-- Row 2: Search, Quick Dates & Action Buttons Toolbar -->
                     <div class="row align-items-end pt-2" style="border-top: 1px dashed #e2e8f0;">
@@ -1075,12 +1138,22 @@ include_once __DIR__ . '/../../include/header.php';
                  POINT 9: MONEY REPORT DATA TABLE WITH FREEZE PANES
                  ============================================================== -->
                 <div class="box box-primary">
-                    <div class="box-header with-border">
-                        <h3 class="box-title">
-                            <i class="fa fa-table"></i> Student Fee Master Ledger
-                            <span class="badge bg-blue"><?= count($reportRows) ?> Students Found</span>
-                        </h3>
-                        <div class="box-tools pull-right" style="display: flex; gap: 6px; align-items: center;">
+                    <div class="box-header with-border" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+                        <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 8px;">
+                            <h3 class="box-title" style="margin: 0;">
+                                <i class="fa fa-table"></i> Student Fee Master Ledger
+                            </h3>
+                            <span class="badge bg-blue" id="tableCountBadge"><?= count($reportRows) ?> Students <?= ($date_filter_mode === 'paid_only') ? 'Paid in Range' : 'Found' ?></span>
+                            <div class="btn-group btn-group-xs" role="group">
+                                <button type="button" class="btn btn-xs <?= ($date_filter_mode === 'paid_only') ? 'btn-primary font-weight-bold text-white' : 'btn-default' ?>" onclick="setDateFilterMode('paid_only')" title="Show only students who made payments in selected date range">
+                                    <i class="fa fa-filter"></i> Paid in Range (<?= $count_range_students ?>)
+                                </button>
+                                <button type="button" class="btn btn-xs <?= ($date_filter_mode === 'all') ? 'btn-primary font-weight-bold text-white' : 'btn-default' ?>" onclick="setDateFilterMode('all')" title="Show all registered students in session">
+                                    <i class="fa fa-users"></i> All Students (<?= $total_session_students ?>)
+                                </button>
+                            </div>
+                        </div>
+                        <div class="box-tools" style="display: flex; gap: 6px; align-items: center;">
                             <button type="button" class="btn btn-danger btn-xs font-weight-bold" onclick="downloadMoneyReportPDF()" title="Download PDF of Money Report"><i class="fa fa-file-pdf-o"></i> Download PDF</button>
                             <button type="button" class="btn btn-warning btn-xs font-weight-bold text-dark" onclick="printMoneyReport()" title="Print Money Report Ledger"><i class="fa fa-print"></i> Print Report</button>
                             <button type="button" class="btn btn-success btn-xs font-weight-bold" onclick="exportToCSV()" title="Export CSV Spreadsheet"><i class="fa fa-file-excel-o"></i> Export CSV</button>
@@ -1528,6 +1601,23 @@ include_once __DIR__ . '/../../include/header.php';
             });
         });
 
+        function onDateInputChange() {
+            var f = $('#fromDateInput').val();
+            var t = $('#endDateInput').val();
+            if (f && t) {
+                if (f > t) {
+                    $('#endDateInput').val(f);
+                }
+                $('#dateFilterModeInput').val('paid_only');
+                document.getElementById('filterForm').submit();
+            }
+        }
+
+        function setDateFilterMode(mode) {
+            $('#dateFilterModeInput').val(mode);
+            document.getElementById('filterForm').submit();
+        }
+
         // Quick Date Range helper
         function setQuickDate(type) {
             var today = new Date();
@@ -1539,6 +1629,7 @@ include_once __DIR__ . '/../../include/header.php';
             if (type === 'today') {
                 $('#fromDateInput').val(todayStr);
                 $('#endDateInput').val(todayStr);
+                $('#dateFilterModeInput').val('paid_only');
             } else if (type === 'yesterday') {
                 var yest = new Date();
                 yest.setDate(yest.getDate() - 1);
@@ -1547,15 +1638,18 @@ include_once __DIR__ . '/../../include/header.php';
                 var ystr = yest.getFullYear() + '-' + ymm + '-' + ydd;
                 $('#fromDateInput').val(ystr);
                 $('#endDateInput').val(ystr);
+                $('#dateFilterModeInput').val('paid_only');
             } else if (type === 'this_month') {
                 $('#fromDateInput').val(yyyy + '-' + mm + '-01');
                 var lastDay = new Date(yyyy, today.getMonth() + 1, 0).getDate();
                 $('#endDateInput').val(yyyy + '-' + mm + '-' + String(lastDay).padStart(2, '0'));
+                $('#dateFilterModeInput').val('paid_only');
             } else if (type === 'year') {
                 var sessVal = $('select[name="scl_session"]').val();
                 if (sessVal === 'All' || !sessVal) sessVal = yyyy;
                 $('#fromDateInput').val(sessVal + '-01-01');
                 $('#endDateInput').val(sessVal + '-12-31');
+                $('#dateFilterModeInput').val('all');
             }
             $('#filterForm').submit();
         }
@@ -1805,10 +1899,10 @@ include_once __DIR__ . '/../../include/header.php';
                     action: 'save',
                     report_date: rDate,
                     scl_session: sess,
-                    total_students: <?= count($reportRows) ?>,
-                    new_admission_collection: <?= $sum_new_adm_collection ?>,
-                    readmission_collection: <?= $sum_readm_collection ?>,
-                    total_collection: <?= $sum_actual_collection ?>,
+                    total_students: <?= $count_range_students ?>,
+                    new_admission_collection: <?= $range_new_adm_collection ?>,
+                    readmission_collection: <?= $range_readm_collection ?>,
+                    total_collection: <?= $sum_range_collection ?>,
                     notes: 'Saved snapshot from Money Report screen for ' + rDate
                 },
                 dataType: 'json',
@@ -1850,7 +1944,7 @@ include_once __DIR__ . '/../../include/header.php';
                             h += '<td>₹' + Number(it.readmission_collection).toLocaleString('en-IN') + '</td>';
                             h += '<td>' + it.saved_by + '</td>';
                             h += '<td style="font-size:11px;">' + it.created_at + '</td>';
-                            h += '<td><a href="index.php?scl_session=' + it.scl_session + '&fromDate=' + it.report_date + '&endDate=' + it.report_date + '" class="btn btn-xs btn-primary"><i class="fa fa-eye"></i> View Day</a></td>';
+                            h += '<td><a href="index.php?scl_session=' + it.scl_session + '&fromDate=' + it.report_date + '&endDate=' + it.report_date + '&date_filter_mode=paid_only" class="btn btn-xs btn-primary"><i class="fa fa-eye"></i> View Day</a></td>';
                             h += '</tr>';
                         }
                         h += '</tbody></table>';

@@ -3,13 +3,13 @@ include_once __DIR__ . '/../../include/config.php';
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
-include_once __DIR__ . '/../dbcon.php';
+include_once __DIR__ . '/../../include/dbcon.php';
 
 // Auth check
-if (!isset($_SESSION['user_data']) || !in_array($_SESSION['role'] ?? '', ['admin', 'teacher'])) {
-    if (!isset($_SESSION['mid']) || empty($_SESSION['_token'])) {
-        die("Unauthorized access. Please login first.");
-    }
+$mid = isset($_SESSION['mid']) ? $_SESSION['mid'] : '';
+$token = isset($_SESSION['_token']) ? $_SESSION['_token'] : '';
+if ((empty($token) || empty($mid)) && !isset($_SESSION['user_data'])) {
+    die("Unauthorized access. Please login first.");
 }
 
 // ---------------------- 1. GET FILTER VALUES ---------------------- //
@@ -26,6 +26,7 @@ if ($upToMonth > 12) $upToMonth = 12;
 $fromDate = trim($_REQUEST['fromDate'] ?? ($scl_session !== 'All' ? $scl_session . '-01-01' : date('Y-01-01')));
 $endDate  = trim($_REQUEST['endDate'] ?? ($scl_session !== 'All' ? $scl_session . '-12-31' : date('Y-12-31')));
 $search_text = trim($_REQUEST['search_text'] ?? '');
+$date_filter_mode = trim($_REQUEST['date_filter_mode'] ?? '');
 
 $months = [
     1 => 'January', 2 => 'February', 3 => 'March', 4 => 'April',
@@ -88,6 +89,23 @@ if ($payments_total_q) {
     }
 }
 
+$safe_from = mysqli_real_escape_string($con, $fromDate);
+$safe_to   = mysqli_real_escape_string($con, $endDate);
+$payments_range = [];
+if (!empty($safe_from) && !empty($safe_to)) {
+    $pq = mysqli_query($con, "
+        SELECT pay_id, SUM(payment_recive) as range_paid
+        FROM rrsv_scl_studen_fee
+        WHERE scl_date BETWEEN '$safe_from' AND '$safe_to'
+        GROUP BY pay_id
+    ");
+    if ($pq) {
+        while ($pr = mysqli_fetch_assoc($pq)) {
+            $payments_range[$pr['pay_id']] = floatval($pr['range_paid']);
+        }
+    }
+}
+
 // ---------------------- 4. PROCESS ROWS & TOTALS ---------------------- //
 $reportRows = [];
 $col_totals = [
@@ -136,6 +154,11 @@ if ($students_result) {
 
         $feePaid = $payments_total[$sid]['total_paid'] ?? 0;
         $totalPaid = $feePaid + $admForm;
+        $rangePaid = $payments_range[$sid] ?? 0;
+
+        if ($date_filter_mode === 'paid_only' && $rangePaid <= 0) {
+            continue;
+        }
 
         $expectedUpToMonth = ($isNew ? $admFee : $readmFee) + $totalItems + ($upToMonth * $monthlyFee) + ($upToMonth * $carMonthly);
         if ($totalPaid >= $expectedUpToMonth) {
@@ -194,7 +217,7 @@ $pdf->SetAutoPageBreak(TRUE, 10);
 $pdf->AddPage();
 $pdf->SetFont('helvetica', '', 7);
 
-$filterText = "Session: $scl_session | Class: $scl_class | Status: $add_status | Due Month: " . $months[$upToMonth] . " | Generated: " . date('d-m-Y H:i');
+$filterText = "Session: $scl_session | Class: $scl_class | Date: $fromDate to $endDate" . ($date_filter_mode === 'paid_only' ? ' (Paid in Range)' : '') . " | Due: " . $months[$upToMonth] . " | Generated: " . date('d-m-Y H:i');
 
 $html = '
 <div style="text-align: center; border-bottom: 1px solid #1e3a8a; padding-bottom: 4px; margin-bottom: 6px;">
