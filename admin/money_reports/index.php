@@ -228,8 +228,9 @@ if ($students_result) {
         $fullYearTuition = $monthlyFee * 12;
 
         // Car Cost (Point 2: Variable as per KM)
-        $hasCar = ($row['scl_car'] === 'Yes' || floatval($row['car_cost']) > 0);
-        $carMonthly = floatval($row['car_cost']);
+        $carRate = floatval($row['car_cost']) > 0 ? floatval($row['car_cost']) : floatval($row['carfee'] ?? 0);
+        $hasCar = (strcasecmp(trim($row['scl_car'] ?? ''), 'yes') === 0 || $carRate > 0);
+        $carMonthly = $hasCar ? $carRate : 0;
         $fullYearCar = $hasCar ? ($carMonthly * 12) : 0;
 
         // Items (Point 2: Variable Uniform, Shoes, Winter, Bag, Books, Copy, etc.)
@@ -1427,7 +1428,7 @@ include_once __DIR__ . '/../../include/header.php';
                                     <td class="col-item tbl-col-20" style="font-weight:700;"><?= ($col_totals['copy'] > 0) ? '₹' . number_format($col_totals['copy']) : '-' ?></td>
                                     <td class="col-item tbl-col-21" style="font-weight:800; background:#f8fafc !important;">₹<?= number_format($col_totals['total_items']) ?></td>
                                     <td class="col-item tbl-col-22" style="font-weight:700;">₹<?= number_format($col_totals['gross_no_car']) ?></td>
-                                    <td class="col-item tbl-col-23" style="font-weight:700;">₹<?= $col_totals['has_car'] ? number_format($col_totals['gross_with_car']) : '01' ?></td>
+                                    <td class="col-item tbl-col-23" style="font-weight:700;">₹<?= ($col_totals['car_count'] > 0) ? number_format($col_totals['gross_with_car']) : '0' ?></td>
                                     <td class="col-item tbl-col-24" style="background:#fef3c7 !important; font-weight:900; color:#92400e;">₹<?= number_format($col_totals['total_package_gross']) ?></td>
                                     <td class="col-item tbl-col-25" style="font-weight:800; color:#166534;">₹<?= number_format($col_totals['range_paid']) ?></td>
                                     <td class="col-item tbl-col-26" style="background:#dcfce7 !important; font-weight:900; color:#15803d;">₹<?= number_format($col_totals['total_paid']) ?></td>

@@ -63,11 +63,8 @@ if (!empty($search_text)) {
 $whereSql = implode(' AND ', $whereConditions);
 
 $students_sql = "
-    SELECT 
-        s.*,
-        c.cost AS car_cost
+    SELECT s.*
     FROM rrsv_student_registration s
-    LEFT JOIN rrsv_scl_car c ON s.scl_car_place = c.id
     WHERE $whereSql
     ORDER BY s.scl_class ASC, s.scl_roll_no ASC, s.id ASC
 ";
@@ -134,8 +131,9 @@ if ($students_result) {
         $monthlyFee = floatval($row['monthly_fee']);
         $fullYearTuition = $monthlyFee * 12;
 
-        $hasCar = ($row['scl_car'] === 'Yes' || floatval($row['car_cost']) > 0);
-        $carMonthly = floatval($row['car_cost']);
+        $carRate = floatval($row['car_cost']) > 0 ? floatval($row['car_cost']) : floatval($row['carfee'] ?? 0);
+        $hasCar = (strcasecmp(trim($row['scl_car'] ?? ''), 'yes') === 0 || $carRate > 0);
+        $carMonthly = $hasCar ? $carRate : 0;
         $fullYearCar = $hasCar ? ($carMonthly * 12) : 0;
 
         $uniform   = floatval($row['uniformval']);

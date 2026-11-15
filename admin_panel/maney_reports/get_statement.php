@@ -26,8 +26,10 @@ $admFee = $isNew ? floatval($student['admission_fee_val']) : 0;
 $readmFee = !$isNew ? floatval($student['re_admission_fee_val']) : 0;
 $monthlyFee = floatval($student['monthly_fee']);
 $yearlyTuition = $monthlyFee * 12;
-$carCost = floatval($student['car_cost']);
-$yearlyCar = ($student['scl_car'] === 'Yes' || $carCost > 0) ? ($carCost * 12) : 0;
+$carRate = floatval($student['car_cost']) > 0 ? floatval($student['car_cost']) : floatval($student['carfee'] ?? 0);
+$hasCar = (strcasecmp(trim($student['scl_car'] ?? ''), 'yes') === 0 || $carRate > 0);
+$carCost = $hasCar ? $carRate : 0;
+$yearlyCar = $hasCar ? ($carCost * 12) : 0;
 
 $uniform = floatval($student['uniformval']);
 $shoes = floatval($student['shoessockesval']);
@@ -147,7 +149,7 @@ echo json_encode([
         'phone' => $phone,
         'clean_phone' => $cleanPhone,
         'type' => $isNew ? 'New Admission' : 'Re-Admission',
-        'has_car' => ($student['scl_car'] === 'Yes' || $carCost > 0) ? 'Yes' : 'No',
+        'has_car' => $hasCar ? 'Yes' : 'No',
         'monthly_fee' => $monthlyFee,
         'car_cost' => $carCost,
         'full_year_gross' => $fullYearGross,
